@@ -15,59 +15,62 @@ namespace TALLERM
         public INGRESAR()
         {
             InitializeComponent();
+            txtTipo.Text = "Seleccionar";
+            panelDatosVehiculo.Enabled = false;
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        private void btnLimpiar_Click_1(object sender, EventArgs e)
         {
-
+            LimpiarCajas();
         }
 
-       
-
-       
-        private void boxLimpiar_Click(object sender, EventArgs e)
+        public void LimpiarCajas()
         {
-
+            txtTipo.Text = "Seleccionar";
+            txtMarca.Text = "";
+            txtColor.Text = "";
+            txtPlaca.Text = "";
+            txtPrecio.Text = "";
+            txtServicio.Text = "";
         }
 
-        private void txtcedula_Click(object sender, EventArgs e)
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
-            txtcedula.Text = "";
+            VerificarCajas();
         }
 
-        private void txtNombre_Click(object sender, EventArgs e)
+        public void VerificarCajas()
         {
-            txtNombre.Text = ""; 
+            if (txtTipo.Text == "Seleccionar" && txtMarca.Text == "" && txtColor.Text == ""
+                && txtPlaca.Text == "" && txtPrecio.Text == "" && txtServicio.Text == "")
+            {
+                MessageBox.Show("Hay Campos sin Completar, Por Favor Reviselos");
+            }
+            else
+            {
+                MessageBox.Show("¡DATOS GUARDADOS EXITOSAMENTE!");
+                LimpiarCajas();
+            }
         }
 
-        private void txtApellido_Click(object sender, EventArgs e)
+        private void txtTipo_TextChanged_1(object sender, EventArgs e)
         {
-            txtApellido.Text = "";
-        }
-
-        private void txtTelefono_Click(object sender, EventArgs e)
-        {
-            txtTelefono.Text = " ";
-        }
-
-        private void txtcedu_Click(object sender, EventArgs e)
-        {
-            txtcedu.Text = " ";
-        }
-
-        private void txtnom_Click(object sender, EventArgs e)
-        {
-            txtnom.Text = " ";
-        }
-
-        private void txtApe_Click(object sender, EventArgs e)
-        {
-            txtApe.Text = "";
-        }
-
-        private void txtCargo_Click(object sender, EventArgs e)
-        {
-            txtCargo.Text = "";
+            if (txtTipo.Text != "Seleccionar")
+            {
+                panelDatosVehiculo.Enabled = true;
+                if (txtTipo.Text != "Bicicleta")
+                {
+                    txtPlaca.Enabled = true;
+                }
+                else
+                {
+                    txtPlaca.Enabled = false;
+                }
+            }
+            else
+            {
+                panelDatosVehiculo.Enabled = false;
+            }
         }
     }
 }

@@ -21,5 +21,10 @@ namespace TALLERM
         {
 
         }
+
+        private void DatosClientes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

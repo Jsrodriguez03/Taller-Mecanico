@@ -22,3 +22,16 @@ D:\Desktop\Taller-Mecanico\TALLERM\obj\Debug\Presentacion_GUI.csproj.GenerateRes
 D:\Desktop\Taller-Mecanico\TALLERM\obj\Debug\Presentacion_GUI.csproj.CoreCompileInputs.cache
 D:\Desktop\Taller-Mecanico\TALLERM\obj\Debug\TALLERM.exe
 D:\Desktop\Taller-Mecanico\TALLERM\obj\Debug\TALLERM.pdb
+D:\Biblioteca\Documents\TallerMecanico\TALLERM\bin\Debug\TALLERM.exe.config
+D:\Biblioteca\Documents\TallerMecanico\TALLERM\bin\Debug\TALLERM.exe
+D:\Biblioteca\Documents\TallerMecanico\TALLERM\bin\Debug\TALLERM.pdb
+D:\Biblioteca\Documents\TallerMecanico\TALLERM\obj\Debug\Presentacion_GUI.csproj.AssemblyReference.cache
+D:\Biblioteca\Documents\TallerMecanico\TALLERM\obj\Debug\Presentacion_GUI.csproj.SuggestedBindingRedirects.cache
+D:\Biblioteca\Documents\TallerMecanico\TALLERM\obj\Debug\TALLERM.DatosClientes.resources
+D:\Biblioteca\Documents\TallerMecanico\TALLERM\obj\Debug\TALLERM.INGRESAR.resources
+D:\Biblioteca\Documents\TallerMecanico\TALLERM\obj\Debug\TALLERM.Properties.Resources.resources
+D:\Biblioteca\Documents\TallerMecanico\TALLERM\obj\Debug\TALLERM.Form1.resources
+D:\Biblioteca\Documents\TallerMecanico\TALLERM\obj\Debug\Presentacion_GUI.csproj.GenerateResource.cache
+D:\Biblioteca\Documents\TallerMecanico\TALLERM\obj\Debug\Presentacion_GUI.csproj.CoreCompileInputs.cache
+D:\Biblioteca\Documents\TallerMecanico\TALLERM\obj\Debug\TALLERM.exe
+D:\Biblioteca\Documents\TallerMecanico\TALLERM\obj\Debug\TALLERM.pdb
