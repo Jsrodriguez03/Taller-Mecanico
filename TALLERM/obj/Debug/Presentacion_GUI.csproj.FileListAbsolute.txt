@@ -35,3 +35,4 @@ D:\Biblioteca\Documents\TallerMecanico\TALLERM\obj\Debug\Presentacion_GUI.csproj
 D:\Biblioteca\Documents\TallerMecanico\TALLERM\obj\Debug\Presentacion_GUI.csproj.CoreCompileInputs.cache
 D:\Biblioteca\Documents\TallerMecanico\TALLERM\obj\Debug\TALLERM.exe
 D:\Biblioteca\Documents\TallerMecanico\TALLERM\obj\Debug\TALLERM.pdb
+D:\Desktop\Taller-Mecanico\TALLERM\obj\Debug\TALLERM.DatosClientes.resources

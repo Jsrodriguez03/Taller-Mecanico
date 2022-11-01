@@ -30,9 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(INGRESAR));
             this.PestañaVehiculos = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.Lista = new System.Windows.Forms.ListBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
@@ -49,11 +48,12 @@
             this.txtPlaca = new System.Windows.Forms.TextBox();
             this.labelPlaca = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.PestañaVehiculos.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.panelDatosVehiculo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelDatosVehiculo.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PestañaVehiculos
@@ -74,26 +74,6 @@
             this.PestañaVehiculos.TabIndex = 1;
             this.PestañaVehiculos.Text = "Vehiculos";
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.PestañaVehiculos);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(-2, -2);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(846, 478);
-            this.tabControl1.TabIndex = 13;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(838, 452);
-            this.tabPage2.TabIndex = 2;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // Lista
             // 
             this.Lista.BackColor = System.Drawing.Color.Silver;
@@ -104,6 +84,16 @@
             this.Lista.Name = "Lista";
             this.Lista.Size = new System.Drawing.Size(186, 404);
             this.Lista.TabIndex = 15;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TALLERM.Properties.Resources.Logo3;
+            this.pictureBox1.Location = new System.Drawing.Point(468, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 145);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // btnLimpiar
             // 
@@ -232,6 +222,7 @@
             this.txtColor.Size = new System.Drawing.Size(163, 20);
             this.txtColor.TabIndex = 13;
             this.txtColor.Text = "Ingrese El Color Del Vehiculo";
+            this.txtColor.Click += new System.EventHandler(this.txtColor_Click);
             // 
             // label5
             // 
@@ -254,6 +245,7 @@
             this.txtMarca.Size = new System.Drawing.Size(167, 20);
             this.txtMarca.TabIndex = 11;
             this.txtMarca.Text = "Ingrese La Marca Del Vehiculo";
+            this.txtMarca.Click += new System.EventHandler(this.txtMarca_Click);
             // 
             // label3
             // 
@@ -276,6 +268,7 @@
             this.txtPlaca.Size = new System.Drawing.Size(162, 20);
             this.txtPlaca.TabIndex = 9;
             this.txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
+            this.txtPlaca.Click += new System.EventHandler(this.txtPlaca_Click);
             // 
             // labelPlaca
             // 
@@ -299,15 +292,25 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "DATOS DEL VEHICULO";
             // 
-            // pictureBox1
+            // tabControl1
             // 
-            this.pictureBox1.Image = global::TALLERM.Properties.Resources.Logo3;
-            this.pictureBox1.Location = new System.Drawing.Point(468, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 145);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
+            this.tabControl1.Controls.Add(this.PestañaVehiculos);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(-2, -2);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(846, 478);
+            this.tabControl1.TabIndex = 13;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(838, 452);
+            this.tabPage2.TabIndex = 2;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // INGRESAR
             // 
@@ -320,10 +323,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TALLER MECÁNICO - Solicitud de Datos del Vehiculo";
             this.PestañaVehiculos.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelDatosVehiculo.ResumeLayout(false);
             this.panelDatosVehiculo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

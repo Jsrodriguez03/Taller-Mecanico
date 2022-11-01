@@ -71,6 +71,22 @@ namespace TALLERM
             {
                 panelDatosVehiculo.Enabled = false;
             }
+
+        }
+
+        private void txtMarca_Click(object sender, EventArgs e)
+        {
+            txtMarca.Text = "";
+        }
+
+        private void txtColor_Click(object sender, EventArgs e)
+        {
+            txtColor.Text = "";
+        }
+
+        private void txtPlaca_Click(object sender, EventArgs e)
+        {
+            txtPlaca.Text = "";
         }
     }
 }

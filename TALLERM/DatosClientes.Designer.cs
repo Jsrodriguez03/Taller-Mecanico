@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.boxServicios = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtcedula = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtCargo = new System.Windows.Forms.TextBox();
             this.txtApe = new System.Windows.Forms.TextBox();
             this.txtnom = new System.Windows.Forms.TextBox();
             this.txtcedu = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.boxLimpiar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.boxLimpiar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -57,16 +57,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // boxServicios
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(443, 341);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 40);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "SERVICIO";
-            this.button1.UseVisualStyleBackColor = false;
+            this.boxServicios.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.boxServicios.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxServicios.Location = new System.Drawing.Point(443, 341);
+            this.boxServicios.Name = "boxServicios";
+            this.boxServicios.Size = new System.Drawing.Size(122, 40);
+            this.boxServicios.TabIndex = 23;
+            this.boxServicios.Text = "SERVICIO";
+            this.boxServicios.UseVisualStyleBackColor = false;
+            this.boxServicios.Click += new System.EventHandler(this.boxServicios_Click);
             // 
             // splitContainer1
             // 
@@ -88,7 +89,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer1.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -116,7 +116,8 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(156, 24);
             this.txtTelefono.TabIndex = 24;
-            this.txtTelefono.Text = "Ingrese Su Nombre";
+            this.txtTelefono.Text = "Ingrese Su Telefono";
+            this.txtTelefono.Click += new System.EventHandler(this.txtTelefono_Click);
             // 
             // txtApellido
             // 
@@ -128,6 +129,7 @@
             this.txtApellido.Size = new System.Drawing.Size(156, 24);
             this.txtApellido.TabIndex = 23;
             this.txtApellido.Text = "Ingrese Sus Apellidos";
+            this.txtApellido.Click += new System.EventHandler(this.txtApellido_Click);
             // 
             // txtNombre
             // 
@@ -139,6 +141,7 @@
             this.txtNombre.Size = new System.Drawing.Size(156, 24);
             this.txtNombre.TabIndex = 22;
             this.txtNombre.Text = "Ingrese Su Nombre";
+            this.txtNombre.Click += new System.EventHandler(this.txtNombre_Click);
             // 
             // txtcedula
             // 
@@ -150,91 +153,7 @@
             this.txtcedula.Size = new System.Drawing.Size(156, 24);
             this.txtcedula.TabIndex = 21;
             this.txtcedula.Text = "Ingrese Su Cedula";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "DATOS DEL CLIENTE";
-            // 
-            // txtCargo
-            // 
-            this.txtCargo.BackColor = System.Drawing.Color.DimGray;
-            this.txtCargo.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCargo.ForeColor = System.Drawing.Color.White;
-            this.txtCargo.Location = new System.Drawing.Point(178, 170);
-            this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(156, 24);
-            this.txtCargo.TabIndex = 32;
-            this.txtCargo.Text = "Ingrese Su Cargo";
-            // 
-            // txtApe
-            // 
-            this.txtApe.BackColor = System.Drawing.Color.DimGray;
-            this.txtApe.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApe.ForeColor = System.Drawing.Color.White;
-            this.txtApe.Location = new System.Drawing.Point(177, 128);
-            this.txtApe.Name = "txtApe";
-            this.txtApe.Size = new System.Drawing.Size(156, 24);
-            this.txtApe.TabIndex = 31;
-            this.txtApe.Text = "Ingrese Sus Apellidos";
-            // 
-            // txtnom
-            // 
-            this.txtnom.BackColor = System.Drawing.Color.DimGray;
-            this.txtnom.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnom.ForeColor = System.Drawing.Color.White;
-            this.txtnom.Location = new System.Drawing.Point(177, 87);
-            this.txtnom.Name = "txtnom";
-            this.txtnom.Size = new System.Drawing.Size(156, 24);
-            this.txtnom.TabIndex = 30;
-            this.txtnom.Text = "Ingrese Su Nombre";
-            // 
-            // txtcedu
-            // 
-            this.txtcedu.BackColor = System.Drawing.Color.DimGray;
-            this.txtcedu.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcedu.ForeColor = System.Drawing.Color.White;
-            this.txtcedu.Location = new System.Drawing.Point(176, 45);
-            this.txtcedu.Name = "txtcedu";
-            this.txtcedu.Size = new System.Drawing.Size(156, 24);
-            this.txtcedu.TabIndex = 29;
-            this.txtcedu.Text = "Ingrese Su Cedula";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(209, 23);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "DATOS DEL MECANICO";
-            // 
-            // boxLimpiar
-            // 
-            this.boxLimpiar.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.boxLimpiar.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxLimpiar.Location = new System.Drawing.Point(596, 341);
-            this.boxLimpiar.Name = "boxLimpiar";
-            this.boxLimpiar.Size = new System.Drawing.Size(125, 40);
-            this.boxLimpiar.TabIndex = 22;
-            this.boxLimpiar.Text = "LIMPIAR";
-            this.boxLimpiar.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TALLERM.Properties.Resources.Logo2;
-            this.pictureBox1.Location = new System.Drawing.Point(443, 69);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(278, 254);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
+            this.txtcedula.Click += new System.EventHandler(this.txtcedula_Click);
             // 
             // label3
             // 
@@ -248,6 +167,16 @@
             this.label3.TabIndex = 19;
             this.label3.Text = "                 APELLIDOS ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(191, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "DATOS DEL CLIENTE";
             // 
             // label5
             // 
@@ -284,6 +213,54 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "                  NOMBRE ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtCargo
+            // 
+            this.txtCargo.BackColor = System.Drawing.Color.DimGray;
+            this.txtCargo.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargo.ForeColor = System.Drawing.Color.White;
+            this.txtCargo.Location = new System.Drawing.Point(178, 170);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(156, 24);
+            this.txtCargo.TabIndex = 32;
+            this.txtCargo.Text = "Ingrese Su Cargo";
+            this.txtCargo.Click += new System.EventHandler(this.txtCargo_Click);
+            // 
+            // txtApe
+            // 
+            this.txtApe.BackColor = System.Drawing.Color.DimGray;
+            this.txtApe.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApe.ForeColor = System.Drawing.Color.White;
+            this.txtApe.Location = new System.Drawing.Point(177, 128);
+            this.txtApe.Name = "txtApe";
+            this.txtApe.Size = new System.Drawing.Size(156, 24);
+            this.txtApe.TabIndex = 31;
+            this.txtApe.Text = "Ingrese Sus Apellidos";
+            this.txtApe.Click += new System.EventHandler(this.txtApe_Click);
+            // 
+            // txtnom
+            // 
+            this.txtnom.BackColor = System.Drawing.Color.DimGray;
+            this.txtnom.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnom.ForeColor = System.Drawing.Color.White;
+            this.txtnom.Location = new System.Drawing.Point(177, 87);
+            this.txtnom.Name = "txtnom";
+            this.txtnom.Size = new System.Drawing.Size(156, 24);
+            this.txtnom.TabIndex = 30;
+            this.txtnom.Text = "Ingrese Su Nombre";
+            this.txtnom.Click += new System.EventHandler(this.txtnom_Click);
+            // 
+            // txtcedu
+            // 
+            this.txtcedu.BackColor = System.Drawing.Color.DimGray;
+            this.txtcedu.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcedu.ForeColor = System.Drawing.Color.White;
+            this.txtcedu.Location = new System.Drawing.Point(176, 45);
+            this.txtcedu.Name = "txtcedu";
+            this.txtcedu.Size = new System.Drawing.Size(156, 24);
+            this.txtcedu.TabIndex = 29;
+            this.txtcedu.Text = "Ingrese Su Cedula";
+            this.txtcedu.Click += new System.EventHandler(this.txtcedu_Click);
             // 
             // label7
             // 
@@ -334,6 +311,38 @@
             this.label10.Text = "                  NOMBRE ";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(209, 23);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "DATOS DEL MECANICO";
+            // 
+            // boxLimpiar
+            // 
+            this.boxLimpiar.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.boxLimpiar.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxLimpiar.Location = new System.Drawing.Point(596, 341);
+            this.boxLimpiar.Name = "boxLimpiar";
+            this.boxLimpiar.Size = new System.Drawing.Size(125, 40);
+            this.boxLimpiar.TabIndex = 22;
+            this.boxLimpiar.Text = "LIMPIAR";
+            this.boxLimpiar.UseVisualStyleBackColor = false;
+            this.boxLimpiar.Click += new System.EventHandler(this.boxLimpiar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TALLERM.Properties.Resources.Logo2;
+            this.pictureBox1.Location = new System.Drawing.Point(443, 69);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(278, 254);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
             // DatosClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,12 +350,11 @@
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(753, 467);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.boxServicios);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.boxLimpiar);
             this.Name = "DatosClientes";
             this.Text = "TALLER MECÁNICO - Solicitud de Datos Clientes Y Mecánicos";
-            this.Load += new System.EventHandler(this.DatosClientes_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -359,7 +367,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button boxServicios;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtApellido;
