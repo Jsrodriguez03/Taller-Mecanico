@@ -15,8 +15,6 @@ namespace TALLERM
         public DatosClientes()
         {
             InitializeComponent();
-            
-        
         }
 
         public void VerificarCajas()
@@ -35,7 +33,7 @@ namespace TALLERM
 
         private void txtcedula_Click(object sender, EventArgs e)
         {
-            txtcedula.Text = "";
+            
 
          }
 
@@ -93,7 +91,13 @@ namespace TALLERM
 
         private void boxServicios_Click(object sender, EventArgs e)
         {
+            //Hay Que Hacer algún tipo de condicional que use el verificar cajas y si está todo bien, haga los 3 comandos de abajo
             VerificarCajas();
+
+            //Comandos Para Mostrar la sigte pag
+            this.Hide();
+            new DatosServicios().ShowDialog();
+            this.Close();
         }
     }
 }

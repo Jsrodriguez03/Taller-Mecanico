@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{5B53976E-0B1C-41A2-8915-1F70708A98B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion_GUI", "TALLERM\Presentacion_GUI.csproj", "{EC6C3E7D-FF98-4488-BC52-8B21C935E9BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion_GUI", "Presentacion_GUI\Presentacion_GUI.csproj", "{EC6C3E7D-FF98-4488-BC52-8B21C935E9BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

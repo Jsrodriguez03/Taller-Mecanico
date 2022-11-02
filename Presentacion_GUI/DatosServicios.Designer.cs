@@ -1,6 +1,6 @@
 ﻿namespace TALLERM
 {
-    partial class INGRESAR
+    partial class DatosServicios
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(INGRESAR));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatosServicios));
             this.PestañaVehiculos = new System.Windows.Forms.TabPage();
-            this.Lista = new System.Windows.Forms.ListBox();
+            this.ListaServicios = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -49,17 +49,20 @@
             this.labelPlaca = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ListaGeneral = new System.Windows.Forms.TabPage();
+            this.GrillaListadoGeneral = new System.Windows.Forms.DataGridView();
             this.PestañaVehiculos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelDatosVehiculo.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.ListaGeneral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GrillaListadoGeneral)).BeginInit();
             this.SuspendLayout();
             // 
             // PestañaVehiculos
             // 
             this.PestañaVehiculos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.PestañaVehiculos.Controls.Add(this.Lista);
+            this.PestañaVehiculos.Controls.Add(this.ListaServicios);
             this.PestañaVehiculos.Controls.Add(this.pictureBox1);
             this.PestañaVehiculos.Controls.Add(this.btnLimpiar);
             this.PestañaVehiculos.Controls.Add(this.btnGuardar);
@@ -70,20 +73,21 @@
             this.PestañaVehiculos.Location = new System.Drawing.Point(4, 22);
             this.PestañaVehiculos.Name = "PestañaVehiculos";
             this.PestañaVehiculos.Padding = new System.Windows.Forms.Padding(3);
-            this.PestañaVehiculos.Size = new System.Drawing.Size(838, 452);
+            this.PestañaVehiculos.Size = new System.Drawing.Size(838, 386);
             this.PestañaVehiculos.TabIndex = 1;
-            this.PestañaVehiculos.Text = "Vehiculos";
+            this.PestañaVehiculos.Text = "Registro Servicios";
+            this.PestañaVehiculos.Click += new System.EventHandler(this.PestañaVehiculos_Click);
             // 
-            // Lista
+            // ListaServicios
             // 
-            this.Lista.BackColor = System.Drawing.Color.Silver;
-            this.Lista.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lista.FormattingEnabled = true;
-            this.Lista.ItemHeight = 16;
-            this.Lista.Location = new System.Drawing.Point(633, 26);
-            this.Lista.Name = "Lista";
-            this.Lista.Size = new System.Drawing.Size(186, 404);
-            this.Lista.TabIndex = 15;
+            this.ListaServicios.BackColor = System.Drawing.Color.Silver;
+            this.ListaServicios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListaServicios.FormattingEnabled = true;
+            this.ListaServicios.ItemHeight = 16;
+            this.ListaServicios.Location = new System.Drawing.Point(633, 26);
+            this.ListaServicios.Name = "ListaServicios";
+            this.ListaServicios.Size = new System.Drawing.Size(186, 340);
+            this.ListaServicios.TabIndex = 15;
             // 
             // pictureBox1
             // 
@@ -106,7 +110,7 @@
             this.btnLimpiar.TabIndex = 13;
             this.btnLimpiar.Text = "LIMPIAR";
             this.btnLimpiar.UseVisualStyleBackColor = false;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnGuardar
             // 
@@ -119,7 +123,7 @@
             this.btnGuardar.TabIndex = 12;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnVolver
             // 
@@ -132,6 +136,7 @@
             this.btnVolver.TabIndex = 11;
             this.btnVolver.Text = "VOLVER";
             this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // txtTipo
             // 
@@ -147,7 +152,7 @@
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(163, 28);
             this.txtTipo.TabIndex = 10;
-            this.txtTipo.TextChanged += new System.EventHandler(this.txtTipo_TextChanged_1);
+            this.txtTipo.TextChanged += new System.EventHandler(this.txtTipo_TextChanged);
             // 
             // label6
             // 
@@ -175,18 +180,19 @@
             this.panelDatosVehiculo.Controls.Add(this.label1);
             this.panelDatosVehiculo.Location = new System.Drawing.Point(20, 183);
             this.panelDatosVehiculo.Name = "panelDatosVehiculo";
-            this.panelDatosVehiculo.Size = new System.Drawing.Size(592, 247);
+            this.panelDatosVehiculo.Size = new System.Drawing.Size(592, 186);
             this.panelDatosVehiculo.TabIndex = 8;
             // 
             // txtPrecio
             // 
             this.txtPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPrecio.ForeColor = System.Drawing.Color.White;
-            this.txtPrecio.Location = new System.Drawing.Point(309, 209);
+            this.txtPrecio.Location = new System.Drawing.Point(309, 147);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(154, 20);
             this.txtPrecio.TabIndex = 16;
-            this.txtPrecio.Text = "Ingrese El Valor Del Servicio\r\n";
+            this.txtPrecio.Text = "Ingrese El Total a Pagar";
+            this.txtPrecio.Click += new System.EventHandler(this.txtPrecio_Click);
             // 
             // label4
             // 
@@ -194,7 +200,7 @@
             this.label4.ForeColor = System.Drawing.Color.Lime;
             this.label4.Image = global::TALLERM.Properties.Resources.Pago;
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(112, 206);
+            this.label4.Location = new System.Drawing.Point(112, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(191, 23);
             this.label4.TabIndex = 15;
@@ -206,12 +212,12 @@
             this.txtServicio.BackColor = System.Drawing.Color.Silver;
             this.txtServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtServicio.Location = new System.Drawing.Point(19, 111);
-            this.txtServicio.Multiline = true;
             this.txtServicio.Name = "txtServicio";
-            this.txtServicio.Size = new System.Drawing.Size(549, 80);
+            this.txtServicio.Size = new System.Drawing.Size(549, 22);
             this.txtServicio.TabIndex = 14;
-            this.txtServicio.Text = "\r\n\r\nDescriba El Problema Del Auto, Materiales Y Mano De Obra";
+            this.txtServicio.Text = "Describa El Problema Del Auto, Materiales Y Mano De Obra";
             this.txtServicio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtServicio.Click += new System.EventHandler(this.txtServicio_Click);
             // 
             // txtColor
             // 
@@ -288,38 +294,49 @@
             this.label1.ForeColor = System.Drawing.Color.Lime;
             this.label1.Location = new System.Drawing.Point(-2, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(580, 238);
+            this.label1.Size = new System.Drawing.Size(580, 179);
             this.label1.TabIndex = 7;
             this.label1.Text = "DATOS DEL VEHICULO";
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.PestañaVehiculos);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.ListaGeneral);
             this.tabControl1.Location = new System.Drawing.Point(-2, -2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(846, 478);
+            this.tabControl1.Size = new System.Drawing.Size(846, 412);
             this.tabControl1.TabIndex = 13;
             // 
-            // tabPage2
+            // ListaGeneral
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(838, 452);
-            this.tabPage2.TabIndex = 2;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.ListaGeneral.Controls.Add(this.GrillaListadoGeneral);
+            this.ListaGeneral.Location = new System.Drawing.Point(4, 22);
+            this.ListaGeneral.Name = "ListaGeneral";
+            this.ListaGeneral.Padding = new System.Windows.Forms.Padding(3);
+            this.ListaGeneral.Size = new System.Drawing.Size(838, 386);
+            this.ListaGeneral.TabIndex = 2;
+            this.ListaGeneral.Text = "Listado General";
+            this.ListaGeneral.UseVisualStyleBackColor = true;
             // 
-            // INGRESAR
+            // GrillaListadoGeneral
+            // 
+            this.GrillaListadoGeneral.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrillaListadoGeneral.Location = new System.Drawing.Point(19, 15);
+            this.GrillaListadoGeneral.Name = "GrillaListadoGeneral";
+            this.GrillaListadoGeneral.Size = new System.Drawing.Size(796, 357);
+            this.GrillaListadoGeneral.TabIndex = 0;
+            // 
+            // DatosServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 469);
+            this.ClientSize = new System.Drawing.Size(840, 404);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "INGRESAR";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "DatosServicios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TALLER MECÁNICO - Solicitud de Datos del Vehiculo";
             this.PestañaVehiculos.ResumeLayout(false);
@@ -327,6 +344,8 @@
             this.panelDatosVehiculo.ResumeLayout(false);
             this.panelDatosVehiculo.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.ListaGeneral.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GrillaListadoGeneral)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -335,8 +354,8 @@
 
         private System.Windows.Forms.TabPage PestañaVehiculos;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.ListBox Lista;
+        private System.Windows.Forms.TabPage ListaGeneral;
+        private System.Windows.Forms.ListBox ListaServicios;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnGuardar;
@@ -354,5 +373,6 @@
         private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.Label labelPlaca;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView GrillaListadoGeneral;
     }
 }

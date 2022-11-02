@@ -52,17 +52,17 @@
     <Compile Include="DatosClientes.Designer.cs">
       <DependentUpon>DatosClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="INGRESAR.cs">
+    <Compile Include="DatosServicios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="INGRESAR.Designer.cs">
-      <DependentUpon>INGRESAR.cs</DependentUpon>
+    <Compile Include="DatosServicios.Designer.cs">
+      <DependentUpon>DatosServicios.cs</DependentUpon>
     </Compile>
-    <Compile Include="TALLERMECANICO.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include=".Designer.cs">
-      <DependentUpon>TALLERMECANICO.cs</DependentUpon>
+      <DependentUpon>Login.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
@@ -70,8 +70,8 @@
     <EmbeddedResource Include="DatosClientes.resx">
       <DependentUpon>DatosClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="INGRESAR.resx">
-      <DependentUpon>INGRESAR.cs</DependentUpon>
+    <EmbeddedResource Include="DatosServicios.resx">
+      <DependentUpon>DatosServicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -83,8 +83,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TALLERMECANICO.resx">
-      <DependentUpon>TALLERMECANICO.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -176,6 +176,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{a31a3406-21ea-4a58-8247-73c4e5900949}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{5b53976e-0b1c-41a2-8915-1f70708a98b5}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
