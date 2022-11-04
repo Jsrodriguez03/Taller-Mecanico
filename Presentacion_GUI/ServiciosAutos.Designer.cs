@@ -1,6 +1,6 @@
 ﻿namespace TALLERM
 {
-    partial class DatosServicios
+    partial class ServiciosAutos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatosServicios));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServiciosAutos));
             this.PestañaVehiculos = new System.Windows.Forms.TabPage();
             this.ListaServicios = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -73,7 +73,7 @@
             this.PestañaVehiculos.Location = new System.Drawing.Point(4, 22);
             this.PestañaVehiculos.Name = "PestañaVehiculos";
             this.PestañaVehiculos.Padding = new System.Windows.Forms.Padding(3);
-            this.PestañaVehiculos.Size = new System.Drawing.Size(838, 386);
+            this.PestañaVehiculos.Size = new System.Drawing.Size(838, 446);
             this.PestañaVehiculos.TabIndex = 1;
             this.PestañaVehiculos.Text = "Registro Servicios";
             this.PestañaVehiculos.Click += new System.EventHandler(this.PestañaVehiculos_Click);
@@ -152,7 +152,6 @@
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(163, 28);
             this.txtTipo.TabIndex = 10;
-            this.txtTipo.TextChanged += new System.EventHandler(this.txtTipo_TextChanged);
             // 
             // label6
             // 
@@ -305,7 +304,7 @@
             this.tabControl1.Location = new System.Drawing.Point(-2, -2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(846, 412);
+            this.tabControl1.Size = new System.Drawing.Size(846, 472);
             this.tabControl1.TabIndex = 13;
             // 
             // ListaGeneral
@@ -314,7 +313,7 @@
             this.ListaGeneral.Location = new System.Drawing.Point(4, 22);
             this.ListaGeneral.Name = "ListaGeneral";
             this.ListaGeneral.Padding = new System.Windows.Forms.Padding(3);
-            this.ListaGeneral.Size = new System.Drawing.Size(838, 386);
+            this.ListaGeneral.Size = new System.Drawing.Size(838, 446);
             this.ListaGeneral.TabIndex = 2;
             this.ListaGeneral.Text = "Listado General";
             this.ListaGeneral.UseVisualStyleBackColor = true;
@@ -327,18 +326,18 @@
             this.GrillaListadoGeneral.Size = new System.Drawing.Size(796, 357);
             this.GrillaListadoGeneral.TabIndex = 0;
             // 
-            // DatosServicios
+            // ServiciosAutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 404);
+            this.ClientSize = new System.Drawing.Size(840, 467);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "DatosServicios";
+            this.Name = "ServiciosAutos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TALLER MECÁNICO - Solicitud de Datos del Vehiculo";
+            this.Text = "TALLER MECÁNICO - Solicitud de Datos Automovil";
             this.PestañaVehiculos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelDatosVehiculo.ResumeLayout(false);
