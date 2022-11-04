@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace TALLERM
 {
-    public partial class ServiciosAutos : Form
+    public partial class DatosServicios : Form
     {
-        public ServiciosAutos()
+        public DatosServicios()
         {
             InitializeComponent();
+            txtTipo.Text = "Seleccionar";
+            panelDatosVehiculo.Enabled = false;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -78,6 +80,26 @@ namespace TALLERM
             {
                 MessageBox.Show("¡DATOS GUARDADOS EXITOSAMENTE!");
                 LimpiarCajas();
+            }
+        }
+
+        private void txtTipo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTipo.Text != "Seleccionar")
+            {
+                panelDatosVehiculo.Enabled = true;
+                if (txtTipo.Text != "Bicicleta")
+                {
+                    txtPlaca.Enabled = true;
+                }
+                else
+                {
+                    txtPlaca.Enabled = false;
+                }
+            }
+            else
+            {
+                panelDatosVehiculo.Enabled = false;
             }
         }
 
