@@ -1,0 +1,14 @@
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\Logica.exe.config
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\Logica.exe
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\Logica.pdb
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\Datos.exe
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\Entidades.dll
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\Datos.pdb
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\Datos.exe.config
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\Entidades.pdb
+D:\Biblioteca\Documents\TallerMecanico\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
+D:\Biblioteca\Documents\TallerMecanico\Logica\obj\Debug\Logica.csproj.SuggestedBindingRedirects.cache
+D:\Biblioteca\Documents\TallerMecanico\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+D:\Biblioteca\Documents\TallerMecanico\Logica\obj\Debug\Logica.csproj.CopyComplete
+D:\Biblioteca\Documents\TallerMecanico\Logica\obj\Debug\Logica.exe
+D:\Biblioteca\Documents\TallerMecanico\Logica\obj\Debug\Logica.pdb

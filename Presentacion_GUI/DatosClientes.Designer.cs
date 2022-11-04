@@ -32,7 +32,6 @@
             this.boxServicios = new System.Windows.Forms.Button();
             this.boxLimpiar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ListaClientes = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
@@ -53,6 +52,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtTipo = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -62,21 +63,21 @@
             // 
             this.boxServicios.BackColor = System.Drawing.Color.LimeGreen;
             this.boxServicios.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxServicios.Location = new System.Drawing.Point(428, 408);
+            this.boxServicios.Location = new System.Drawing.Point(415, 351);
             this.boxServicios.Name = "boxServicios";
-            this.boxServicios.Size = new System.Drawing.Size(122, 40);
+            this.boxServicios.Size = new System.Drawing.Size(128, 40);
             this.boxServicios.TabIndex = 23;
-            this.boxServicios.Text = "SERVICIO";
+            this.boxServicios.Text = "SIGUIENTE";
             this.boxServicios.UseVisualStyleBackColor = false;
-            this.boxServicios.Click += new System.EventHandler(this.boxServicios_Click);
+            this.boxServicios.Click += new System.EventHandler(this.boxSiguiente_Click);
             // 
             // boxLimpiar
             // 
             this.boxLimpiar.BackColor = System.Drawing.Color.LimeGreen;
             this.boxLimpiar.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxLimpiar.Location = new System.Drawing.Point(581, 408);
+            this.boxLimpiar.Location = new System.Drawing.Point(577, 351);
             this.boxLimpiar.Name = "boxLimpiar";
-            this.boxLimpiar.Size = new System.Drawing.Size(125, 40);
+            this.boxLimpiar.Size = new System.Drawing.Size(129, 40);
             this.boxLimpiar.TabIndex = 22;
             this.boxLimpiar.Text = "LIMPIAR";
             this.boxLimpiar.UseVisualStyleBackColor = false;
@@ -85,23 +86,12 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TALLERM.Properties.Resources.Logo2;
-            this.pictureBox1.Location = new System.Drawing.Point(428, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(470, 65);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(278, 254);
+            this.pictureBox1.Size = new System.Drawing.Size(204, 167);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
-            // 
-            // ListaClientes
-            // 
-            this.ListaClientes.BackColor = System.Drawing.Color.Silver;
-            this.ListaClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ListaClientes.FormattingEnabled = true;
-            this.ListaClientes.ItemHeight = 16;
-            this.ListaClientes.Location = new System.Drawing.Point(428, 288);
-            this.ListaClientes.Name = "ListaClientes";
-            this.ListaClientes.Size = new System.Drawing.Size(278, 100);
-            this.ListaClientes.TabIndex = 25;
             // 
             // panel1
             // 
@@ -129,6 +119,7 @@
             this.txtTelefono.Size = new System.Drawing.Size(156, 24);
             this.txtTelefono.TabIndex = 33;
             this.txtTelefono.Text = "Ingrese Su Telefono";
+            this.txtTelefono.Click += new System.EventHandler(this.txtTelefono_Click);
             // 
             // txtApellido
             // 
@@ -140,6 +131,7 @@
             this.txtApellido.Size = new System.Drawing.Size(156, 24);
             this.txtApellido.TabIndex = 32;
             this.txtApellido.Text = "Ingrese Sus Apellidos";
+            this.txtApellido.Click += new System.EventHandler(this.txtApellido_Click);
             // 
             // txtNombre
             // 
@@ -151,6 +143,7 @@
             this.txtNombre.Size = new System.Drawing.Size(156, 24);
             this.txtNombre.TabIndex = 31;
             this.txtNombre.Text = "Ingrese Su Nombre";
+            this.txtNombre.Click += new System.EventHandler(this.txtNombre_Click);
             // 
             // txtcedula
             // 
@@ -162,6 +155,7 @@
             this.txtcedula.Size = new System.Drawing.Size(156, 24);
             this.txtcedula.TabIndex = 30;
             this.txtcedula.Text = "Ingrese Su Cedula";
+            this.txtcedula.Click += new System.EventHandler(this.txtcedula_Click);
             // 
             // label3
             // 
@@ -249,6 +243,7 @@
             this.txtCargo.Size = new System.Drawing.Size(156, 24);
             this.txtCargo.TabIndex = 41;
             this.txtCargo.Text = "Ingrese Su Cargo";
+            this.txtCargo.Click += new System.EventHandler(this.txtCargo_Click);
             // 
             // txtApe
             // 
@@ -260,6 +255,7 @@
             this.txtApe.Size = new System.Drawing.Size(156, 24);
             this.txtApe.TabIndex = 40;
             this.txtApe.Text = "Ingrese Sus Apellidos";
+            this.txtApe.Click += new System.EventHandler(this.txtApe_Click);
             // 
             // txtnom
             // 
@@ -271,6 +267,7 @@
             this.txtnom.Size = new System.Drawing.Size(156, 24);
             this.txtnom.TabIndex = 39;
             this.txtnom.Text = "Ingrese Su Nombre";
+            this.txtnom.Click += new System.EventHandler(this.txtnom_Click);
             // 
             // txtcedu
             // 
@@ -282,6 +279,7 @@
             this.txtcedu.Size = new System.Drawing.Size(156, 24);
             this.txtcedu.TabIndex = 38;
             this.txtcedu.Text = "Ingrese Su Cedula";
+            this.txtcedu.Click += new System.EventHandler(this.txtcedu_Click);
             // 
             // label7
             // 
@@ -344,15 +342,42 @@
             this.label6.TabIndex = 33;
             this.label6.Text = "DATOS DEL MECANICO";
             // 
+            // txtTipo
+            // 
+            this.txtTipo.BackColor = System.Drawing.Color.White;
+            this.txtTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipo.FormattingEnabled = true;
+            this.txtTipo.Items.AddRange(new object[] {
+            "Seleccionar",
+            "Bicicleta",
+            "Motocicleta",
+            "Automovil"});
+            this.txtTipo.Location = new System.Drawing.Point(482, 305);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(163, 28);
+            this.txtTipo.TabIndex = 29;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(401, 249);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(327, 56);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Indique El Tipo De Vehiculo A Registrar\r\n";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // DatosClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(740, 467);
+            this.ClientSize = new System.Drawing.Size(759, 467);
+            this.Controls.Add(this.txtTipo);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.ListaClientes);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.boxServicios);
             this.Controls.Add(this.boxLimpiar);
@@ -362,6 +387,7 @@
             this.Name = "DatosClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TALLER MECÁNICO - Solicitud de Datos Clientes Y Mecánicos";
+            this.Click += new System.EventHandler(this.DatosClientes_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -375,7 +401,6 @@
         private System.Windows.Forms.Button boxServicios;
         private System.Windows.Forms.Button boxLimpiar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListBox ListaClientes;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtApellido;
@@ -396,5 +421,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox txtTipo;
+        private System.Windows.Forms.Label label11;
     }
 }
