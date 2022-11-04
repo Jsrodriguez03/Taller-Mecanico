@@ -15,6 +15,8 @@ namespace TALLERM
         public ServiciosAutos()
         {
             InitializeComponent();
+            txtServicio.Text = "Seleccionar";
+            txtMecanico.Text = "Seleccionar";
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -24,12 +26,11 @@ namespace TALLERM
 
         public void LimpiarCajas()
         {
-            txtTipo.Text = "Seleccionar";
+            txtServicio.Text = "Seleccionar";
+            txtMecanico.Text = "Seleccionar";
             txtMarca.Text = "Ingrese La Marca Del Vehiculo";
             txtColor.Text = "Ingrese El Color Del Vehiculo";
             txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
-            txtPrecio.Text = "Ingrese El Total a Pagar";
-            txtServicio.Text = "Describa El Problema Del Auto, Materiales Y Mano De Obra";
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -39,7 +40,7 @@ namespace TALLERM
         }
 
         public void InicializarCajas()
-        {
+        {            
             if (txtMarca.Text == "")
             {
                 txtMarca.Text = "Ingrese La Marca Del Vehiculo";
@@ -57,20 +58,20 @@ namespace TALLERM
 
             if (txtServicio.Text == "")
             {
-                txtServicio.Text = "Describa El Problema Del Auto, Materiales Y Mano De Obra";
+                txtServicio.Text = "Seleccionar";
             }
 
-            if (txtPrecio.Text == "")
+            if (txtMecanico.Text == "")
             {
-                txtPrecio.Text = "Ingrese El Total a Pagar";
+                txtMecanico.Text = "Seleccionar";
             }
         }
 
         public void VerificarCajas()
         {
-            if (txtTipo.Text == "Seleccionar" || txtMarca.Text == "Ingrese La Marca Del Vehiculo" ||
+            if (txtServicio.Text == "Seleccionar" || txtMarca.Text == "Ingrese La Marca Del Vehiculo" ||
                 txtColor.Text == "Ingrese El Color Del Vehiculo" || txtPlaca.Text == "Ingrese La Placa Del Vehiculo" ||
-                txtPrecio.Text == "Ingrese El Total a Pagar" || txtServicio.Text == "Describa El Problema Del Auto, Materiales Y Mano De Obra")
+                txtServicio.Text == "Seleccionar" || txtMecanico.Text == "Seleccionar")
             {
                 MessageBox.Show("Hay Campos sin Completar, Por Favor Reviselos");
             }
@@ -110,16 +111,6 @@ namespace TALLERM
             {
                 txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
             }
-
-            if (txtServicio.Text == "")
-            {
-                txtServicio.Text = "Describa El Problema Del Auto, Materiales Y Mano De Obra";
-            }
-
-            if (txtPrecio.Text == "")
-            {
-                txtPrecio.Text = "Ingrese El Total a Pagar";
-            }
         }
 
         private void txtColor_Click(object sender, EventArgs e)
@@ -137,16 +128,6 @@ namespace TALLERM
             if (txtPlaca.Text == "")
             {
                 txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
-            }
-
-            if (txtServicio.Text == "")
-            {
-                txtServicio.Text = "Describa El Problema Del Auto, Materiales Y Mano De Obra";
-            }
-
-            if (txtPrecio.Text == "")
-            {
-                txtPrecio.Text = "Ingrese El Total a Pagar";
             }
         }
 
@@ -166,73 +147,6 @@ namespace TALLERM
             {
                 txtMarca.Text = "Ingrese La Marca Del Vehiculo";
             }
-
-            if (txtServicio.Text == "")
-            {
-                txtServicio.Text = "Describa El Problema Del Auto, Materiales Y Mano De Obra";
-            }
-
-            if (txtPrecio.Text == "")
-            {
-                txtPrecio.Text = "Ingrese El Total a Pagar";
-            }
-        }        
-
-        private void txtServicio_Click(object sender, EventArgs e)
-        {
-            if (txtServicio.Text == "Describa El Problema Del Auto, Materiales Y Mano De Obra")
-            {
-                txtServicio.Text = "";
-            }
-
-            if (txtPlaca.Text == "")
-            {
-                txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
-            }
-
-            if (txtColor.Text == "")
-            {
-                txtColor.Text = "Ingrese El Color Del Vehiculo";
-            }
-
-            if (txtMarca.Text == "")
-            {
-                txtMarca.Text = "Ingrese La Marca Del Vehiculo";
-            }
-
-            if (txtPrecio.Text == "")
-            {
-                txtPrecio.Text = "Ingrese El Total a Pagar";
-            }
-        }
-
-        private void txtPrecio_Click(object sender, EventArgs e)
-        {
-            if (txtServicio.Text == "")
-            {
-                txtServicio.Text = "Describa El Problema Del Auto, Materiales Y Mano De Obra";
-            }
-
-            if (txtPlaca.Text == "")
-            {
-                txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
-            }
-
-            if (txtColor.Text == "")
-            {
-                txtColor.Text = "Ingrese El Color Del Vehiculo";
-            }
-
-            if (txtMarca.Text == "")
-            {
-                txtMarca.Text = "Ingrese La Marca Del Vehiculo";
-            }
-
-            if (txtPrecio.Text == "Ingrese El Total a Pagar")
-            {
-                txtPrecio.Text = "";
-            }
-        }
-   
+        } 
     }
 }

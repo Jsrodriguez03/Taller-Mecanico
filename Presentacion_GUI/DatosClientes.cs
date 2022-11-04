@@ -51,28 +51,27 @@ namespace TALLERM
             {
                 MessageBox.Show("¡DATOS GUARDADOS EXITOSAMENTE! \n" +
                                 "Será Dirigido a La Siguiente Sección.");
-                LimpiarCajas();
+                
 
-                if (txtTipo.Text == "Bicicletas")
+                if (txtTipo.Text == "Bicicleta")
                 {
                     this.Hide();
                     new ServiciosBicicleta().ShowDialog();
                     this.Close();
                 }
-                else
+
+                if (txtTipo.Text == "Motocicleta")
                 {
-                    if (txtTipo.Text == "Motocicleta")
-                    {
-                        this.Hide();
-                        new ServiciosMotos().ShowDialog();
-                        this.Close();
-                    }
-                    else
-                    {
-                        this.Hide();
-                        new ServiciosAutos().ShowDialog();
-                        this.Close();
-                    }
+                    this.Hide();
+                    new ServiciosMotos().ShowDialog();
+                    this.Close();
+                }
+
+                if (txtTipo.Text == "Automovil")
+                {
+                    this.Hide();
+                    new ServiciosAutos().ShowDialog();
+                    this.Close();
                 }
             }
         }

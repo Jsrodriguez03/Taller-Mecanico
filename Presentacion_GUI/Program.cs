@@ -16,7 +16,7 @@ namespace TALLERM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DatosClientes());
+            Application.Run(new ServiciosAutos());
         }
     }
 }

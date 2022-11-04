@@ -95,6 +95,7 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.txtTelefono);
             this.panel1.Controls.Add(this.txtApellido);
             this.panel1.Controls.Add(this.txtNombre);
@@ -219,6 +220,7 @@
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.txtCargo);
             this.panel2.Controls.Add(this.txtApe);
             this.panel2.Controls.Add(this.txtnom);

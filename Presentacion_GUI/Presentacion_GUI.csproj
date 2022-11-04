@@ -195,5 +195,71 @@
       <Name>Logica</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bicicleta-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bicicleta-40 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bicicleta-40 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bicicleta-40 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-motocicleta-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-suzuki-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-suzuki-40 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-suzuki-401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-yamaha-motor-company-limited-is-a-japanese-manufacturer-of-motorcycles-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-yamaha-motor-company-limited-is-a-japanese-manufacturer-of-motorcycles-401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-motocicleta-401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mecánico2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-apoyo-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-engranajes-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-engranaje-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-engranaje-40 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-engranaje-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bicicleta-40 %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bicicleta-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-honda-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-placa-de-matrícula-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bicicleta-30.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
