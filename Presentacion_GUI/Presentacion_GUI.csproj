@@ -261,5 +261,29 @@
   <ItemGroup>
     <None Include="Resources\icons8-bicicleta-30.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-honda-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-placa-de-matrícula-401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-engranaje-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-engranaje-302.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bicicleta-40 %281%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bicicleta-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bicicleta-40 %281%294.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-engranaje-303.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -111,6 +111,16 @@ namespace TALLERM
             {
                 txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
             }
+
+            if (txtServicio.Text == "")
+            {
+                txtServicio.Text = "Seleccionar";
+            }
+
+            if (txtMecanico.Text == "")
+            {
+                txtMecanico.Text = "Seleccionar";
+            }
         }
 
         private void txtColor_Click(object sender, EventArgs e)
@@ -128,6 +138,16 @@ namespace TALLERM
             if (txtPlaca.Text == "")
             {
                 txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
+            }
+
+            if (txtServicio.Text == "")
+            {
+                txtServicio.Text = "Seleccionar";
+            }
+
+            if (txtMecanico.Text == "")
+            {
+                txtMecanico.Text = "Seleccionar";
             }
         }
 
@@ -147,6 +167,62 @@ namespace TALLERM
             {
                 txtMarca.Text = "Ingrese La Marca Del Vehiculo";
             }
-        } 
+
+            if (txtServicio.Text == "")
+            {
+                txtServicio.Text = "Seleccionar";
+            }
+
+            if (txtMecanico.Text == "")
+            {
+                txtMecanico.Text = "Seleccionar";
+            }
+        }
+
+        private void txtServicio_Click(object sender, EventArgs e)
+        {
+            if (txtPlaca.Text == "")
+            {
+                txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
+            }
+
+            if (txtColor.Text == "")
+            {
+                txtColor.Text = "Ingrese El Color Del Vehiculo";
+            }
+
+            if (txtMarca.Text == "")
+            {
+                txtMarca.Text = "Ingrese La Marca Del Vehiculo";
+            }
+
+            if (txtMecanico.Text == "")
+            {
+                txtMecanico.Text = "Seleccionar";
+            }
+        }
+
+        private void txtMecanico_Click(object sender, EventArgs e)
+        {
+            if (txtPlaca.Text == "")
+            {
+                txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
+            }
+
+            if (txtColor.Text == "")
+            {
+                txtColor.Text = "Ingrese El Color Del Vehiculo";
+            }
+
+            if (txtMarca.Text == "")
+            {
+                txtMarca.Text = "Ingrese La Marca Del Vehiculo";
+            }
+
+            if (txtServicio.Text == "")
+            {
+                txtServicio.Text = "Seleccionar";
+            }
+        }
     }
 }

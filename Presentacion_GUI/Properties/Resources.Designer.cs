@@ -173,6 +173,16 @@ namespace TALLERM.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_bicicleta_301 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-bicicleta-301", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_bicicleta_35 {
             get {
                 object obj = ResourceManager.GetObject("icons8-bicicleta-35", resourceCulture);
@@ -223,6 +233,26 @@ namespace TALLERM.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_bicicleta_40__1_3 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-bicicleta-40 (1)3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_bicicleta_40__1_4 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-bicicleta-40 (1)4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_bicicleta_40__2_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-bicicleta-40 (2)", resourceCulture);
@@ -236,6 +266,36 @@ namespace TALLERM.Properties {
         internal static System.Drawing.Bitmap icons8_engranaje_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-engranaje-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_engranaje_301 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-engranaje-301", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_engranaje_302 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-engranaje-302", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_engranaje_303 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-engranaje-303", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,6 +336,16 @@ namespace TALLERM.Properties {
         internal static System.Drawing.Bitmap icons8_honda_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-honda-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_honda_321 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-honda-321", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -326,6 +396,16 @@ namespace TALLERM.Properties {
         internal static System.Drawing.Bitmap icons8_placa_de_matrícula_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8-placa-de-matrícula-40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_placa_de_matrícula_401 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-placa-de-matrícula-401", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
