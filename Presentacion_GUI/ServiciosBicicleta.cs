@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TALLERM
@@ -16,7 +9,9 @@ namespace TALLERM
         {
             InitializeComponent();
             txtServicio.Text = "Seleccionar";
+            txtServicio.DropDownStyle = ComboBoxStyle.DropDownList;
             txtMecanico.Text = "Seleccionar";
+            txtMecanico.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void btnVolver_Click_1(object sender, EventArgs e)
@@ -169,6 +164,73 @@ namespace TALLERM
             {
                 txtServicio.Text = "Seleccionar";
             }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (txtServicio.Text != "Seleccionar" && txtMecanico.Text != "Seleccionar")
+            {
+                float valor = 0;
+                if (txtServicio.Text == "Lavado")
+                {
+                    valor = 15000;
+                }
+                else
+                {
+                    if (txtServicio.Text == "Mantenimiento")
+                    {
+                        valor = 150000;
+                    }
+                    else
+                    {
+                        if (txtServicio.Text == "Pinchazo")
+                        {
+                            valor = 1300;
+                        }
+                        else
+                        {
+                            valor = 211000;
+                        }
+                    }
+                }
+
+                dgServicios.Rows.Add(txtServicio.Text, txtMecanico.Text, valor);
+                PrecioTotal();
+                LimpiarCajas();
+            }
+            else
+            {
+                MessageBox.Show("Por Favor Complete Todos Los Campos.");
+            }
+        }
+
+        public void PrecioTotal()
+        {
+            decimal Total = 0;
+            foreach (DataGridViewRow row in dgServicios.Rows)
+            {
+                Total += Convert.ToDecimal(row.Cells["Column3"].Value);
+            }
+            Precio.Text = Total.ToString() + "$";
+
+            
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            dgServicios.Rows.RemoveAt(dgServicios.CurrentCell.RowIndex);
+            PrecioTotal();
+            //FALTA QUE NO ELIMINEEEEEEEE CUANDO ESTÁ VACÍAAAAAAAAAAAA
+            //int fila = dgServicios.CurrentCell.RowIndex;
+            //if (fila == -1)
+            //{
+            //    MessageBox.Show("No Hay Fila Seleccionada");
+            //}
+            //else
+            //{
+            //    dgServicios.Rows.RemoveAt(dgServicios.CurrentCell.RowIndex);
+
+            //}
         }
     }
 }

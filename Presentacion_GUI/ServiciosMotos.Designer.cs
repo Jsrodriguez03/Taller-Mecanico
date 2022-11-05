@@ -34,22 +34,26 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.txtMecanico = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtServicio = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dgServicios = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Precio = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.panelDatosVehiculo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtColor = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtPlaca = new System.Windows.Forms.TextBox();
+            this.labelPlaca = new System.Windows.Forms.Label();
             this.ListaGeneral = new System.Windows.Forms.TabPage();
             this.GrillaListadoGeneral = new System.Windows.Forms.DataGridView();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,21 +64,17 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelPlaca = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.PestañaVehiculos.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgServicios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelDatosVehiculo.SuspendLayout();
             this.ListaGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaListadoGeneral)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -92,7 +92,7 @@
             this.PestañaVehiculos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.PestañaVehiculos.Controls.Add(this.panel1);
             this.PestañaVehiculos.Controls.Add(this.dgServicios);
-            this.PestañaVehiculos.Controls.Add(this.label2);
+            this.PestañaVehiculos.Controls.Add(this.Precio);
             this.PestañaVehiculos.Controls.Add(this.label4);
             this.PestañaVehiculos.Controls.Add(this.pictureBox1);
             this.PestañaVehiculos.Controls.Add(this.btnLimpiar);
@@ -127,12 +127,13 @@
             this.btnEliminar.BackColor = System.Drawing.Color.Black;
             this.btnEliminar.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.LimeGreen;
-            this.btnEliminar.Location = new System.Drawing.Point(419, 63);
+            this.btnEliminar.Location = new System.Drawing.Point(431, 63);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(144, 40);
             this.btnEliminar.TabIndex = 45;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtMecanico
             // 
@@ -147,23 +148,37 @@
             "Luis Pinto",
             "Steven Molina",
             "Nayid Castellar"});
-            this.txtMecanico.Location = new System.Drawing.Point(244, 76);
+            this.txtMecanico.Location = new System.Drawing.Point(268, 76);
             this.txtMecanico.Name = "txtMecanico";
-            this.txtMecanico.Size = new System.Drawing.Size(163, 21);
+            this.txtMecanico.Size = new System.Drawing.Size(148, 21);
             this.txtMecanico.TabIndex = 44;
             this.txtMecanico.Click += new System.EventHandler(this.txtMecanico_Click);
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Image = global::TALLERM.Properties.Resources.Mecánico;
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Location = new System.Drawing.Point(267, 46);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(133, 27);
+            this.label7.TabIndex = 43;
+            this.label7.Text = "Mecánico";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Black;
             this.btnAgregar.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.LimeGreen;
-            this.btnAgregar.Location = new System.Drawing.Point(419, 11);
+            this.btnAgregar.Location = new System.Drawing.Point(431, 11);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(144, 40);
             this.btnAgregar.TabIndex = 42;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtServicio
             // 
@@ -173,14 +188,36 @@
             this.txtServicio.FormattingEnabled = true;
             this.txtServicio.Items.AddRange(new object[] {
             "Seleccionar",
-            "Bicicleta",
-            "Motocicleta",
-            "Automovil"});
+            "Ajuste del Nivel de la suspensión",
+            "Cambio de Aceite",
+            "Lavado General",
+            "Limpieza de filtros",
+            "Mantenimiento de frenos",
+            "Regulación del Anticongelante",
+            "Revisión de Cadena",
+            "Revisión de Frenos",
+            "Revisión de la Batería",
+            "Revisión de los neumáticos",
+            "",
+            ""});
             this.txtServicio.Location = new System.Drawing.Point(23, 76);
             this.txtServicio.Name = "txtServicio";
-            this.txtServicio.Size = new System.Drawing.Size(200, 21);
+            this.txtServicio.Size = new System.Drawing.Size(224, 21);
             this.txtServicio.TabIndex = 41;
             this.txtServicio.Click += new System.EventHandler(this.txtServicio_Click);
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Image = global::TALLERM.Properties.Resources.icons8_engranaje_301;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.Location = new System.Drawing.Point(16, 46);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(185, 27);
+            this.label6.TabIndex = 40;
+            this.label6.Text = "Tipo de Servicio";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label8
             // 
@@ -203,40 +240,46 @@
             this.dgServicios.Location = new System.Drawing.Point(19, 267);
             this.dgServicios.Name = "dgServicios";
             this.dgServicios.RowHeadersWidth = 40;
+            this.dgServicios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgServicios.Size = new System.Drawing.Size(592, 195);
             this.dgServicios.TabIndex = 41;
             // 
-            // Column1
+            // Precio
             // 
-            this.Column1.HeaderText = "Descripción Servicios";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 257;
+            this.Precio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Precio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Precio.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Precio.ForeColor = System.Drawing.Color.White;
+            this.Precio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Precio.Location = new System.Drawing.Point(636, 399);
+            this.Precio.Name = "Precio";
+            this.Precio.Size = new System.Drawing.Size(186, 28);
+            this.Precio.TabIndex = 17;
+            this.Precio.Text = "0$";
+            this.Precio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Column2
+            // label4
             // 
-            this.Column2.HeaderText = "Mecánico Responsable";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 175;
+            this.label4.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Lime;
+            this.label4.Image = global::TALLERM.Properties.Resources.Pago;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label4.Location = new System.Drawing.Point(636, 369);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(186, 23);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "PRECIO TOTAL";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Column3
+            // pictureBox1
             // 
-            this.Column3.HeaderText = "Valor del Servicio";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 120;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(636, 399);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 28);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "0$";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pictureBox1.Image = global::TALLERM.Properties.Resources.Logo3;
+            this.pictureBox1.Location = new System.Drawing.Point(656, 39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 145);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // btnLimpiar
             // 
@@ -314,6 +357,18 @@
             this.txtColor.Text = "Ingrese El Color Del Vehiculo";
             this.txtColor.Click += new System.EventHandler(this.txtColor_Click);
             // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Image = global::TALLERM.Properties.Resources.icons8_motocicleta_401;
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Location = new System.Drawing.Point(211, 51);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(107, 23);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "COLOR";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // txtMarca
             // 
             this.txtMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -325,6 +380,18 @@
             this.txtMarca.Text = "Ingrese La Marca Del Vehiculo";
             this.txtMarca.Click += new System.EventHandler(this.txtMarca_Click);
             // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Image = global::TALLERM.Properties.Resources.icons8_honda_321;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Location = new System.Drawing.Point(16, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 23);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "     MARCA";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // txtPlaca
             // 
             this.txtPlaca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -335,6 +402,18 @@
             this.txtPlaca.TabIndex = 34;
             this.txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
             this.txtPlaca.Click += new System.EventHandler(this.txtPlaca_Click);
+            // 
+            // labelPlaca
+            // 
+            this.labelPlaca.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPlaca.Image = global::TALLERM.Properties.Resources.icons8_placa_de_matrícula_401;
+            this.labelPlaca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelPlaca.Location = new System.Drawing.Point(400, 51);
+            this.labelPlaca.Name = "labelPlaca";
+            this.labelPlaca.Size = new System.Drawing.Size(106, 23);
+            this.labelPlaca.TabIndex = 33;
+            this.labelPlaca.Text = "PLACA";
+            this.labelPlaca.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ListaGeneral
             // 
@@ -405,90 +484,26 @@
             this.Column12.HeaderText = "Precio";
             this.Column12.Name = "Column12";
             // 
-            // label7
+            // Column1
             // 
-            this.label7.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Image = global::TALLERM.Properties.Resources.Mecánico;
-            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(242, 46);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(133, 27);
-            this.label7.TabIndex = 43;
-            this.label7.Text = "Mecánico";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Column1.HeaderText = "Descripción Servicios";
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.Width = 257;
             // 
-            // label6
+            // Column2
             // 
-            this.label6.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Image = global::TALLERM.Properties.Resources.icons8_engranaje_301;
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(16, 46);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(185, 27);
-            this.label6.TabIndex = 40;
-            this.label6.Text = "Tipo de Servicio";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Column2.HeaderText = "Mecánico Responsable";
+            this.Column2.Name = "Column2";
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.Width = 175;
             // 
-            // label4
+            // Column3
             // 
-            this.label4.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Lime;
-            this.label4.Image = global::TALLERM.Properties.Resources.Pago;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(636, 369);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(186, 23);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "PRECIO TOTAL";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TALLERM.Properties.Resources.Logo3;
-            this.pictureBox1.Location = new System.Drawing.Point(656, 39);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 145);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Image = global::TALLERM.Properties.Resources.icons8_motocicleta_401;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(211, 51);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 23);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "COLOR";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Image = global::TALLERM.Properties.Resources.icons8_honda_321;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(16, 51);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 23);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "     MARCA";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelPlaca
-            // 
-            this.labelPlaca.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPlaca.Image = global::TALLERM.Properties.Resources.icons8_placa_de_matrícula_401;
-            this.labelPlaca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelPlaca.Location = new System.Drawing.Point(400, 51);
-            this.labelPlaca.Name = "labelPlaca";
-            this.labelPlaca.Size = new System.Drawing.Size(106, 23);
-            this.labelPlaca.TabIndex = 33;
-            this.labelPlaca.Text = "PLACA";
-            this.labelPlaca.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Column3.HeaderText = "Valor del Servicio";
+            this.Column3.Name = "Column3";
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column3.Width = 120;
             // 
             // ServiciosMotos
             // 
@@ -506,11 +521,11 @@
             this.PestañaVehiculos.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgServicios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelDatosVehiculo.ResumeLayout(false);
             this.panelDatosVehiculo.PerformLayout();
             this.ListaGeneral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GrillaListadoGeneral)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -520,10 +535,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage PestañaVehiculos;
         private System.Windows.Forms.DataGridView dgServicios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Precio;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLimpiar;
@@ -555,5 +567,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

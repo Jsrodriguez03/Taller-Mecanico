@@ -9,6 +9,7 @@ namespace TALLERM
         {
             InitializeComponent();
             txtTipo.Text = "Seleccionar";
+            txtTipo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         //Eventos Para Botones
@@ -57,21 +58,18 @@ namespace TALLERM
                 {
                     this.Hide();
                     new ServiciosBicicleta().ShowDialog();
-                    this.Close();
                 }
 
                 if (txtTipo.Text == "Motocicleta")
                 {
                     this.Hide();
                     new ServiciosMotos().ShowDialog();
-                    this.Close();
                 }
 
                 if (txtTipo.Text == "Automovil")
                 {
-                    this.Hide();
+                    //this.Hide();
                     new ServiciosAutos().ShowDialog();
-                    this.Close();
                 }
             }
         }

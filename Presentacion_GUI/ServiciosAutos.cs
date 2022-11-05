@@ -1,22 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace TALLERM
 {
     public partial class ServiciosAutos : Form
     {
+        DatosClientes datosClientes = new DatosClientes();
+
         public ServiciosAutos()
         {
             InitializeComponent();
             txtServicio.Text = "Seleccionar";
+            txtServicio.DropDownStyle = ComboBoxStyle.DropDownList; 
             txtMecanico.Text = "Seleccionar";
+            txtMecanico.DropDownStyle = ComboBoxStyle.DropDownList;            
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -36,11 +35,11 @@ namespace TALLERM
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             InicializarCajas();
-            VerificarCajas();
+            VerificarCajas();   
         }
 
         public void InicializarCajas()
-        {            
+        {
             if (txtMarca.Text == "")
             {
                 txtMarca.Text = "Ingrese La Marca Del Vehiculo";
@@ -69,9 +68,11 @@ namespace TALLERM
 
         public void VerificarCajas()
         {
-            if (txtServicio.Text == "Seleccionar" || txtMarca.Text == "Ingrese La Marca Del Vehiculo" ||
-                txtColor.Text == "Ingrese El Color Del Vehiculo" || txtPlaca.Text == "Ingrese La Placa Del Vehiculo" ||
-                txtServicio.Text == "Seleccionar" || txtMecanico.Text == "Seleccionar")
+            if (txtMarca.Text == "Ingrese La Marca Del Vehiculo" || txtColor.Text == "Ingrese El Color Del Vehiculo" || 
+                txtPlaca.Text == "Ingrese La Placa Del Vehiculo" || dgServicios.Rows[0].Cells[0].Value == null)
+
+                
+
             {
                 MessageBox.Show("Hay Campos sin Completar, Por Favor Reviselos");
             }
@@ -86,7 +87,6 @@ namespace TALLERM
         {
             this.Hide();
             new DatosClientes().ShowDialog();
-            this.Close();
         }
 
         private void PestañaVehiculos_Click(object sender, EventArgs e)
@@ -224,5 +224,147 @@ namespace TALLERM
                 txtServicio.Text = "Seleccionar";
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (txtServicio.Text != "Seleccionar" && txtMecanico.Text != "Seleccionar")
+            {
+                float valor = 0;
+                if (txtServicio.Text == "Ajustes del Borner")
+                {
+                    valor = 15700;
+                }
+                else
+                {
+                    if (txtServicio.Text == "Ajustes del Motor")
+                    {
+                        valor = 530000;
+                    }
+                    else
+                    {
+                        if (txtServicio.Text == "Ajuste del tiempo de encendido")
+                        {
+                            valor = 23200;
+                        }
+                        else
+                        {
+                            if (txtServicio.Text == "Limpieza o Cambio del filtro de aire")
+                            {
+                                valor = 152000;
+                            }
+                            else
+                            {
+                                if (txtServicio.Text == "Limpieza o Cambio  de gasolina")
+                                {
+                                    valor = 150000;
+                                }
+                                else
+                                {
+                                    if (txtServicio.Text == "Limpieza o Cambio de las bujías")
+                                    {
+                                        valor = 26900;
+                                    }
+                                    else
+                                    {
+                                        if (txtServicio.Text == "Nivelación de batería")
+                                        {
+                                            valor = 15000;
+                                        }
+                                        else
+                                        {
+                                            if (txtServicio.Text == "Pintar")
+                                            {
+                                                valor = 54000;
+                                            }
+                                            else
+                                            {
+                                                if (txtServicio.Text == "Pinchazos")
+                                                {
+                                                    valor = 35000;
+                                                }
+                                                else
+                                                {
+                                                    if (txtServicio.Text == "Reparación de clutch")
+                                                    {
+                                                        valor = 110000;
+                                                    }
+                                                    else
+                                                    {
+                                                        if (txtServicio.Text == "Reparación de Frenos")
+                                                        {
+                                                            valor = 20000;
+                                                        }
+                                                        else
+                                                        {
+                                                            if (txtServicio.Text == "Reparación de luces")
+                                                            {
+                                                                valor = 18700;
+                                                            }
+                                                            else
+                                                            {
+                                                                if (txtServicio.Text == "Cambio de Aceite y Filtro")
+                                                                {
+                                                                    valor = 13000;
+                                                                }
+                                                                else
+                                                                {
+                                                                    valor = 38000;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                dgServicios.Rows.Add(txtServicio.Text, txtMecanico.Text,valor);
+                PrecioTotal();
+                txtServicio.Text = "Seleccionar";
+                txtMecanico.Text = "Seleccionar";
+            }
+            else
+            {
+                MessageBox.Show("Por Favor Complete Todos Los Campos.");
+            }
+        }        
+
+        public void PrecioTotal()
+        {
+            decimal Total = 0;
+            foreach (DataGridViewRow row in dgServicios.Rows)
+            {
+                Total += Convert.ToDecimal(row.Cells["Column3"].Value);
+            }
+            Precio.Text = Total.ToString()+"$";
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarFila();
+        }
+        public void EliminarFila()
+        {
+            //foreach (DataGridViewRow row in dgServicios.Rows)
+            //{
+            //    if (row.Cells[0].Value != null)
+            //    {
+            //        dgServicios.Rows.Remove(dgServicios.CurrentRow);
+            //        //dgServicios.Rows.Remove(dgServicios.CurrentRow.Index);
+            //        PrecioTotal();
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("No Hay Fila Seleccionada");
+            //    }
+            //}
+        }
+
+        
     }
 }

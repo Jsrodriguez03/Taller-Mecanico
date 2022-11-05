@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatosClientes));
             this.boxServicios = new System.Windows.Forms.Button();
             this.boxLimpiar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
@@ -54,9 +53,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtTipo = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // boxServicios
@@ -82,16 +82,6 @@
             this.boxLimpiar.Text = "LIMPIAR";
             this.boxLimpiar.UseVisualStyleBackColor = false;
             this.boxLimpiar.Click += new System.EventHandler(this.boxLimpiar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TALLERM.Properties.Resources.Logo2;
-            this.pictureBox1.Location = new System.Drawing.Point(470, 65);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 167);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -351,10 +341,10 @@
             this.txtTipo.FormattingEnabled = true;
             this.txtTipo.Items.AddRange(new object[] {
             "Seleccionar",
+            "Automovil",
             "Bicicleta",
-            "Motocicleta",
-            "Automovil"});
-            this.txtTipo.Location = new System.Drawing.Point(482, 305);
+            "Motocicleta"});
+            this.txtTipo.Location = new System.Drawing.Point(479, 308);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(163, 28);
             this.txtTipo.TabIndex = 29;
@@ -369,6 +359,16 @@
             this.label11.TabIndex = 28;
             this.label11.Text = "Indique El Tipo De Vehiculo A Registrar\r\n";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TALLERM.Properties.Resources.Logo2;
+            this.pictureBox1.Location = new System.Drawing.Point(470, 65);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(204, 167);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
             // 
             // DatosClientes
             // 
@@ -390,11 +390,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TALLER MECÁNICO - Solicitud de Datos Clientes Y Mecánicos";
             this.Click += new System.EventHandler(this.DatosClientes_Click);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -404,10 +404,6 @@
         private System.Windows.Forms.Button boxLimpiar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtcedula;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
@@ -425,5 +421,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox txtTipo;
         private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.TextBox txtcedula;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.TextBox txtTelefono;
+        public System.Windows.Forms.TextBox txtApellido;
     }
 }
