@@ -10,22 +10,15 @@ using System.Windows.Forms;
 
 namespace TALLERM
 {
-    public partial class ServiciosMotos : Form
+    public partial class PresentaciónBicicletas : Form
     {
-        public ServiciosMotos()
+        public PresentaciónBicicletas()
         {
             InitializeComponent();
             txtServicio.Text = "Seleccionar";
             txtServicio.DropDownStyle = ComboBoxStyle.DropDownList;
             txtMecanico.Text = "Seleccionar";
             txtMecanico.DropDownStyle = ComboBoxStyle.DropDownList;
-        }
-
-        private void btnVolver_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            new DatosClientes().ShowDialog();
-            this.Close();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -78,9 +71,8 @@ namespace TALLERM
 
         public void VerificarCajas()
         {
-            if (txtServicio.Text == "Seleccionar" || txtMarca.Text == "Ingrese La Marca Del Vehiculo" ||
-                txtColor.Text == "Ingrese El Color Del Vehiculo" || txtPlaca.Text == "Ingrese La Placa Del Vehiculo" ||
-                txtMecanico.Text == "Seleccionar")
+            if (txtMarca.Text == "Ingrese La Marca Del Vehiculo" || txtColor.Text == "Ingrese El Color Del Vehiculo" || 
+                txtPlaca.Text == "Ingrese La Placa Del Vehiculo" || dgServicios.Rows[0].Cells[0].Value == null)
             {
                 MessageBox.Show("Hay Campos sin Completar, Por Favor Reviselos");
             }
@@ -88,12 +80,139 @@ namespace TALLERM
             {
                 MessageBox.Show("¡DATOS GUARDADOS EXITOSAMENTE!");
                 LimpiarCajas();
-            }
+                LimpiarTabla();
+            }            
+        }
+
+        public void LimpiarTabla()
+        {
+            dgServicios.Rows.Clear();
+        }
+
+        private void btnVolver_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            new PresentaciónClientes().ShowDialog();
         }
 
         private void PestañaVehiculos_Click(object sender, EventArgs e)
         {
             InicializarCajas();
+        }        
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (txtServicio.Text != "Seleccionar" && txtMecanico.Text != "Seleccionar")
+            {
+                float valor = 0;
+                if (txtServicio.Text == "Ajuste del Nivel de la suspensión")
+                {
+                    valor = 15700;
+                }
+                else
+                {
+                    if (txtServicio.Text == "Cambio de Aceite")
+                    {
+                        valor = 23000;
+                    }
+                    else
+                    {
+                        if (txtServicio.Text == "Lavado General")
+                        {
+                            valor = 530000;
+                        }
+                        else
+                        {
+                            if (txtServicio.Text == "Limpieza de filtros")
+                            {
+                                valor = 152000;
+                            }
+                            else
+                            {
+                                if (txtServicio.Text == "Mantenimiento de frenos")
+                                {
+                                    valor = 150000;
+                                }
+                                else
+                                {
+                                    if (txtServicio.Text == "Regulación del Anticongelante")
+                                    {
+                                        valor = 26900;
+                                    }
+                                    else
+                                    {
+                                        if (txtServicio.Text == "Revisión de Cadena")
+                                        {
+                                            valor = 15000;
+                                        }
+                                        else
+                                        {
+                                            if (txtServicio.Text == "Revisión de Frenos")
+                                            {
+                                                valor = 54000;
+                                            }
+                                            else
+                                            {
+                                                if (txtServicio.Text == "Revisión de la Batería")
+                                                {
+                                                    valor = 35000;
+                                                }
+                                                else
+                                                {
+                                                    valor = 38000;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                dgServicios.Rows.Add(txtServicio.Text, txtMecanico.Text, valor);
+                PrecioTotal();
+                LimpiarCajas();
+                txtServicio.Text = "Seleccionar";
+                txtMecanico.Text = "Seleccionar";
+            }
+            else
+            {
+                MessageBox.Show("Por Favor Complete Todos Los Campos.");
+            }
+        }
+
+        public void PrecioTotal()
+        {
+            decimal Total = 0;
+            foreach (DataGridViewRow row in dgServicios.Rows)
+            {
+                Total += Convert.ToDecimal(row.Cells["Column3"].Value);
+            }
+            Precio.Text = Total.ToString() + "$";
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarFila();
+        }
+
+        public void EliminarFila()
+        {
+            foreach (DataGridViewRow row in dgServicios.Rows)
+            {
+                if (row.Cells[0].Value != null)
+                {
+                    //dgServicios.Rows.Remove(dgServicios.CurrentRow);
+                    dgServicios.Rows.RemoveAt(dgServicios.CurrentRow.Index);
+                    PrecioTotal();
+                    break;
+                }
+                else
+                {
+                    MessageBox.Show("No Hay Fila Seleccionada");
+                }
+            }
         }
 
         //Eventos De Verificación de Cajas
@@ -227,112 +346,26 @@ namespace TALLERM
             }
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void ServiciosMotos_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (txtServicio.Text != "Seleccionar" && txtMecanico.Text != "Seleccionar")
+            var respuesta = MessageBox.Show("¿Desea salir?", "         T A L L E R      M E C Á N I C O", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respuesta != DialogResult.Yes)
             {
-                float valor = 0;
-                if (txtServicio.Text == "Ajuste del Nivel de la suspensión")
-                {
-                    valor = 15700;
-                }
-                else
-                {
-                    if (txtServicio.Text == "Cambio de Aceite")
-                    {
-                        valor = 23000;
-                    }
-                    else
-                    {
-                        if (txtServicio.Text == "Lavado General")
-                        {
-                            valor = 530000;
-                        }
-                        else
-                        {
-                            if (txtServicio.Text == "Limpieza de filtros")
-                            {
-                                valor = 152000;
-                            }
-                            else
-                            {
-                                if (txtServicio.Text == "Mantenimiento de frenos")
-                                {
-                                    valor = 150000;
-                                }
-                                else
-                                {
-                                    if (txtServicio.Text == "Regulación del Anticongelante")
-                                    {
-                                        valor = 26900;
-                                    }
-                                    else
-                                    {
-                                        if (txtServicio.Text == "Revisión de Cadena")
-                                        {
-                                            valor = 15000;
-                                        }
-                                        else
-                                        {
-                                            if (txtServicio.Text == "Revisión de Frenos")
-                                            {
-                                                valor = 54000;
-                                            }
-                                            else
-                                            {
-                                                if (txtServicio.Text == "Revisión de la Batería")
-                                                {
-                                                    valor = 35000;
-                                                }
-                                                else
-                                                {
-                                                    valor = 38000;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                
-                dgServicios.Rows.Add(txtServicio.Text, txtMecanico.Text, valor);
-                PrecioTotal();
-                LimpiarCajas();
+                e.Cancel = true;
             }
             else
             {
-                MessageBox.Show("Por Favor Complete Todos Los Campos.");
+                new PresentaciónClientes().Close();
             }
         }
 
-        public void PrecioTotal()
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-            decimal Total = 0;
-            foreach (DataGridViewRow row in dgServicios.Rows)
+            var respuesta = MessageBox.Show("¿Desea salir?", "         T A L L E R      M E C Á N I C O", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
             {
-                Total += Convert.ToDecimal(row.Cells["Column3"].Value);
+                this.Close();
             }
-            Precio.Text = Total.ToString() + "$";
         }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            dgServicios.Rows.RemoveAt(dgServicios.CurrentCell.RowIndex);
-            PrecioTotal();
-            //FALTA QUE NO ELIMINEEEEEEEE CUANDO ESTÁ VACÍAAAAAAAAAAAA
-            //int fila = dgServicios.CurrentCell.RowIndex;
-            //if (fila == -1)
-            //{
-            //    MessageBox.Show("No Hay Fila Seleccionada");
-            //}
-            //else
-            //{
-            //    dgServicios.Rows.RemoveAt(dgServicios.CurrentCell.RowIndex);
-
-            //}
-        }
-
     }
 }

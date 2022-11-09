@@ -12,14 +12,14 @@ namespace Entidades
 
         }
 
-        public Cliente(string Nombre, string Apellidos, string Cedula, string Telefono):base(Nombre, Apellidos, Cedula)
+        public Cliente(string Cedula, string Nombre, string Apellidos, string Telefono):base(Cedula, Nombre, Apellidos)
         {
             this.Telefono = Telefono;
         }
 
         public override string ToString()
         {
-            return $"{Nombre};{Apellidos};{Cedula};{Telefono}";
+            return $"{Cedula};{Nombre};{Apellido};{Telefono}";
         }
 
         private string Telefono { get; set; }

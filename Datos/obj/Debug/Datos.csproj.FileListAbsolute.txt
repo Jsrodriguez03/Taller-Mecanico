@@ -1,11 +1,23 @@
-D:\Biblioteca\Documents\TallerMecanico\Datos\bin\Debug\Datos.exe.config
-D:\Biblioteca\Documents\TallerMecanico\Datos\bin\Debug\Datos.exe
+E:\Johnp\Downloads\DATOS JOHNP\unicesar 2022\2022-2\G01\S_Introduccionb\Datos\bin\Debug\Datos.dll
+E:\Johnp\Downloads\DATOS JOHNP\unicesar 2022\2022-2\G01\S_Introduccionb\Datos\bin\Debug\Datos.pdb
+E:\Johnp\Downloads\DATOS JOHNP\unicesar 2022\2022-2\G01\S_Introduccionb\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+E:\Johnp\Downloads\DATOS JOHNP\unicesar 2022\2022-2\G01\S_Introduccionb\Datos\obj\Debug\Datos.dll
+E:\Johnp\Downloads\DATOS JOHNP\unicesar 2022\2022-2\G01\S_Introduccionb\Datos\obj\Debug\Datos.pdb
+C:\Users\LENOVO\Documents\programacion\C#\Libreta_contactos\Datos\bin\Debug\Datos.dll
+C:\Users\LENOVO\Documents\programacion\C#\Libreta_contactos\Datos\bin\Debug\Datos.pdb
+C:\Users\LENOVO\Documents\programacion\C#\Libreta_contactos\Datos\bin\Debug\Entidades.dll
+C:\Users\LENOVO\Documents\programacion\C#\Libreta_contactos\Datos\bin\Debug\Entidades.pdb
+C:\Users\LENOVO\Documents\programacion\C#\Libreta_contactos\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Documents\programacion\C#\Libreta_contactos\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Documents\programacion\C#\Libreta_contactos\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\LENOVO\Documents\programacion\C#\Libreta_contactos\Datos\obj\Debug\Datos.dll
+C:\Users\LENOVO\Documents\programacion\C#\Libreta_contactos\Datos\obj\Debug\Datos.pdb
+D:\Biblioteca\Documents\TallerMecanico\Datos\bin\Debug\Datos.dll
 D:\Biblioteca\Documents\TallerMecanico\Datos\bin\Debug\Datos.pdb
 D:\Biblioteca\Documents\TallerMecanico\Datos\bin\Debug\Entidades.dll
 D:\Biblioteca\Documents\TallerMecanico\Datos\bin\Debug\Entidades.pdb
 D:\Biblioteca\Documents\TallerMecanico\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
-D:\Biblioteca\Documents\TallerMecanico\Datos\obj\Debug\Datos.csproj.SuggestedBindingRedirects.cache
 D:\Biblioteca\Documents\TallerMecanico\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
 D:\Biblioteca\Documents\TallerMecanico\Datos\obj\Debug\Datos.csproj.CopyComplete
-D:\Biblioteca\Documents\TallerMecanico\Datos\obj\Debug\Datos.exe
+D:\Biblioteca\Documents\TallerMecanico\Datos\obj\Debug\Datos.dll
 D:\Biblioteca\Documents\TallerMecanico\Datos\obj\Debug\Datos.pdb

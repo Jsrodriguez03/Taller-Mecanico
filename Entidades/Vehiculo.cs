@@ -12,28 +12,31 @@ namespace Entidades
 
         }
 
-        public Vehiculo(string Marca, string Modelo, string Color, string Servicio, float Precio)
+        public Vehiculo(string Dueño,string Marca, string Color, string Servicio, string Mecanico, string Precio)
         {
+            this.Dueño = Dueño;
             this.Marca = Marca;
-            this.Modelo = Modelo;
-            this.Color = Color; 
+            this.Color = Color;            
             this.Servicio = Servicio;
+            this.Mecanico = Mecanico;
             this.Precio = Precio;
         }
 
         public override string ToString()
         {
-            return $"{Marca};{Modelo};{Color};{Servicio};{Precio}";
+            return $"{Dueño};{Marca};{Color};{Servicio};{Mecanico};{Precio}";
         }
+
+        public string Dueño { get; set; }
 
         public string Marca { get; set; }
 
-        public string Modelo { get; set; }
+        public string Precio { get; set; }
 
         public string Color { get; set; }
 
         public string Servicio { get; set; }
 
-        public float Precio { get; set; }
+        public string Mecanico { get; set; }
     }
 }

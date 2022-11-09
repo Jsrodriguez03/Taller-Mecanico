@@ -1,6 +1,6 @@
 ﻿namespace TALLERM
 {
-    partial class DatosClientes
+    partial class PresentaciónClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatosClientes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PresentaciónClientes));
             this.boxServicios = new System.Windows.Forms.Button();
             this.boxLimpiar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtcedula = new System.Windows.Forms.TextBox();
+            this.txtCedula = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtCargo = new System.Windows.Forms.TextBox();
-            this.txtApe = new System.Windows.Forms.TextBox();
-            this.txtnom = new System.Windows.Forms.TextBox();
-            this.txtcedu = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtTipo = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,9 +53,9 @@
             // 
             this.boxServicios.BackColor = System.Drawing.Color.LimeGreen;
             this.boxServicios.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxServicios.Location = new System.Drawing.Point(415, 351);
+            this.boxServicios.Location = new System.Drawing.Point(23, 383);
             this.boxServicios.Name = "boxServicios";
-            this.boxServicios.Size = new System.Drawing.Size(128, 40);
+            this.boxServicios.Size = new System.Drawing.Size(115, 40);
             this.boxServicios.TabIndex = 23;
             this.boxServicios.Text = "SIGUIENTE";
             this.boxServicios.UseVisualStyleBackColor = false;
@@ -75,9 +65,9 @@
             // 
             this.boxLimpiar.BackColor = System.Drawing.Color.LimeGreen;
             this.boxLimpiar.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxLimpiar.Location = new System.Drawing.Point(577, 351);
+            this.boxLimpiar.Location = new System.Drawing.Point(154, 383);
             this.boxLimpiar.Name = "boxLimpiar";
-            this.boxLimpiar.Size = new System.Drawing.Size(129, 40);
+            this.boxLimpiar.Size = new System.Drawing.Size(107, 40);
             this.boxLimpiar.TabIndex = 22;
             this.boxLimpiar.Text = "LIMPIAR";
             this.boxLimpiar.UseVisualStyleBackColor = false;
@@ -89,15 +79,15 @@
             this.panel1.Controls.Add(this.txtTelefono);
             this.panel1.Controls.Add(this.txtApellido);
             this.panel1.Controls.Add(this.txtNombre);
-            this.panel1.Controls.Add(this.txtcedula);
+            this.panel1.Controls.Add(this.txtCedula);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(22, 12);
+            this.panel1.Location = new System.Drawing.Point(23, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(363, 219);
+            this.panel1.Size = new System.Drawing.Size(363, 232);
             this.panel1.TabIndex = 26;
             // 
             // txtTelefono
@@ -136,29 +126,29 @@
             this.txtNombre.Text = "Ingrese Su Nombre";
             this.txtNombre.Click += new System.EventHandler(this.txtNombre_Click);
             // 
-            // txtcedula
+            // txtCedula
             // 
-            this.txtcedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtcedula.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcedula.ForeColor = System.Drawing.Color.White;
-            this.txtcedula.Location = new System.Drawing.Point(185, 53);
-            this.txtcedula.Name = "txtcedula";
-            this.txtcedula.Size = new System.Drawing.Size(156, 24);
-            this.txtcedula.TabIndex = 30;
-            this.txtcedula.Text = "Ingrese Su Cedula";
-            this.txtcedula.Click += new System.EventHandler(this.txtcedula_Click);
+            this.txtCedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCedula.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCedula.ForeColor = System.Drawing.Color.White;
+            this.txtCedula.Location = new System.Drawing.Point(185, 53);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(156, 24);
+            this.txtCedula.TabIndex = 30;
+            this.txtCedula.Text = "Ingrese Su Cedula";
+            this.txtCedula.Click += new System.EventHandler(this.txtcedula_Click);
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Image = global::TALLERM.Properties.Resources.Nombre;
+            this.label3.Image = global::TallerMecanico.Properties.Resources.Nombre;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label3.Location = new System.Drawing.Point(26, 125);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 42);
+            this.label3.Size = new System.Drawing.Size(136, 42);
             this.label3.TabIndex = 29;
-            this.label3.Text = "                 APELLIDOS ";
+            this.label3.Text = "                 APELLIDO";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -175,7 +165,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Image = global::TALLERM.Properties.Resources.icons8_mensaje_de_telefono_32;
+            this.label5.Image = global::TallerMecanico.Properties.Resources.icons8_mensaje_de_telefono_32;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label5.Location = new System.Drawing.Point(27, 167);
             this.label5.Name = "label5";
@@ -187,7 +177,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Image = global::TALLERM.Properties.Resources.CC;
+            this.label4.Image = global::TallerMecanico.Properties.Resources.CC;
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label4.Location = new System.Drawing.Point(26, 43);
             this.label4.Name = "label4";
@@ -199,7 +189,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Image = global::TALLERM.Properties.Resources.Nombre;
+            this.label2.Image = global::TallerMecanico.Properties.Resources.Nombre;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label2.Location = new System.Drawing.Point(26, 85);
             this.label2.Name = "label2";
@@ -207,132 +197,6 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "                  NOMBRE ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.txtCargo);
-            this.panel2.Controls.Add(this.txtApe);
-            this.panel2.Controls.Add(this.txtnom);
-            this.panel2.Controls.Add(this.txtcedu);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(22, 237);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(363, 211);
-            this.panel2.TabIndex = 27;
-            // 
-            // txtCargo
-            // 
-            this.txtCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCargo.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCargo.ForeColor = System.Drawing.Color.White;
-            this.txtCargo.Location = new System.Drawing.Point(189, 170);
-            this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(156, 24);
-            this.txtCargo.TabIndex = 41;
-            this.txtCargo.Text = "Ingrese Su Cargo";
-            this.txtCargo.Click += new System.EventHandler(this.txtCargo_Click);
-            // 
-            // txtApe
-            // 
-            this.txtApe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtApe.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApe.ForeColor = System.Drawing.Color.White;
-            this.txtApe.Location = new System.Drawing.Point(188, 128);
-            this.txtApe.Name = "txtApe";
-            this.txtApe.Size = new System.Drawing.Size(156, 24);
-            this.txtApe.TabIndex = 40;
-            this.txtApe.Text = "Ingrese Sus Apellidos";
-            this.txtApe.Click += new System.EventHandler(this.txtApe_Click);
-            // 
-            // txtnom
-            // 
-            this.txtnom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtnom.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnom.ForeColor = System.Drawing.Color.White;
-            this.txtnom.Location = new System.Drawing.Point(188, 87);
-            this.txtnom.Name = "txtnom";
-            this.txtnom.Size = new System.Drawing.Size(156, 24);
-            this.txtnom.TabIndex = 39;
-            this.txtnom.Text = "Ingrese Su Nombre";
-            this.txtnom.Click += new System.EventHandler(this.txtnom_Click);
-            // 
-            // txtcedu
-            // 
-            this.txtcedu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtcedu.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcedu.ForeColor = System.Drawing.Color.White;
-            this.txtcedu.Location = new System.Drawing.Point(187, 45);
-            this.txtcedu.Name = "txtcedu";
-            this.txtcedu.Size = new System.Drawing.Size(156, 24);
-            this.txtcedu.TabIndex = 38;
-            this.txtcedu.Text = "Ingrese Su Cedula";
-            this.txtcedu.Click += new System.EventHandler(this.txtcedu_Click);
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Image = global::TALLERM.Properties.Resources.Nombre;
-            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(28, 117);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(151, 42);
-            this.label7.TabIndex = 37;
-            this.label7.Text = "                 APELLIDOS ";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Image = global::TALLERM.Properties.Resources.Mecánico1;
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(29, 159);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(157, 44);
-            this.label8.TabIndex = 36;
-            this.label8.Text = "    CARGO ";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Image = global::TALLERM.Properties.Resources.CC;
-            this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Location = new System.Drawing.Point(28, 35);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(151, 39);
-            this.label9.TabIndex = 35;
-            this.label9.Text = "          CEDULA ";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Image = global::TALLERM.Properties.Resources.Nombre;
-            this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label10.Location = new System.Drawing.Point(28, 77);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(136, 34);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "                  NOMBRE ";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Lime;
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(17, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(209, 23);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "DATOS DEL MECANICO";
             // 
             // txtTipo
             // 
@@ -344,7 +208,7 @@
             "Automovil",
             "Bicicleta",
             "Motocicleta"});
-            this.txtTipo.Location = new System.Drawing.Point(479, 308);
+            this.txtTipo.Location = new System.Drawing.Point(65, 340);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(163, 28);
             this.txtTipo.TabIndex = 29;
@@ -353,32 +217,45 @@
             // 
             this.label11.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(401, 249);
+            this.label11.Location = new System.Drawing.Point(28, 281);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(327, 56);
+            this.label11.Size = new System.Drawing.Size(241, 56);
             this.label11.TabIndex = 28;
             this.label11.Text = "Indique El Tipo De Vehiculo A Registrar\r\n";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::TALLERM.Properties.Resources.Logo2;
-            this.pictureBox1.Location = new System.Drawing.Point(470, 65);
+            this.pictureBox1.Image = global::TallerMecanico.Properties.Resources.Logo2;
+            this.pictureBox1.Location = new System.Drawing.Point(275, 281);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 167);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 87);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
-            // DatosClientes
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnSalir.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(275, 383);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(111, 40);
+            this.btnSalir.TabIndex = 30;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // PresentaciónClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(759, 467);
+            this.ClientSize = new System.Drawing.Size(409, 446);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.boxServicios);
@@ -386,14 +263,12 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "DatosClientes";
+            this.Name = "PresentaciónClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TALLER MECÁNICO - Solicitud de Datos Clientes Y Mecánicos";
+            this.Text = "TALLER MECÁNICO - Solicitud de Datos Clientes";
             this.Click += new System.EventHandler(this.DatosClientes_Click);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -409,21 +284,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtCargo;
-        private System.Windows.Forms.TextBox txtApe;
-        private System.Windows.Forms.TextBox txtnom;
-        private System.Windows.Forms.TextBox txtcedu;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox txtTipo;
         private System.Windows.Forms.Label label11;
-        public System.Windows.Forms.TextBox txtcedula;
+        public System.Windows.Forms.TextBox txtCedula;
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.TextBox txtTelefono;
         public System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

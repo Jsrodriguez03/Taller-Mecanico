@@ -43,7 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="ServiciosAutos.cs" />
+    <Compile Include="ServiciosBicicletas.cs" />
+    <Compile Include="ImpServicioAutos.cs" />
+    <Compile Include="ImpServicioMotos.cs" />
+    <Compile Include="ImpServicioBicicletas.cs" />
+    <Compile Include="ServiciosMotos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -51,7 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">
-      <Project>{a009acbf-e2e0-495d-b560-60fe68c0b37b}</Project>
+      <Project>{12370c1b-c251-45e9-a318-43e27155a668}</Project>
       <Name>Datos</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">

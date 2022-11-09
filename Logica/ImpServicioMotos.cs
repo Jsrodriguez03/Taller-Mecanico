@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logica
 {
-    internal class Program
+    internal interface ImpServicioMotos
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }

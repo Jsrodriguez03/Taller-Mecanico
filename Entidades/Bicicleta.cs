@@ -12,14 +12,14 @@ namespace Entidades
 
         }
 
-        public Bicicleta(string Marca, string Modelo, string Color, string Servicio, float Precio):base(Marca, Modelo, Color, Servicio, Precio)
+        public Bicicleta(string Dueño, string Marca, string Color, string Servicio, string Mecanico, string Precio):base(Dueño, Marca, Color, Servicio, Mecanico, Precio)
         {
 
         }
 
         public override string ToString()
         {
-            return $"{Marca};{Modelo};{Color};{Servicio};{Precio}";
+            return $"{Dueño};{Marca};{Color};{Servicio};{Mecanico};{Precio}";
         }
     }
 }

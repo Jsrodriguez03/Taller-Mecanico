@@ -19,7 +19,7 @@ namespace Presentación
 
             Bicicleta bicicleta = new Bicicleta("Specialized", "G3", "Negro", "Pintada", 120000);
             Moto moto = new Moto("Boxer", "XZ", "Verde", "Frenos", 50700, "G73 - ABC");
-            Carro carro = new Carro("Toyota", "2012", "Blanco", "Cambios", 130460, "DBA -74S");
+            Auto carro = new Carro("Toyota", "2012", "Blanco", "Cambios", 130460, "DBA -74S");
 
             Console.WriteLine("PRUEBA ENTIDAD PERSONA");
             persona = cliente;

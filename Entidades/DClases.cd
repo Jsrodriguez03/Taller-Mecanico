@@ -8,23 +8,23 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Cliente">
-    <Position X="1.25" Y="4" Width="2" />
+    <Position X="2.75" Y="4" Width="2" />
+    <InheritanceLine Type="Entidades.Persona" ManuallyRouted="true">
+      <Path>
+        <Point X="3.875" Y="3.132" />
+        <Point X="3.875" Y="4" />
+        <Point X="3.75" Y="4" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
       <FileName>Cliente.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Entidades.Mecanico">
-    <Position X="4" Y="4" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAQAAAIEAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
-      <FileName>Mecanico.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Entidades.Vehiculo">
-    <Position X="11.25" Y="1" Width="2.25" />
+    <Position X="11.5" Y="1" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAJAAAAAAAAAEAAAAAAAQAAAAAAAAAAgAgAAAAAA=</HashCode>
+      <HashCode>AAAAAJCAAAAACAAEAAAAAAAQAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Vehiculo.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -42,11 +42,11 @@
       <FileName>Moto.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Entidades.Carro">
+  <Class Name="Entidades.Auto">
     <Position X="14.25" Y="4.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Carro.cs</FileName>
+      <FileName>Auto.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

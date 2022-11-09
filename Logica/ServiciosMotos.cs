@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Datos
+namespace Logica
 {
-    internal class Program
+    internal class ServiciosMotos : ImpServicioMotos
     {
         static void Main(string[] args)
         {
