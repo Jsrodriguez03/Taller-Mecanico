@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entidades;
+using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace TALLERM
 {
@@ -79,6 +82,7 @@ namespace TALLERM
             else
             {
                 MessageBox.Show("¡DATOS GUARDADOS EXITOSAMENTE!");
+                Guardar();
                 LimpiarCajas();
                 LimpiarTabla();
             }            
@@ -87,12 +91,30 @@ namespace TALLERM
         public void LimpiarTabla()
         {
             dgServicios.Rows.Clear();
+            PrecioTotal();
+        }
+
+        public void Guardar()
+        {
+            ServiciosBicicletas serviciosBicicletas = new ServiciosBicicletas();
+            Bicicleta bici = new Bicicleta();
+
+            bici.Dueño = txtCedu.Text + ";" + txtNom.Text + ";" + txtApe.Text + ";" + txtTel.Text;
+            bici.Marca = txtMarca.Text;
+            bici.Color = txtColor.Text;
+            bici.Servicio = (string)dgServicios.Rows[0].Cells["descripciónServicios"].Value;
+            bici.Mecanico = (string)dgServicios.Rows[0].Cells["Mecanico"].Value;
+            bici.Precio = (string)dgServicios.Rows[0].Cells["valor"].Value;
+
+            serviciosBicicletas.Agregar(bici);
         }
 
         private void btnVolver_Click_1(object sender, EventArgs e)
         {
+            PresentaciónClientes bici = new PresentaciónClientes();
             this.Hide();
-            new PresentaciónClientes().ShowDialog();
+            bici.ShowDialog();
+            this.Close();
         }
 
         private void PestañaVehiculos_Click(object sender, EventArgs e)
@@ -348,15 +370,7 @@ namespace TALLERM
 
         private void ServiciosMotos_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var respuesta = MessageBox.Show("¿Desea salir?", "         T A L L E R      M E C Á N I C O", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (respuesta != DialogResult.Yes)
-            {
-                e.Cancel = true;
-            }
-            else
-            {
-                new PresentaciónClientes().Close();
-            }
+
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -366,6 +380,25 @@ namespace TALLERM
             {
                 this.Close();
             }
+        }
+
+        private void PresentaciónBicicletas_Load(object sender, EventArgs e)
+        {
+            CargarGrilla();
+        }
+
+        public void CargarGrilla()
+        {
+            String ruta1 = "Automoviles.TXT";
+            StreamReader sr = new StreamReader(ruta1);
+            string line = sr.ReadLine();
+            while (line != null)
+            {
+                String[] info = line.Split(';');
+                GrillaListadoGeneral.Rows.Add(info);
+                line = sr.ReadLine();
+            }
+            sr.Close();
         }
     }
 }

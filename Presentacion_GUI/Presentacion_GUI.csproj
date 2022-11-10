@@ -291,7 +291,7 @@
       <Name>Entidades</Name>
     </ProjectReference>
     <ProjectReference Include="..\Logica\Logica.csproj">
-      <Project>{5b53976e-0b1c-41a2-8915-1f70708a98b5}</Project>
+      <Project>{0cddc79d-3a5a-439b-b2c9-6761910986eb}</Project>
       <Name>Logica</Name>
     </ProjectReference>
   </ItemGroup>

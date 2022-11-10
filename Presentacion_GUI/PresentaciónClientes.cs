@@ -51,29 +51,41 @@ namespace TALLERM
 
                 if (txtTipo.Text == "Bicicleta")
                 {
-                    
-                    
+                    PresentaciónBicicletas bicis = new PresentaciónBicicletas();
+                    bicis.txtCedu.Text = txtCedula.Text;
+                    bicis.txtNom.Text = txtNombre.Text;
+                    bicis.txtApe.Text = txtApellido.Text;
+                    bicis.txtTel.Text = txtTelefono.Text;
+                    this.Hide();
+                    bicis.ShowDialog();
+                    this.Close();
+
 
                 }
 
                 if (txtTipo.Text == "Motocicleta")
                 {
-                    
-                    
+                    PresentaciónMotos motos = new PresentaciónMotos();
+                    motos.txtCedu.Text = txtCedula.Text;
+                    motos.txtNom.Text = txtNombre.Text;
+                    motos.txtApe.Text = txtApellido.Text;
+                    motos.txtTel.Text = txtTelefono.Text;
+                    this.Hide();
+                    motos.ShowDialog();
+                    this.Close();
+
                 }
 
                 if (txtTipo.Text == "Automovil")
                 {
-                    
                     PresentaciónAutos autos = new PresentaciónAutos();
                     autos.txtCedu.Text = txtCedula.Text;
                     autos.txtNom.Text = txtNombre.Text;
                     autos.txtApe.Text = txtApellido.Text;
-                    autos.txtTel.Text = txtTelefono.Text;                    
-                    autos.Show();
-                    
-
-
+                    autos.txtTel.Text = txtTelefono.Text;
+                    this.Hide();
+                    autos.ShowDialog();
+                    this.Close();
                 }
             }
         }

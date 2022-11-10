@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PresentaciónAutos));
             this.PestañaVehiculos = new System.Windows.Forms.TabPage();
+            this.txtTel = new System.Windows.Forms.TextBox();
+            this.txtApe = new System.Windows.Forms.TextBox();
+            this.txtNom = new System.Windows.Forms.TextBox();
+            this.txtCedu = new System.Windows.Forms.TextBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.dgServicios = new System.Windows.Forms.DataGridView();
             this.descripciónServicios = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,12 +71,9 @@
             this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.color = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mecanico2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtCedu = new System.Windows.Forms.TextBox();
-            this.txtNom = new System.Windows.Forms.TextBox();
-            this.txtApe = new System.Windows.Forms.TextBox();
-            this.txtTel = new System.Windows.Forms.TextBox();
             this.PestañaVehiculos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgServicios)).BeginInit();
             this.panel1.SuspendLayout();
@@ -107,6 +108,58 @@
             this.PestañaVehiculos.TabIndex = 1;
             this.PestañaVehiculos.Text = "Registro Servicios";
             this.PestañaVehiculos.Click += new System.EventHandler(this.PestañaVehiculos_Click);
+            // 
+            // txtTel
+            // 
+            this.txtTel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.txtTel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTel.Enabled = false;
+            this.txtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTel.Location = new System.Drawing.Point(806, 83);
+            this.txtTel.Name = "txtTel";
+            this.txtTel.Size = new System.Drawing.Size(29, 15);
+            this.txtTel.TabIndex = 46;
+            this.txtTel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTel.Visible = false;
+            // 
+            // txtApe
+            // 
+            this.txtApe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.txtApe.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtApe.Enabled = false;
+            this.txtApe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApe.Location = new System.Drawing.Point(806, 59);
+            this.txtApe.Name = "txtApe";
+            this.txtApe.Size = new System.Drawing.Size(29, 15);
+            this.txtApe.TabIndex = 45;
+            this.txtApe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtApe.Visible = false;
+            // 
+            // txtNom
+            // 
+            this.txtNom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.txtNom.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNom.Enabled = false;
+            this.txtNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNom.Location = new System.Drawing.Point(806, 40);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(29, 15);
+            this.txtNom.TabIndex = 44;
+            this.txtNom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNom.Visible = false;
+            // 
+            // txtCedu
+            // 
+            this.txtCedu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.txtCedu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCedu.Enabled = false;
+            this.txtCedu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCedu.Location = new System.Drawing.Point(806, 17);
+            this.txtCedu.Name = "txtCedu";
+            this.txtCedu.Size = new System.Drawing.Size(29, 15);
+            this.txtCedu.TabIndex = 43;
+            this.txtCedu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCedu.Visible = false;
             // 
             // btnSalir
             // 
@@ -482,7 +535,6 @@
             // 
             // GrillaListadoGeneral
             // 
-            this.GrillaListadoGeneral.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GrillaListadoGeneral.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GrillaListadoGeneral.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cedula,
@@ -492,6 +544,7 @@
             this.marca,
             this.color,
             this.placa,
+            this.servicio,
             this.mecanico2,
             this.precio2});
             this.GrillaListadoGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -504,115 +557,89 @@
             // 
             // cedula
             // 
+            this.cedula.FillWeight = 25.38071F;
             this.cedula.HeaderText = "Cedula";
             this.cedula.Name = "cedula";
             this.cedula.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cedula.Width = 80;
             // 
             // nombre
             // 
+            this.nombre.FillWeight = 25.38071F;
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
             this.nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // apellido
             // 
+            this.apellido.FillWeight = 25.38071F;
             this.apellido.HeaderText = "Apellido";
             this.apellido.Name = "apellido";
             this.apellido.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // telefono
             // 
+            this.telefono.FillWeight = 25.38071F;
             this.telefono.HeaderText = "Telefono";
             this.telefono.Name = "telefono";
             this.telefono.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.telefono.Width = 80;
             // 
             // marca
             // 
+            this.marca.FillWeight = 25.38071F;
             this.marca.HeaderText = "Marca";
             this.marca.Name = "marca";
             this.marca.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.marca.Width = 70;
             // 
             // color
             // 
+            this.color.FillWeight = 25.38071F;
             this.color.HeaderText = "Color";
             this.color.Name = "color";
             this.color.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.color.Width = 80;
             // 
             // placa
             // 
+            this.placa.FillWeight = 25.38071F;
             this.placa.HeaderText = "Placa";
             this.placa.Name = "placa";
             this.placa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.placa.Width = 80;
+            // 
+            // servicio
+            // 
+            this.servicio.FillWeight = 771.5736F;
+            this.servicio.HeaderText = "Servicio";
+            this.servicio.Name = "servicio";
+            this.servicio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.servicio.Width = 200;
             // 
             // mecanico2
             // 
+            this.mecanico2.FillWeight = 25.38071F;
             this.mecanico2.HeaderText = "Mecánico";
             this.mecanico2.Name = "mecanico2";
             this.mecanico2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.mecanico2.Width = 90;
             // 
             // precio2
             // 
+            this.precio2.FillWeight = 25.38071F;
             this.precio2.HeaderText = "Precio";
             this.precio2.Name = "precio2";
             this.precio2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // txtCedu
-            // 
-            this.txtCedu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.txtCedu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCedu.Enabled = false;
-            this.txtCedu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCedu.Location = new System.Drawing.Point(806, 17);
-            this.txtCedu.Name = "txtCedu";
-            this.txtCedu.Size = new System.Drawing.Size(29, 15);
-            this.txtCedu.TabIndex = 43;
-            this.txtCedu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCedu.Visible = false;
-            // 
-            // txtNom
-            // 
-            this.txtNom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.txtNom.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNom.Enabled = false;
-            this.txtNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNom.Location = new System.Drawing.Point(806, 40);
-            this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(29, 15);
-            this.txtNom.TabIndex = 44;
-            this.txtNom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtNom.Visible = false;
-            // 
-            // txtApe
-            // 
-            this.txtApe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.txtApe.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtApe.Enabled = false;
-            this.txtApe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApe.Location = new System.Drawing.Point(806, 59);
-            this.txtApe.Name = "txtApe";
-            this.txtApe.Size = new System.Drawing.Size(29, 15);
-            this.txtApe.TabIndex = 45;
-            this.txtApe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtApe.Visible = false;
-            // 
-            // txtTel
-            // 
-            this.txtTel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.txtTel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTel.Enabled = false;
-            this.txtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTel.Location = new System.Drawing.Point(806, 83);
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(29, 15);
-            this.txtTel.TabIndex = 46;
-            this.txtTel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTel.Visible = false;
+            this.precio2.Width = 70;
             // 
             // PresentaciónAutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(840, 500);
+            this.ControlBox = false;
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -668,6 +695,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descripciónServicios;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mecanico;
         private System.Windows.Forms.DataGridViewTextBoxColumn valor;
+        public System.Windows.Forms.TextBox txtTel;
+        public System.Windows.Forms.TextBox txtApe;
+        public System.Windows.Forms.TextBox txtNom;
+        public System.Windows.Forms.TextBox txtCedu;
         private System.Windows.Forms.DataGridViewTextBoxColumn cedula;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
@@ -675,11 +706,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn color;
         private System.Windows.Forms.DataGridViewTextBoxColumn placa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn servicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn mecanico2;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio2;
-        public System.Windows.Forms.TextBox txtTel;
-        public System.Windows.Forms.TextBox txtApe;
-        public System.Windows.Forms.TextBox txtNom;
-        public System.Windows.Forms.TextBox txtCedu;
     }
 }

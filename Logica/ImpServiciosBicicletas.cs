@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entidades;
 
 namespace Logica
 {
-    internal interface ImpServicioMotos
+    public interface ImpServicioBicicletas
     {
+        void Agregar(Vehiculo vehiculo);
     }
 }

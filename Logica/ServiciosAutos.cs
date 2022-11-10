@@ -17,28 +17,8 @@ namespace Logica
 
         public void Agregar(Vehiculo vehiculo)
         {
-            txt.Guardar(0, vehiculo.ToString()) ;
+            txt.Guardar(0, vehiculo.ToString());
             vehiculos.Add(vehiculo);
-        }
-
-        public void Eliminar()
-        {
-
-        }
-
-        public void Modificar()
-        {
-
-        }
-        
-        public void Buscar()
-        {
-
-        }
-
-        public void Mostrar()
-        {
-
         }
 
     }

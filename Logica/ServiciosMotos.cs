@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entidades;
+using Datos;
 
 namespace Logica
 {
-    internal class ServiciosMotos : ImpServicioMotos
+    public class ServiciosMotos : ImpServicioMotos
     {
-        static void Main(string[] args)
+        List<Vehiculo> vehiculos = new List<Vehiculo>();
+        Archivos txt = new Archivos();
+
+        public void Agregar(Vehiculo vehiculo)
         {
+            txt.Guardar(2, vehiculo.ToString());
+            vehiculos.Add(vehiculo);
         }
     }
 }

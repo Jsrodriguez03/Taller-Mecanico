@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PresentaciónMotos));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.PestañaVehiculos = new System.Windows.Forms.TabPage();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.txtMecanico = new System.Windows.Forms.ComboBox();
@@ -40,6 +41,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dgServicios = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -62,10 +66,10 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSalir = new System.Windows.Forms.Button();
+            this.txtTel = new System.Windows.Forms.TextBox();
+            this.txtApe = new System.Windows.Forms.TextBox();
+            this.txtNom = new System.Windows.Forms.TextBox();
+            this.txtCedu = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.PestañaVehiculos.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -89,6 +93,10 @@
             // PestañaVehiculos
             // 
             this.PestañaVehiculos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.PestañaVehiculos.Controls.Add(this.txtTel);
+            this.PestañaVehiculos.Controls.Add(this.txtApe);
+            this.PestañaVehiculos.Controls.Add(this.txtNom);
+            this.PestañaVehiculos.Controls.Add(this.txtCedu);
             this.PestañaVehiculos.Controls.Add(this.btnSalir);
             this.PestañaVehiculos.Controls.Add(this.panel1);
             this.PestañaVehiculos.Controls.Add(this.dgServicios);
@@ -106,6 +114,19 @@
             this.PestañaVehiculos.TabIndex = 1;
             this.PestañaVehiculos.Text = "Registro Servicios";
             this.PestañaVehiculos.Click += new System.EventHandler(this.PestañaVehiculos_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnSalir.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.Black;
+            this.btnSalir.Location = new System.Drawing.Point(656, 333);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(144, 40);
+            this.btnSalir.TabIndex = 43;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // panel1
             // 
@@ -237,6 +258,27 @@
             this.dgServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgServicios.Size = new System.Drawing.Size(592, 195);
             this.dgServicios.TabIndex = 41;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Descripción Servicios";
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.Width = 290;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Mecánico Responsable";
+            this.Column2.Name = "Column2";
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.Width = 168;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Valor del Servicio";
+            this.Column3.Name = "Column3";
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column3.Width = 131;
             // 
             // Precio
             // 
@@ -453,56 +495,76 @@
             this.Column12.HeaderText = "Precio";
             this.Column12.Name = "Column12";
             // 
-            // Column1
+            // txtTel
             // 
-            this.Column1.HeaderText = "Descripción Servicios";
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 290;
+            this.txtTel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtTel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTel.Enabled = false;
+            this.txtTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTel.Location = new System.Drawing.Point(806, 83);
+            this.txtTel.Name = "txtTel";
+            this.txtTel.Size = new System.Drawing.Size(29, 15);
+            this.txtTel.TabIndex = 50;
+            this.txtTel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTel.Visible = false;
             // 
-            // Column2
+            // txtApe
             // 
-            this.Column2.HeaderText = "Mecánico Responsable";
-            this.Column2.Name = "Column2";
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Width = 168;
+            this.txtApe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtApe.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtApe.Enabled = false;
+            this.txtApe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApe.Location = new System.Drawing.Point(806, 59);
+            this.txtApe.Name = "txtApe";
+            this.txtApe.Size = new System.Drawing.Size(29, 15);
+            this.txtApe.TabIndex = 49;
+            this.txtApe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtApe.Visible = false;
             // 
-            // Column3
+            // txtNom
             // 
-            this.Column3.HeaderText = "Valor del Servicio";
-            this.Column3.Name = "Column3";
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.Width = 131;
+            this.txtNom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtNom.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNom.Enabled = false;
+            this.txtNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNom.Location = new System.Drawing.Point(806, 40);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(29, 15);
+            this.txtNom.TabIndex = 48;
+            this.txtNom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNom.Visible = false;
             // 
-            // btnSalir
+            // txtCedu
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnSalir.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.ForeColor = System.Drawing.Color.Black;
-            this.btnSalir.Location = new System.Drawing.Point(656, 333);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(144, 40);
-            this.btnSalir.TabIndex = 43;
-            this.btnSalir.Text = "SALIR";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.txtCedu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtCedu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCedu.Enabled = false;
+            this.txtCedu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCedu.Location = new System.Drawing.Point(806, 17);
+            this.txtCedu.Name = "txtCedu";
+            this.txtCedu.Size = new System.Drawing.Size(29, 15);
+            this.txtCedu.TabIndex = 47;
+            this.txtCedu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCedu.Visible = false;
             // 
-            // ServiciosBicicleta
+            // PresentaciónMotos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(840, 500);
             this.ControlBox = false;
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ServiciosBicicleta";
+            this.Name = "PresentaciónMotos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TALLER MECÁNICO - Solicitud de Datos Bicicleta";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ServiciosBicicleta_FormClosing);
             this.tabControl1.ResumeLayout(false);
             this.PestañaVehiculos.ResumeLayout(false);
+            this.PestañaVehiculos.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgServicios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -553,5 +615,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Button btnSalir;
+        public System.Windows.Forms.TextBox txtTel;
+        public System.Windows.Forms.TextBox txtApe;
+        public System.Windows.Forms.TextBox txtNom;
+        public System.Windows.Forms.TextBox txtCedu;
     }
 }

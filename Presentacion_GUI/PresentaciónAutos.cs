@@ -108,9 +108,11 @@ namespace TALLERM
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
-        {
-            //this.Hide();
-            new PresentaciónClientes().ShowDialog();
+        {            
+            PresentaciónClientes autos = new PresentaciónClientes();
+            this.Hide();
+            autos.ShowDialog();
+            this.Close();
         }
 
         private void PestañaVehiculos_Click(object sender, EventArgs e)
@@ -218,6 +220,7 @@ namespace TALLERM
                                 
                 dgServicios.Rows.Add(txtServicio.Text, txtMecanico.Text, valor);
                 PrecioTotal();
+                LimpiarCajas();
                 txtServicio.Text = "Seleccionar";
                 txtMecanico.Text = "Seleccionar";
             }
@@ -408,13 +411,13 @@ namespace TALLERM
         public void CargarGrilla()
         {
             String ruta1 = "Automoviles.TXT";
-            StreamReader sr = new StreamReader(ruta1, true);
+            StreamReader sr = new StreamReader(ruta1);
             string line = sr.ReadLine();
-            int i = 1;
-            while (!(sr.EndOfStream))
+            while (line != null)
             {
                 String[] info = line.Split(';');
-                dgServicios.Rows.Add(info);
+                GrillaListadoGeneral.Rows.Add(info);
+                line = sr.ReadLine();
             }
             sr.Close();
         }

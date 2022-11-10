@@ -11,14 +11,5 @@ namespace Logica
     {
         void Agregar(Vehiculo vehiculo);
 
-        void Eliminar();
-
-        void Modificar();
-
-        void Buscar();
-
-        void Mostrar();
-
-
     }
 }
