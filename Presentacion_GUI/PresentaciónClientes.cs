@@ -51,7 +51,7 @@ namespace TALLERM
 
                 if (txtTipo.Text == "Bicicleta")
                 {
-                    PresentaciónBicicletas bicis = new PresentaciónBicicletas();
+                    PresentaciónBicicleta bicis = new PresentaciónBicicleta();
                     bicis.txtCedu.Text = txtCedula.Text;
                     bicis.txtNom.Text = txtNombre.Text;
                     bicis.txtApe.Text = txtApellido.Text;
@@ -59,7 +59,6 @@ namespace TALLERM
                     this.Hide();
                     bicis.ShowDialog();
                     this.Close();
-
 
                 }
 
