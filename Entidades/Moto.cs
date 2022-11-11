@@ -19,7 +19,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return $"{Dueño};{Marca};{Color};{Placa};{Servicio};{Precio};{Precio}";
+            return $"{Dueño};{Marca};{Color};{Placa};{Servicio};{Mecanico};{Precio}";
         }
 
         public string Placa { get; set; }

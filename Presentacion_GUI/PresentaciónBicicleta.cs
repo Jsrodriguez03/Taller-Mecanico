@@ -1,5 +1,8 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
+using Entidades;
+using Logica;
 
 namespace TALLERM
 {
@@ -66,6 +69,7 @@ namespace TALLERM
             else
             {
                 MessageBox.Show("¡DATOS GUARDADOS EXITOSAMENTE!");
+                Guardar();
                 LimpiarCajas();
                 LimpiarTabla();
             }
@@ -74,12 +78,30 @@ namespace TALLERM
         public void LimpiarTabla()
         {
             dgServicios.Rows.Clear();
+            PrecioTotal();
+        }
+
+        public void Guardar()
+        {
+            ServiciosBicicletas serviciosBicicletas = new ServiciosBicicletas();
+            Bicicleta bici = new Bicicleta();
+
+            bici.Dueño = txtCedu.Text + ";" + txtNom.Text + ";" + txtApe.Text + ";" + txtTel.Text;
+            bici.Marca = txtMarca.Text;
+            bici.Color = txtColor.Text;
+            bici.Servicio = (string)dgServicios.Rows[0].Cells["descripciónServicios"].Value;
+            bici.Mecanico = (string)dgServicios.Rows[0].Cells["Mecanico"].Value;
+            bici.Precio = (string)dgServicios.Rows[0].Cells["valor"].Value;
+
+            serviciosBicicletas.Agregar(bici);
         }
 
         private void btnVolver_Click_1(object sender, EventArgs e)
         {
+            PresentaciónClientes bicis = new PresentaciónClientes();
             this.Hide();
-            new PresentaciónClientes().ShowDialog();
+            bicis.ShowDialog();
+            this.Close();
         }
         
         private void PestañaVehiculos_Click(object sender, EventArgs e)
@@ -91,26 +113,26 @@ namespace TALLERM
         {
             if (txtServicio.Text != "Seleccionar" && txtMecanico.Text != "Seleccionar")
             {
-                float valor = 0;
+                string valor = "";
                 if (txtServicio.Text == "Lavado")
                 {
-                    valor = 15000;
+                    valor = "15000";
                 }
                 else
                 {
                     if (txtServicio.Text == "Mantenimiento")
                     {
-                        valor = 150000;
+                        valor = "150000";
                     }
                     else
                     {
                         if (txtServicio.Text == "Pinchazo")
                         {
-                            valor = 1300;
+                            valor = "1300";
                         }
                         else
                         {
-                            valor = 211000;
+                            valor = "211000";
                         }
                     }
                 }
@@ -131,7 +153,7 @@ namespace TALLERM
             decimal Total = 0;
             foreach (DataGridViewRow row in dgServicios.Rows)
             {
-                Total += Convert.ToDecimal(row.Cells["Column3"].Value);
+                Total += Convert.ToDecimal(row.Cells["valor"].Value);
             }
             Precio.Text = Total.ToString() + "$";
         }
@@ -243,11 +265,6 @@ namespace TALLERM
             }
         }
 
-        private void ServiciosBicicleta_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-        }
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             var respuesta = MessageBox.Show("¿Desea salir?", "         T A L L E R      M E C Á N I C O", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -255,6 +272,25 @@ namespace TALLERM
             {
                 this.Close();
             }
+        }
+
+        private void PresentaciónBicicleta_Load(object sender, EventArgs e)
+        {
+            CargarGrilla();
+        }
+
+        public void CargarGrilla()
+        {
+            String ruta2 = "Bicicletas.TXT";
+            StreamReader sr = new StreamReader(ruta2);
+            string line = sr.ReadLine();
+            while (line != null)
+            {
+                String[] info = line.Split(';');
+                GrillaListadoGeneral.Rows.Add(info);
+                line = sr.ReadLine();
+            }
+            sr.Close();
         }
     }
 }

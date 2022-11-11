@@ -2,5 +2,5 @@
 1234;Santiago;Junior;987;Toyota;Dorada;GHJ;Ajuste del tiempo de encendido;Luis Pinto;23200
 12345678901;Junior Santiago;Santiago Junior;3015159004;Renault;Gris;ADE-F12;Limpieza o Cambio del filtro de aire;Juliana Torres;23200
 Cedula;Nombre;APellido;Telefono;Marca;Color;Placa;Ajuste del tiempo de encendido;Junior Rodriguez;23200
-
-
+1003;Junior;Santiago;3015159004;Renault;Negro;123-ABC;Ajustes del Motor;Junior Rodriguez;530000
+1003;Juliana;Torres;3014567890;Chevrolet;Negro;ASV-DVC;Ajustes del Motor;Luis Pinto;530000

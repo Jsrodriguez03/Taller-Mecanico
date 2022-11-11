@@ -96,17 +96,18 @@ namespace TALLERM
 
         public void Guardar()
         {
-            ServiciosBicicletas serviciosBicicletas = new ServiciosBicicletas();
-            Bicicleta bici = new Bicicleta();
+            ServiciosMotos serviciosMotos = new ServiciosMotos();
+            Moto moto = new Moto();
 
-            bici.Dueño = txtCedu.Text + ";" + txtNom.Text + ";" + txtApe.Text + ";" + txtTel.Text;
-            bici.Marca = txtMarca.Text;
-            bici.Color = txtColor.Text;
-            bici.Servicio = (string)dgServicios.Rows[0].Cells["descripciónServicios"].Value;
-            bici.Mecanico = (string)dgServicios.Rows[0].Cells["Mecanico"].Value;
-            bici.Precio = (string)dgServicios.Rows[0].Cells["valor"].Value;
+            moto.Dueño = txtCedu.Text + ";" + txtNom.Text + ";" + txtApe.Text + ";" + txtTel.Text;
+            moto.Marca = txtMarca.Text;
+            moto.Color = txtColor.Text;
+            moto.Placa = txtPlaca.Text;
+            moto.Servicio = (string)dgServicios.Rows[0].Cells["descripciónServicios"].Value;
+            moto.Mecanico = (string)dgServicios.Rows[0].Cells["Responsable"].Value;
+            moto.Precio = (string)dgServicios.Rows[0].Cells["valor"].Value;
 
-            serviciosBicicletas.Agregar(bici);
+            serviciosMotos.Agregar(moto);
         }
 
         private void btnVolver_Click_1(object sender, EventArgs e)
@@ -126,62 +127,62 @@ namespace TALLERM
         {
             if (txtServicio.Text != "Seleccionar" && txtMecanico.Text != "Seleccionar")
             {
-                float valor = 0;
+                string valor = "";
                 if (txtServicio.Text == "Ajuste del Nivel de la suspensión")
                 {
-                    valor = 15700;
+                    valor = "15700";
                 }
                 else
                 {
                     if (txtServicio.Text == "Cambio de Aceite")
                     {
-                        valor = 23000;
+                        valor = "23000";
                     }
                     else
                     {
                         if (txtServicio.Text == "Lavado General")
                         {
-                            valor = 530000;
+                            valor = "530000";
                         }
                         else
                         {
                             if (txtServicio.Text == "Limpieza de filtros")
                             {
-                                valor = 152000;
+                                valor = "152000";
                             }
                             else
                             {
                                 if (txtServicio.Text == "Mantenimiento de frenos")
                                 {
-                                    valor = 150000;
+                                    valor = "150000";
                                 }
                                 else
                                 {
                                     if (txtServicio.Text == "Regulación del Anticongelante")
                                     {
-                                        valor = 26900;
+                                        valor = "26900";
                                     }
                                     else
                                     {
                                         if (txtServicio.Text == "Revisión de Cadena")
                                         {
-                                            valor = 15000;
+                                            valor = "15000";
                                         }
                                         else
                                         {
                                             if (txtServicio.Text == "Revisión de Frenos")
                                             {
-                                                valor = 54000;
+                                                valor = "54000";
                                             }
                                             else
                                             {
                                                 if (txtServicio.Text == "Revisión de la Batería")
                                                 {
-                                                    valor = 35000;
+                                                    valor = "35000";
                                                 }
                                                 else
                                                 {
-                                                    valor = 38000;
+                                                    valor = "38000";
                                                 }
                                             }
                                         }
@@ -194,7 +195,6 @@ namespace TALLERM
                 
                 dgServicios.Rows.Add(txtServicio.Text, txtMecanico.Text, valor);
                 PrecioTotal();
-                LimpiarCajas();
                 txtServicio.Text = "Seleccionar";
                 txtMecanico.Text = "Seleccionar";
             }
@@ -209,7 +209,7 @@ namespace TALLERM
             decimal Total = 0;
             foreach (DataGridViewRow row in dgServicios.Rows)
             {
-                Total += Convert.ToDecimal(row.Cells["Column3"].Value);
+                Total += Convert.ToDecimal(row.Cells["valor"].Value);
             }
             Precio.Text = Total.ToString() + "$";
         }
@@ -368,11 +368,6 @@ namespace TALLERM
             }
         }
 
-        private void ServiciosMotos_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
-        }
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             var respuesta = MessageBox.Show("¿Desea salir?", "         T A L L E R      M E C Á N I C O", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -389,7 +384,7 @@ namespace TALLERM
 
         public void CargarGrilla()
         {
-            String ruta1 = "Automoviles.TXT";
+            String ruta1 = "Motocicletas.TXT";
             StreamReader sr = new StreamReader(ruta1);
             string line = sr.ReadLine();
             while (line != null)

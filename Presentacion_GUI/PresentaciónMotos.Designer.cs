@@ -56,9 +56,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dgServicios = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -74,6 +71,9 @@
             this.txtPlaca = new System.Windows.Forms.TextBox();
             this.labelPlaca = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.descripciónServicios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Responsable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ListaGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaListadoGeneral)).BeginInit();
             this.PestañaVehiculos.SuspendLayout();
@@ -412,9 +412,9 @@
             // 
             this.dgServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgServicios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
+            this.descripciónServicios,
+            this.Responsable,
+            this.valor});
             this.dgServicios.Location = new System.Drawing.Point(19, 267);
             this.dgServicios.Name = "dgServicios";
             this.dgServicios.RowHeadersVisible = false;
@@ -423,27 +423,6 @@
             this.dgServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgServicios.Size = new System.Drawing.Size(592, 195);
             this.dgServicios.TabIndex = 41;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Descripción Servicios";
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 290;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Mecánico Responsable";
-            this.Column2.Name = "Column2";
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Width = 168;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Valor del Servicio";
-            this.Column3.Name = "Column3";
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.Width = 131;
             // 
             // Precio
             // 
@@ -626,7 +605,28 @@
             this.tabControl1.Size = new System.Drawing.Size(846, 506);
             this.tabControl1.TabIndex = 15;
             // 
-            // PresentaciónBicicletas
+            // descripciónServicios
+            // 
+            this.descripciónServicios.HeaderText = "Descripción Servicios";
+            this.descripciónServicios.Name = "descripciónServicios";
+            this.descripciónServicios.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.descripciónServicios.Width = 290;
+            // 
+            // Responsable
+            // 
+            this.Responsable.HeaderText = "Mecánico Responsable";
+            this.Responsable.Name = "Responsable";
+            this.Responsable.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Responsable.Width = 168;
+            // 
+            // valor
+            // 
+            this.valor.HeaderText = "Valor del Servicio";
+            this.valor.Name = "valor";
+            this.valor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.valor.Width = 131;
+            // 
+            // PresentaciónMotos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -637,7 +637,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "PresentaciónBicicletas";
+            this.Name = "PresentaciónMotos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TALLER MECÁNICO - Solicitud de Datos Motocicleta";
             this.Load += new System.EventHandler(this.PresentaciónBicicletas_Load);
@@ -673,9 +673,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgServicios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Label Precio;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -702,5 +699,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn servicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn mecanico2;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripciónServicios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Responsable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
     }
 }

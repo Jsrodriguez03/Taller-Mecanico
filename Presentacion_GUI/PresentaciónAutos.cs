@@ -220,7 +220,6 @@ namespace TALLERM
                                 
                 dgServicios.Rows.Add(txtServicio.Text, txtMecanico.Text, valor);
                 PrecioTotal();
-                LimpiarCajas();
                 txtServicio.Text = "Seleccionar";
                 txtMecanico.Text = "Seleccionar";
             }

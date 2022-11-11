@@ -45,9 +45,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dgServicios = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -62,11 +59,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.ListaGeneral = new System.Windows.Forms.TabPage();
             this.GrillaListadoGeneral = new System.Windows.Forms.DataGridView();
+            this.descripciónServicios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mecanico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.color = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -299,9 +300,9 @@
             // 
             this.dgServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgServicios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
+            this.descripciónServicios,
+            this.Mecanico,
+            this.Valor});
             this.dgServicios.Location = new System.Drawing.Point(19, 267);
             this.dgServicios.Name = "dgServicios";
             this.dgServicios.RowHeadersVisible = false;
@@ -310,27 +311,6 @@
             this.dgServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgServicios.Size = new System.Drawing.Size(592, 195);
             this.dgServicios.TabIndex = 41;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Descripción Servicios";
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 290;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Mecánico Responsable";
-            this.Column2.Name = "Column2";
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Width = 168;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Valor del Servicio";
-            this.Column3.Name = "Column3";
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.Width = 131;
             // 
             // Precio
             // 
@@ -491,21 +471,45 @@
             // 
             // GrillaListadoGeneral
             // 
+            this.GrillaListadoGeneral.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GrillaListadoGeneral.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GrillaListadoGeneral.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column6,
             this.Column4,
+            this.apellido,
             this.Column7,
-            this.Column8,
             this.Column9,
+            this.color,
             this.Column10,
             this.Column11,
             this.Column12});
             this.GrillaListadoGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GrillaListadoGeneral.Location = new System.Drawing.Point(3, 3);
             this.GrillaListadoGeneral.Name = "GrillaListadoGeneral";
+            this.GrillaListadoGeneral.RowHeadersVisible = false;
             this.GrillaListadoGeneral.Size = new System.Drawing.Size(832, 474);
             this.GrillaListadoGeneral.TabIndex = 1;
+            // 
+            // descripciónServicios
+            // 
+            this.descripciónServicios.HeaderText = "Descripción Servicios";
+            this.descripciónServicios.Name = "descripciónServicios";
+            this.descripciónServicios.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.descripciónServicios.Width = 290;
+            // 
+            // Mecanico
+            // 
+            this.Mecanico.HeaderText = "Mecánico Responsable";
+            this.Mecanico.Name = "Mecanico";
+            this.Mecanico.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Mecanico.Width = 168;
+            // 
+            // Valor
+            // 
+            this.Valor.HeaderText = "Valor del Servicio";
+            this.Valor.Name = "Valor";
+            this.Valor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Valor.Width = 131;
             // 
             // Column6
             // 
@@ -517,20 +521,25 @@
             this.Column4.HeaderText = "Nombre";
             this.Column4.Name = "Column4";
             // 
+            // apellido
+            // 
+            this.apellido.HeaderText = "Apellido";
+            this.apellido.Name = "apellido";
+            // 
             // Column7
             // 
             this.Column7.HeaderText = "Telefono";
             this.Column7.Name = "Column7";
             // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Marca";
-            this.Column8.Name = "Column8";
-            // 
             // Column9
             // 
-            this.Column9.HeaderText = "Placa";
+            this.Column9.HeaderText = "Marca";
             this.Column9.Name = "Column9";
+            // 
+            // color
+            // 
+            this.color.HeaderText = "Color";
+            this.color.Name = "color";
             // 
             // Column10
             // 
@@ -547,7 +556,7 @@
             this.Column12.HeaderText = "Precio";
             this.Column12.Name = "Column12";
             // 
-            // PresentaciónMotos
+            // PresentaciónBicicleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -558,10 +567,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "PresentaciónMotos";
+            this.Name = "PresentaciónBicicleta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TALLER MECÁNICO - Solicitud de Datos Bicicleta";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ServiciosBicicleta_FormClosing);
+            this.Load += new System.EventHandler(this.PresentaciónBicicleta_Load);
             this.tabControl1.ResumeLayout(false);
             this.PestañaVehiculos.ResumeLayout(false);
             this.PestañaVehiculos.PerformLayout();
@@ -603,21 +612,22 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView GrillaListadoGeneral;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Button btnSalir;
         public System.Windows.Forms.TextBox txtTel;
         public System.Windows.Forms.TextBox txtApe;
         public System.Windows.Forms.TextBox txtNom;
         public System.Windows.Forms.TextBox txtCedu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripciónServicios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mecanico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn color;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
     }
 }
