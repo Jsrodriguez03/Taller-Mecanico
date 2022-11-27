@@ -1,26 +1,26 @@
-﻿using System;
-using System.Diagnostics.Contracts;
-using System.Drawing;
-using System.Reflection;
-using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
-using Entidades;
+﻿using Entidades;
 using Logica;
+using System;
 using System.IO;
+using System.Windows.Forms;
+
 
 namespace TALLERM
 {
     public partial class PresentaciónAutos : Form
     {
+        string fecha = DateTime.Now.ToString("ddMMyy-");
+        int idSer = 1;
+
         public PresentaciónAutos()
         {
             InitializeComponent();
-            txtServicio.Text = "Seleccionar";
-            txtServicio.DropDownStyle = ComboBoxStyle.DropDownList; 
-            txtMecanico.Text = "Seleccionar";
-            txtMecanico.DropDownStyle = ComboBoxStyle.DropDownList;            
+            boxServicio.Text = "Seleccionar";
+            boxServicio.DropDownStyle = ComboBoxStyle.DropDownList;           
         }
 
+
+        #region Eventos Botones
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarCajas();
@@ -28,8 +28,8 @@ namespace TALLERM
 
         public void LimpiarCajas()
         {
-            txtServicio.Text = "Seleccionar";
-            txtMecanico.Text = "Seleccionar";
+            boxServicio.Text = "Seleccionar";
+            txtMecanico.Text = "Nombre Mecánico";
             txtMarca.Text = "Ingrese La Marca Del Vehiculo";
             txtColor.Text = "Ingrese El Color Del Vehiculo";
             txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
@@ -38,8 +38,137 @@ namespace TALLERM
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             InicializarCajas();
-            VerificarCajas();                      
+            VerificarCajas();
+            Insertar();
+
+            Servicio servicio = new Servicio();
+            servicio.IdServicio = idSer.ToString();
+            idSer++;
+
         }
+
+
+        #region Inserciones
+        public void Insertar()
+        {
+            InsertarCliente();
+            InsertarAuto();            
+            InsertarServicio();
+        }
+
+        public void InsertarAuto()
+        {
+            Auto auto = new Auto();
+            auto.Propietario = txtNom.Text + " " + txtApe.Text;
+            auto.Marca = txtMarca.Text;
+            auto.Color = txtColor.Text;
+            auto.Placa = txtPlaca.Text;
+
+            ImpAutomovil automovilImp = new ImpAutomovil();
+
+            int resultado = automovilImp.Insertar(auto);
+
+            if (resultado > 0)
+            {
+                MessageBox.Show("Automovil Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se pudo guardar el Automovil", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        public void InsertarCliente()
+        {
+            Cliente cliente = new Cliente();
+            cliente.Cedula = txtCedu.Text;
+            cliente.Nombre = txtNom.Text;
+            cliente.Apellido = txtApe.Text;
+            cliente.Telefono = txtTel.Text;
+
+            ImpCliente clienteImp = new ImpCliente();
+
+            int resultado = clienteImp.Insertar(cliente);
+
+            if (resultado > 0)
+            {
+                MessageBox.Show("Cliente Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se pudo guardar el cliente", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        public void InsertarServicio()
+        {
+            Servicio servicio = new Servicio();
+            Mecanico mecanico = new Mecanico();
+            ImpServicio servicioImp = new ImpServicio();
+
+            int filas = dgServicios.Rows.Count;
+
+            for (int i = 0; i < filas - 1; i++)
+            {
+                if ((string)dgServicios.Rows[i].Cells["Mecanico"].Value == "Junior Rodriguez")
+                {
+                    mecanico.idMecanico = "M1";
+                    servicio.IdServicio = fecha + "S" + idSer.ToString();
+                    servicio.NombreServicio = (string)dgServicios.Rows[i].Cells["descripciónServicios"].Value;
+                    servicio.idMecanico = mecanico;
+                    servicio.Precio = Convert.ToDouble(dgServicios.Rows[i].Cells["valor"].Value);
+                }
+                else
+                {
+                    if ((string)dgServicios.Rows[i].Cells["Mecanico"].Value == "Juliana Torres")
+                    {
+                        mecanico.idMecanico = "M2";
+                        servicio.IdServicio = fecha + "S" + idSer.ToString();
+                        servicio.NombreServicio = (string)dgServicios.Rows[i].Cells["descripciónServicios"].Value;
+                        servicio.idMecanico = mecanico;
+                        servicio.Precio = servicio.Precio = Convert.ToDouble(dgServicios.Rows[i].Cells["valor"].Value);
+                    }
+                    else
+                    {
+                        if ((string)dgServicios.Rows[i].Cells["Mecanico"].Value == "Luis Pinto")
+                        {
+                            mecanico.idMecanico = "M3";
+                            servicio.IdServicio = fecha + "S" + idSer.ToString();
+                            servicio.NombreServicio = (string)dgServicios.Rows[i].Cells["descripciónServicios"].Value;
+                            servicio.idMecanico = mecanico;
+                            servicio.Precio = servicio.Precio = Convert.ToDouble(dgServicios.Rows[i].Cells["valor"].Value);
+                        }
+                        else
+                        {
+                            if ((string)dgServicios.Rows[i].Cells["Mecanico"].Value == "Nayid Castellar")
+                            {
+                                mecanico.idMecanico = "M4";
+                                servicio.IdServicio = fecha + "S" + idSer.ToString();
+                                servicio.NombreServicio = (string)dgServicios.Rows[i].Cells["descripciónServicios"].Value;
+                                servicio.idMecanico = mecanico;
+                                servicio.Precio = servicio.Precio = Convert.ToDouble(dgServicios.Rows[i].Cells["valor"].Value);
+                            }
+                            else
+                            {
+                                if ((string)dgServicios.Rows[i].Cells["Mecanico"].Value == "Steven Molina")
+                                {
+                                    mecanico.idMecanico = "M5";
+                                    servicio.IdServicio = fecha + "S" + idSer.ToString();
+                                    servicio.NombreServicio = (string)dgServicios.Rows[i].Cells["descripciónServicios"].Value;
+                                    servicio.idMecanico = mecanico;
+                                    servicio.Precio = servicio.Precio = Convert.ToDouble(dgServicios.Rows[i].Cells["valor"].Value);
+                                }
+                            }
+                        }
+                    }
+                }
+                int resultado = servicioImp.Insertar(servicio);
+            }
+
+            MessageBox.Show("Servicio Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        #endregion
+
 
         public void InicializarCajas()
         {
@@ -58,28 +187,22 @@ namespace TALLERM
                 txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
             }
 
-            if (txtServicio.Text == "")
+            if (boxServicio.Text == "")
             {
-                txtServicio.Text = "Seleccionar";
-            }
-
-            if (txtMecanico.Text == "")
-            {
-                txtMecanico.Text = "Seleccionar";
+                boxServicio.Text = "Seleccionar";
             }
         }
 
         public void VerificarCajas()
         {
-            if (txtMarca.Text == "Ingrese La Marca Del Vehiculo" || txtColor.Text == "Ingrese El Color Del Vehiculo" || 
-                txtPlaca.Text == "Ingrese La Placa Del Vehiculo" || dgServicios.Rows[0].Cells[0].Value == null)            
+            if (txtMarca.Text == "Ingrese La Marca Del Vehiculo" || txtColor.Text == "Ingrese El Color Del Vehiculo" ||
+                txtPlaca.Text == "Ingrese La Placa Del Vehiculo" || dgServicios.Rows[0].Cells[0].Value == null)
             {
-                MessageBox.Show("Hay Campos sin Completar, Por Favor Reviselos");
+                MessageBox.Show("Hay Campos sin Llenar, Por Favor Reviselos", "Revisar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                MessageBox.Show("¡DATOS GUARDADOS EXITOSAMENTE!");
-                Guardar();
+                MessageBox.Show("Datos Guardados Exitosamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 LimpiarCajas();
                 LimpiarTabla();
             }
@@ -91,24 +214,8 @@ namespace TALLERM
             PrecioTotal();
         }
 
-        public void Guardar()
-        {
-            ServiciosAutos serviciosAutos = new ServiciosAutos();
-            Auto auto = new Auto();
-
-            auto.Dueño = txtCedu.Text +";"+ txtNom.Text + ";" + txtApe.Text + ";" + txtTel.Text;
-            auto.Marca = txtMarca.Text;
-            auto.Color = txtColor.Text;
-            auto.Placa = txtPlaca.Text;
-            auto.Servicio = (string)dgServicios.Rows[0].Cells["descripciónServicios"].Value;
-            auto.Mecanico = (string)dgServicios.Rows[0].Cells["Mecanico"].Value;
-            auto.Precio = (string)dgServicios.Rows[0].Cells["valor"].Value;
-
-            serviciosAutos.Agregar(auto);
-        }
-
         private void btnVolver_Click(object sender, EventArgs e)
-        {            
+        {
             PresentaciónClientes autos = new PresentaciónClientes();
             this.Hide();
             autos.ShowDialog();
@@ -122,112 +229,39 @@ namespace TALLERM
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (txtServicio.Text != "Seleccionar" && txtMecanico.Text != "Seleccionar")
+            AgregarServicio();
+        }
+
+        public void AgregarServicio()
+        {
+            string valor = "";
+
+            if (boxServicio.Text != "Seleccionar")
             {
-                string valor = "";
-                if (txtServicio.Text == "Ajustes del Borner")
-                {
-                    valor = "15700";
-                }
-                else
-                {
-                    if (txtServicio.Text == "Ajustes del Motor")
-                    {
-                        valor = "530000";
-                    }
-                    else
-                    {
-                        if (txtServicio.Text == "Ajuste del tiempo de encendido")
-                        {
-                            valor = "23200";
-                        }
-                        else
-                        {
-                            if (txtServicio.Text == "Limpieza o Cambio del filtro de aire")
-                            {
-                                valor = "152000";
-                            }
-                            else
-                            {
-                                if (txtServicio.Text == "Limpieza o Cambio  de gasolina")
-                                {
-                                    valor = "150000";
-                                }
-                                else
-                                {
-                                    if (txtServicio.Text == "Limpieza o Cambio de las bujías")
-                                    {
-                                        valor = "150000";
-                                    }
-                                    else
-                                    {
-                                        if (txtServicio.Text == "Nivelación de batería")
-                                        {
-                                            valor = "15000";
-                                        }
-                                        else
-                                        {
-                                            if (txtServicio.Text == "Pintar")
-                                            {
-                                                valor = "54000";
-                                            }
-                                            else
-                                            {
-                                                if (txtServicio.Text == "Pinchazos")
-                                                {
-                                                    valor = "35000";
-                                                }
-                                                else
-                                                {
-                                                    if (txtServicio.Text == "Reparación de clutch")
-                                                    {
-                                                        valor = "110000";
-                                                    }
-                                                    else
-                                                    {
-                                                        if (txtServicio.Text == "Reparación de Frenos")
-                                                        {
-                                                            valor = "20000";
-                                                        }
-                                                        else
-                                                        {
-                                                            if (txtServicio.Text == "Reparación de luces")
-                                                            {
-                                                                valor = "18700";
-                                                            }
-                                                            else
-                                                            {
-                                                                if (txtServicio.Text == "Cambio de Aceite y Filtro")
-                                                                {
-                                                                    valor = "13000";
-                                                                }
-                                                                else
-                                                                {
-                                                                    valor = "38000";
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                                
-                dgServicios.Rows.Add(txtServicio.Text, txtMecanico.Text, valor);
+                if (boxServicio.SelectedIndex == 1) { valor = "530540"; txtMecanico.Text = "Junior Rodriguez"; }
+                if (boxServicio.SelectedIndex == 2) { valor = "150000"; txtMecanico.Text = "Juliana Torres"; }
+                if (boxServicio.SelectedIndex == 3) { valor = "25000"; txtMecanico.Text = "Luis Pinto"; }
+                if (boxServicio.SelectedIndex == 4) { valor = "13000"; txtMecanico.Text = "Nayid Castellar"; }
+                if (boxServicio.SelectedIndex == 5) { valor = "152000"; txtMecanico.Text = "Steven Molina"; }
+                if (boxServicio.SelectedIndex == 6) { valor = "530540"; txtMecanico.Text = "Junior Rodriguez"; }
+                if (boxServicio.SelectedIndex == 7) { valor = "58000"; txtMecanico.Text = "Juliana Torres"; }
+                if (boxServicio.SelectedIndex == 8) { valor = "15600"; txtMecanico.Text = "Luis Pinto"; }
+                if (boxServicio.SelectedIndex == 9) { valor = "54000"; txtMecanico.Text = "Nayid Castellar"; }
+                if (boxServicio.SelectedIndex == 10) { valor = "35000"; txtMecanico.Text = "Steven Molina"; }
+                if (boxServicio.SelectedIndex == 11) { valor = "110000"; txtMecanico.Text = "Junior Rodriguez"; }
+                if (boxServicio.SelectedIndex == 12) { valor = "20000"; txtMecanico.Text = "Juliana Torres"; }
+                if (boxServicio.SelectedIndex == 13) { valor = "18700"; txtMecanico.Text = "Luis Pinto"; }
+                if (boxServicio.SelectedIndex == 14) { valor = "38000"; txtMecanico.Text = "Steven Molina"; }
+                if (boxServicio.SelectedIndex == 0) { MessageBox.Show("Seleccione Uno de los Servicio.", 
+                                                    "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+
+                dgServicios.Rows.Add(boxServicio.Text, txtMecanico.Text, valor);
                 PrecioTotal();
-                txtServicio.Text = "Seleccionar";
-                txtMecanico.Text = "Seleccionar";
-            }
-            else
-            {
-                MessageBox.Show("Por Favor Complete Todos Los Campos.");
+                boxServicio.Text = "Seleccionar";
+                txtMecanico.Text = "Nombre Mecánico";
             }
         }
+
 
         public void PrecioTotal()
         {
@@ -236,7 +270,7 @@ namespace TALLERM
             {
                 Total += Convert.ToDecimal(row.Cells["valor"].Value);
             }
-            Precio.Text = Total.ToString()+"$";
+            Precio.Text = Total.ToString() + "$";
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -250,7 +284,6 @@ namespace TALLERM
             {
                 if (row.Cells[0].Value != null)
                 {
-                    //dgServicios.Rows.Remove(dgServicios.CurrentRow);
                     dgServicios.Rows.RemoveAt(dgServicios.CurrentRow.Index);
                     PrecioTotal();
                     break;
@@ -258,11 +291,23 @@ namespace TALLERM
                 else
                 {
                     MessageBox.Show("No Hay Fila Seleccionada");
+                    break;
                 }
             }
         }
 
-        //Eventos De Verificación de Cajas
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            var respuesta = MessageBox.Show("¿Desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+        #endregion
+
+
+        #region Eventos Cajas de Textos
         private void txtMarca_Click(object sender, EventArgs e)
         {
             if (txtMarca.Text == "Ingrese La Marca Del Vehiculo")
@@ -280,14 +325,9 @@ namespace TALLERM
                 txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
             }
 
-            if (txtServicio.Text == "")
+            if (boxServicio.Text == "")
             {
-                txtServicio.Text = "Seleccionar";
-            }
-
-            if (txtMecanico.Text == "")
-            {
-                txtMecanico.Text = "Seleccionar";
+                boxServicio.Text = "Seleccionar";
             }
         }
 
@@ -308,14 +348,9 @@ namespace TALLERM
                 txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
             }
 
-            if (txtServicio.Text == "")
+            if (boxServicio.Text == "")
             {
-                txtServicio.Text = "Seleccionar";
-            }
-
-            if (txtMecanico.Text == "")
-            {
-                txtMecanico.Text = "Seleccionar";
+                boxServicio.Text = "Seleccionar";
             }
         }
 
@@ -336,14 +371,9 @@ namespace TALLERM
                 txtMarca.Text = "Ingrese La Marca Del Vehiculo";
             }
 
-            if (txtServicio.Text == "")
+            if (boxServicio.Text == "")
             {
-                txtServicio.Text = "Seleccionar";
-            }
-
-            if (txtMecanico.Text == "")
-            {
-                txtMecanico.Text = "Seleccionar";
+                boxServicio.Text = "Seleccionar";
             }
         }
 
@@ -364,43 +394,114 @@ namespace TALLERM
                 txtMarca.Text = "Ingrese La Marca Del Vehiculo";
             }
 
-            if (txtMecanico.Text == "")
-            {
-                txtMecanico.Text = "Seleccionar";
-            }
+            OpcionMecanico();
         }
 
-        private void txtMecanico_Click(object sender, EventArgs e)
+        private void txtServicio_TextChanged(object sender, EventArgs e)
         {
-            if (txtPlaca.Text == "")
-            {
-                txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
-            }
-
-            if (txtColor.Text == "")
-            {
-                txtColor.Text = "Ingrese El Color Del Vehiculo";
-            }
-
-            if (txtMarca.Text == "")
-            {
-                txtMarca.Text = "Ingrese La Marca Del Vehiculo";
-            }
-
-            if (txtServicio.Text == "")
-            {
-                txtServicio.Text = "Seleccionar";
-            }
+            OpcionMecanico();
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        public void OpcionMecanico()
         {
-            var respuesta = MessageBox.Show("¿Desea salir?", "         T A L L E R      M E C Á N I C O", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (respuesta == DialogResult.Yes)
+            if (boxServicio.Text != "Seleccionar")
             {
-                this.Close();
+                if (boxServicio.Text == "Limpieza o Cambio  de gasolina")
+                {
+                    txtMecanico.Text = "Steven Molina";
+                }
+                else
+                {
+                    if (boxServicio.Text == "Ajustes del Borner")
+                    {
+                        txtMecanico.Text = "Junior Rodriguez";
+                    }
+                    else
+                    {
+                        if (boxServicio.Text == "Ajuste del tiempo de encendido")
+                        {
+                            txtMecanico.Text = "Luis Pinto";
+                        }
+                        else
+                        {
+                            if (boxServicio.Text == "Limpieza o Cambio del filtro de aire")
+                            {
+                                txtMecanico.Text = "Nayid Castellar";
+                            }
+                            else
+                            {
+                                if (boxServicio.Text == "Ajustes del Motor")
+                                {
+                                    txtMecanico.Text = "Juliana Torres";
+                                }
+                                else
+                                {
+                                    if (boxServicio.Text == "Limpieza o Cambio de las bujías")
+                                    {
+                                        txtMecanico.Text = "Junior Rodriguez";
+                                    }
+                                    else
+                                    {
+                                        if (boxServicio.Text == "Nivelación de batería")
+                                        {
+                                            txtMecanico.Text = "Juliana Torres";
+                                        }
+                                        else
+                                        {
+                                            if (boxServicio.Text == "Pintar")
+                                            {
+                                                txtMecanico.Text = "Luis Pinto";
+                                            }
+                                            else
+                                            {
+                                                if (boxServicio.Text == "Pinchazos")
+                                                {
+                                                    txtMecanico.Text = "Nayid Castellar";
+                                                }
+                                                else
+                                                {
+                                                    if (boxServicio.Text == "Reparación de clutch")
+                                                    {
+                                                        txtMecanico.Text = "Steven Molina";
+                                                    }
+                                                    else
+                                                    {
+                                                        if (boxServicio.Text == "Reparación de Frenos")
+                                                        {
+                                                            txtMecanico.Text = "Junior Rodriguez";
+                                                        }
+                                                        else
+                                                        {
+                                                            if (boxServicio.Text == "Reparación de luces")
+                                                            {
+                                                                txtMecanico.Text = "Juliana Torres";
+                                                            }
+                                                            else
+                                                            {
+                                                                if (boxServicio.Text == "Cambio de Aceite y Filtro")
+                                                                {
+                                                                    txtMecanico.Text = "Luis Pinto";
+                                                                }
+                                                                else
+                                                                {
+                                                                    txtMecanico.Text = "Junior Rodriguez";
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
+        #endregion
+
 
         private void PresentaciónAutos_Load(object sender, EventArgs e)
         {
@@ -421,6 +522,5 @@ namespace TALLERM
             sr.Close();
         }
 
-       
     }
 }

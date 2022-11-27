@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Entidades
+﻿namespace Entidades
 {
     public class Cliente : Persona
     {
@@ -12,7 +7,7 @@ namespace Entidades
 
         }
 
-        public Cliente(string Cedula, string Nombre, string Apellidos, string Telefono):base(Cedula, Nombre, Apellidos)
+        public Cliente(string Cedula, string Nombre, string Apellidos, string Telefono) : base(Cedula, Nombre, Apellidos)
         {
             this.Telefono = Telefono;
         }
@@ -22,6 +17,6 @@ namespace Entidades
             return $"{Cedula};{Nombre};{Apellido};{Telefono}";
         }
 
-        private string Telefono { get; set; }
+        public string Telefono { get; set; }
     }
 }

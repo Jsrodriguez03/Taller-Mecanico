@@ -49,13 +49,15 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.txtMecanico = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.txtServicio = new System.Windows.Forms.ComboBox();
+            this.boxServicio = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dgServicios = new System.Windows.Forms.DataGridView();
+            this.descripciónServicios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Responsable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -71,9 +73,7 @@
             this.txtPlaca = new System.Windows.Forms.TextBox();
             this.labelPlaca = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.descripciónServicios = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Responsable = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtMecanico = new System.Windows.Forms.Label();
             this.ListaGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaListadoGeneral)).BeginInit();
             this.PestañaVehiculos.SuspendLayout();
@@ -288,11 +288,11 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.txtMecanico);
+            this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.btnAgregar);
-            this.panel1.Controls.Add(this.txtServicio);
+            this.panel1.Controls.Add(this.boxServicio);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Location = new System.Drawing.Point(19, 142);
@@ -312,25 +312,6 @@
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // txtMecanico
-            // 
-            this.txtMecanico.BackColor = System.Drawing.Color.White;
-            this.txtMecanico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMecanico.ForeColor = System.Drawing.Color.Black;
-            this.txtMecanico.FormattingEnabled = true;
-            this.txtMecanico.Items.AddRange(new object[] {
-            "Seleccionar",
-            "Junior Rodriguez",
-            "Juliana Torres",
-            "Luis Pinto",
-            "Steven Molina",
-            "Nayid Castellar"});
-            this.txtMecanico.Location = new System.Drawing.Point(268, 76);
-            this.txtMecanico.Name = "txtMecanico";
-            this.txtMecanico.Size = new System.Drawing.Size(148, 21);
-            this.txtMecanico.TabIndex = 44;
-            this.txtMecanico.Click += new System.EventHandler(this.txtMecanico_Click);
             // 
             // label7
             // 
@@ -358,13 +339,13 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // txtServicio
+            // boxServicio
             // 
-            this.txtServicio.BackColor = System.Drawing.Color.White;
-            this.txtServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtServicio.ForeColor = System.Drawing.Color.Black;
-            this.txtServicio.FormattingEnabled = true;
-            this.txtServicio.Items.AddRange(new object[] {
+            this.boxServicio.BackColor = System.Drawing.Color.White;
+            this.boxServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxServicio.ForeColor = System.Drawing.Color.Black;
+            this.boxServicio.FormattingEnabled = true;
+            this.boxServicio.Items.AddRange(new object[] {
             "Seleccionar",
             "Ajuste del Nivel de la suspensión",
             "Cambio de Aceite",
@@ -378,11 +359,11 @@
             "Revisión de los neumáticos",
             "",
             ""});
-            this.txtServicio.Location = new System.Drawing.Point(23, 76);
-            this.txtServicio.Name = "txtServicio";
-            this.txtServicio.Size = new System.Drawing.Size(224, 21);
-            this.txtServicio.TabIndex = 41;
-            this.txtServicio.Click += new System.EventHandler(this.txtServicio_Click);
+            this.boxServicio.Location = new System.Drawing.Point(23, 76);
+            this.boxServicio.Name = "boxServicio";
+            this.boxServicio.Size = new System.Drawing.Size(224, 21);
+            this.boxServicio.TabIndex = 41;
+            this.boxServicio.Click += new System.EventHandler(this.txtServicio_Click);
             // 
             // label6
             // 
@@ -423,6 +404,27 @@
             this.dgServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgServicios.Size = new System.Drawing.Size(592, 195);
             this.dgServicios.TabIndex = 41;
+            // 
+            // descripciónServicios
+            // 
+            this.descripciónServicios.HeaderText = "Descripción Servicios";
+            this.descripciónServicios.Name = "descripciónServicios";
+            this.descripciónServicios.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.descripciónServicios.Width = 290;
+            // 
+            // Responsable
+            // 
+            this.Responsable.HeaderText = "Mecánico Responsable";
+            this.Responsable.Name = "Responsable";
+            this.Responsable.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Responsable.Width = 168;
+            // 
+            // valor
+            // 
+            this.valor.HeaderText = "Valor del Servicio";
+            this.valor.Name = "valor";
+            this.valor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.valor.Width = 131;
             // 
             // Precio
             // 
@@ -580,7 +582,7 @@
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(162, 20);
             this.txtPlaca.TabIndex = 34;
-            this.txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
+            this.txtPlaca.Text = "Ingrese La Placa De la Bicicleta";
             this.txtPlaca.Click += new System.EventHandler(this.txtPlaca_Click);
             // 
             // labelPlaca
@@ -605,26 +607,18 @@
             this.tabControl1.Size = new System.Drawing.Size(846, 506);
             this.tabControl1.TabIndex = 15;
             // 
-            // descripciónServicios
+            // txtMecanico
             // 
-            this.descripciónServicios.HeaderText = "Descripción Servicios";
-            this.descripciónServicios.Name = "descripciónServicios";
-            this.descripciónServicios.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.descripciónServicios.Width = 290;
-            // 
-            // Responsable
-            // 
-            this.Responsable.HeaderText = "Mecánico Responsable";
-            this.Responsable.Name = "Responsable";
-            this.Responsable.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Responsable.Width = 168;
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Valor del Servicio";
-            this.valor.Name = "valor";
-            this.valor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.valor.Width = 131;
+            this.txtMecanico.BackColor = System.Drawing.Color.White;
+            this.txtMecanico.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtMecanico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMecanico.ForeColor = System.Drawing.Color.Black;
+            this.txtMecanico.Location = new System.Drawing.Point(271, 76);
+            this.txtMecanico.Name = "txtMecanico";
+            this.txtMecanico.Size = new System.Drawing.Size(144, 21);
+            this.txtMecanico.TabIndex = 47;
+            this.txtMecanico.Text = "Nombre Mecánico";
+            this.txtMecanico.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // PresentaciónMotos
             // 
@@ -634,6 +628,7 @@
             this.ClientSize = new System.Drawing.Size(840, 500);
             this.ControlBox = false;
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -666,10 +661,9 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.ComboBox txtMecanico;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.ComboBox txtServicio;
+        private System.Windows.Forms.ComboBox boxServicio;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgServicios;
@@ -702,5 +696,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descripciónServicios;
         private System.Windows.Forms.DataGridViewTextBoxColumn Responsable;
         private System.Windows.Forms.DataGridViewTextBoxColumn valor;
+        private System.Windows.Forms.Label txtMecanico;
     }
 }

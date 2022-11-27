@@ -9,3 +9,14 @@ D:\Biblioteca\Documents\TallerMecanico\Logica\obj\Debug\Logica.csproj.CoreCompil
 D:\Biblioteca\Documents\TallerMecanico\Logica\obj\Debug\Logica.csproj.CopyComplete
 D:\Biblioteca\Documents\TallerMecanico\Logica\obj\Debug\Logica.dll
 D:\Biblioteca\Documents\TallerMecanico\Logica\obj\Debug\Logica.pdb
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\MySql.Data.dll
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\Google.Protobuf.dll
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\ZstdNet.dll
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\BouncyCastle.Crypto.dll
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\System.Memory.dll
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\System.Buffers.dll
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\K4os.Compression.LZ4.dll
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\K4os.Hash.xxHash.dll
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\System.Numerics.Vectors.dll
+D:\Biblioteca\Documents\TallerMecanico\Logica\bin\Debug\MySql.Data.xml

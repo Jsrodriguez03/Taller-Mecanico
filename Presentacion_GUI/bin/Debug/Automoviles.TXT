@@ -4,3 +4,8 @@
 Cedula;Nombre;APellido;Telefono;Marca;Color;Placa;Ajuste del tiempo de encendido;Junior Rodriguez;23200
 1003;Junior;Santiago;3015159004;Renault;Negro;123-ABC;Ajustes del Motor;Junior Rodriguez;530000
 1003;Juliana;Torres;3014567890;Chevrolet;Negro;ASV-DVC;Ajustes del Motor;Luis Pinto;530000
+1;11;11;1;1;1;1;Ajustes del Motor;Luis Pinto;530000
+1003;Junior;Santiago;301;Renault;Blanco;123
+1003;Junior;Santiago;103;Renault;Blanco;123
+1;Junior;Santiago;1;Renault;Negro;123
+1;Junior;1;1;Renault;Blanco;123

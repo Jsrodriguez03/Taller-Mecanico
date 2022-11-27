@@ -18,10 +18,8 @@ namespace TALLERM
         public PresentaciónMotos()
         {
             InitializeComponent();
-            txtServicio.Text = "Seleccionar";
-            txtServicio.DropDownStyle = ComboBoxStyle.DropDownList;
-            txtMecanico.Text = "Seleccionar";
-            txtMecanico.DropDownStyle = ComboBoxStyle.DropDownList;
+            boxServicio.Text = "Seleccionar";
+            boxServicio.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -31,7 +29,7 @@ namespace TALLERM
 
         public void LimpiarCajas()
         {
-            txtServicio.Text = "Seleccionar";
+            boxServicio.Text = "Seleccionar";
             txtMecanico.Text = "Seleccionar";
             txtMarca.Text = "Ingrese La Marca Del Vehiculo";
             txtColor.Text = "Ingrese El Color Del Vehiculo";
@@ -61,9 +59,9 @@ namespace TALLERM
                 txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
             }
 
-            if (txtServicio.Text == "")
+            if (boxServicio.Text == "")
             {
-                txtServicio.Text = "Seleccionar";
+                boxServicio.Text = "Seleccionar";
             }
 
             if (txtMecanico.Text == "")
@@ -82,7 +80,7 @@ namespace TALLERM
             else
             {
                 MessageBox.Show("¡DATOS GUARDADOS EXITOSAMENTE!");
-                Guardar();
+                //Guardar();
                 LimpiarCajas();
                 LimpiarTabla();
             }            
@@ -94,21 +92,21 @@ namespace TALLERM
             PrecioTotal();
         }
 
-        public void Guardar()
-        {
-            ServiciosMotos serviciosMotos = new ServiciosMotos();
-            Moto moto = new Moto();
+        //public void Guardar()
+        //{
+        //    ServiciosMotos serviciosMotos = new ServiciosMotos();
+        //    Moto moto = new Moto();
 
-            moto.Dueño = txtCedu.Text + ";" + txtNom.Text + ";" + txtApe.Text + ";" + txtTel.Text;
-            moto.Marca = txtMarca.Text;
-            moto.Color = txtColor.Text;
-            moto.Placa = txtPlaca.Text;
-            moto.Servicio = (string)dgServicios.Rows[0].Cells["descripciónServicios"].Value;
-            moto.Mecanico = (string)dgServicios.Rows[0].Cells["Responsable"].Value;
-            moto.Precio = (string)dgServicios.Rows[0].Cells["valor"].Value;
+        //    moto.Propietario = txtCedu.Text + ";" + txtNom.Text + ";" + txtApe.Text + ";" + txtTel.Text;
+        //    moto.Marca = txtMarca.Text;
+        //    moto.Color = txtColor.Text;
+        //    moto.Placa = txtPlaca.Text;
+        //    //moto.Servicio = (string)dgServicios.Rows[0].Cells["descripciónServicios"].Value;
+        //    //moto.Mecanico = (string)dgServicios.Rows[0].Cells["Responsable"].Value;
+        //    //moto.Precio = (string)dgServicios.Rows[0].Cells["valor"].Value;
 
-            serviciosMotos.Agregar(moto);
-        }
+        //    serviciosMotos.Agregar(moto);
+        //}
 
         private void btnVolver_Click_1(object sender, EventArgs e)
         {
@@ -125,58 +123,58 @@ namespace TALLERM
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (txtServicio.Text != "Seleccionar" && txtMecanico.Text != "Seleccionar")
+            if (boxServicio.Text != "Seleccionar" && txtMecanico.Text != "Seleccionar")
             {
                 string valor = "";
-                if (txtServicio.Text == "Ajuste del Nivel de la suspensión")
+                if (boxServicio.Text == "Ajuste del Nivel de la suspensión")
                 {
                     valor = "15700";
                 }
                 else
                 {
-                    if (txtServicio.Text == "Cambio de Aceite")
+                    if (boxServicio.Text == "Cambio de Aceite")
                     {
                         valor = "23000";
                     }
                     else
                     {
-                        if (txtServicio.Text == "Lavado General")
+                        if (boxServicio.Text == "Lavado General")
                         {
                             valor = "530000";
                         }
                         else
                         {
-                            if (txtServicio.Text == "Limpieza de filtros")
+                            if (boxServicio.Text == "Limpieza de filtros")
                             {
                                 valor = "152000";
                             }
                             else
                             {
-                                if (txtServicio.Text == "Mantenimiento de frenos")
+                                if (boxServicio.Text == "Mantenimiento de frenos")
                                 {
                                     valor = "150000";
                                 }
                                 else
                                 {
-                                    if (txtServicio.Text == "Regulación del Anticongelante")
+                                    if (boxServicio.Text == "Regulación del Anticongelante")
                                     {
                                         valor = "26900";
                                     }
                                     else
                                     {
-                                        if (txtServicio.Text == "Revisión de Cadena")
+                                        if (boxServicio.Text == "Revisión de Cadena")
                                         {
                                             valor = "15000";
                                         }
                                         else
                                         {
-                                            if (txtServicio.Text == "Revisión de Frenos")
+                                            if (boxServicio.Text == "Revisión de Frenos")
                                             {
                                                 valor = "54000";
                                             }
                                             else
                                             {
-                                                if (txtServicio.Text == "Revisión de la Batería")
+                                                if (boxServicio.Text == "Revisión de la Batería")
                                                 {
                                                     valor = "35000";
                                                 }
@@ -193,9 +191,9 @@ namespace TALLERM
                     }
                 }
                 
-                dgServicios.Rows.Add(txtServicio.Text, txtMecanico.Text, valor);
+                dgServicios.Rows.Add(boxServicio.Text, txtMecanico.Text, valor);
                 PrecioTotal();
-                txtServicio.Text = "Seleccionar";
+                boxServicio.Text = "Seleccionar";
                 txtMecanico.Text = "Seleccionar";
             }
             else
@@ -260,9 +258,9 @@ namespace TALLERM
                 txtMecanico.Text = "Seleccionar";
             }
 
-            if (txtServicio.Text == "")
+            if (boxServicio.Text == "")
             {
-                txtServicio.Text = "Seleccionar";
+                boxServicio.Text = "Seleccionar";
             }
         }
 
@@ -288,9 +286,9 @@ namespace TALLERM
                 txtMecanico.Text = "Seleccionar";
             }
 
-            if (txtServicio.Text == "")
+            if (boxServicio.Text == "")
             {
-                txtServicio.Text = "Seleccionar";
+                boxServicio.Text = "Seleccionar";
             }
         }
 
@@ -316,9 +314,9 @@ namespace TALLERM
                 txtMecanico.Text = "Seleccionar";
             }
 
-            if (txtServicio.Text == "")
+            if (boxServicio.Text == "")
             {
-                txtServicio.Text = "Seleccionar";
+                boxServicio.Text = "Seleccionar";
             }
         }
 
@@ -339,9 +337,9 @@ namespace TALLERM
                 txtMarca.Text = "Ingrese La Marca Del Vehiculo";
             }
 
-            if (txtServicio.Text == "")
+            if (boxServicio.Text == "")
             {
-                txtServicio.Text = "Seleccionar";
+                boxServicio.Text = "Seleccionar";
             }
         }
 

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Entidades
+﻿namespace Entidades
 {
     public class Persona
     {
@@ -16,7 +11,7 @@ namespace Entidades
         {
             this.Cedula = Cedula;
             this.Nombre = Nombre;
-            this.Apellido = Apellido;            
+            this.Apellido = Apellido;
         }
 
         public override string ToString()

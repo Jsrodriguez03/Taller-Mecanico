@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Entidades
+﻿namespace Entidades
 {
     public class Bicicleta : Vehiculo
     {
@@ -12,14 +7,14 @@ namespace Entidades
 
         }
 
-        public Bicicleta(string Dueño, string Marca, string Color, string Servicio, string Mecanico, string Precio):base(Dueño, Marca, Color, Servicio, Mecanico, Precio)
+        public Bicicleta(string Propietario, string Marca, string Color) : base(Propietario, Marca, Color)
         {
 
         }
 
         public override string ToString()
         {
-            return $"{Dueño};{Marca};{Color};{Servicio};{Mecanico};{Precio}";
+            return $"{Propietario};{Marca};{Color}";
         }
     }
 }
