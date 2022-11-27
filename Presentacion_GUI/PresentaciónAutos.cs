@@ -45,6 +45,9 @@ namespace TALLERM
             servicio.IdServicio = idSer.ToString();
             idSer++;
 
+            LimpiarCajas();
+            LimpiarTabla();
+
         }
 
 
@@ -202,9 +205,8 @@ namespace TALLERM
             }
             else
             {
-                MessageBox.Show("Datos Guardados Exitosamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                LimpiarCajas();
-                LimpiarTabla();
+                //MessageBox.Show("Datos Guardados Exitosamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                
             }
         }
 
