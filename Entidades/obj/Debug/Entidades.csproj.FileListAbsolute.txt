@@ -10,3 +10,9 @@ D:\Biblioteca\Documents\TallerMecanico\Entidades\obj\Debug\Entidades.csproj.Asse
 D:\Biblioteca\Documents\TallerMecanico\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 D:\Biblioteca\Documents\TallerMecanico\Entidades\obj\Debug\Entidades.dll
 D:\Biblioteca\Documents\TallerMecanico\Entidades\obj\Debug\Entidades.pdb
+D:\Desktop\Taller-Mecanico\Entidades\bin\Debug\Entidades.dll
+D:\Desktop\Taller-Mecanico\Entidades\bin\Debug\Entidades.pdb
+D:\Desktop\Taller-Mecanico\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+D:\Desktop\Taller-Mecanico\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+D:\Desktop\Taller-Mecanico\Entidades\obj\Debug\Entidades.dll
+D:\Desktop\Taller-Mecanico\Entidades\obj\Debug\Entidades.pdb
