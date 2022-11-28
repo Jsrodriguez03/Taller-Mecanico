@@ -1,6 +1,7 @@
 ﻿using Entidades;
 using Logica;
 using System;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -512,17 +513,89 @@ namespace TALLERM
 
         public void CargarGrilla()
         {
-            String ruta1 = "Automoviles.TXT";
-            StreamReader sr = new StreamReader(ruta1);
-            string line = sr.ReadLine();
-            while (line != null)
-            {
-                String[] info = line.Split(';');
-                GrillaListadoGeneral.Rows.Add(info);
-                line = sr.ReadLine();
-            }
-            sr.Close();
+            //    String ruta1 = "Automoviles.TXT";
+            //    StreamReader sr = new StreamReader(ruta1);
+            //    string line = sr.ReadLine();
+            //    while (line != null)
+            //    {
+            //        String[] info = line.Split(';');
+            //        GrillaListadoGeneral.Rows.Add(info);
+            //        line = sr.ReadLine();
+            //    }
+            //    sr.Close();
         }
 
+    private void btnAgregar_MouseEnter(object sender, EventArgs e)
+        {                       
+            btnAgregar.ForeColor = Color.Black;
+            btnAgregar.BackColor = Color.LimeGreen;
+        }
+
+        private void btnAgregar_MouseLeave(object sender, EventArgs e)
+        {
+            btnAgregar.ForeColor = Color.LimeGreen;
+            btnAgregar.BackColor = Color.Black;
+        }
+
+        private void btnEliminar_MouseEnter(object sender, EventArgs e)
+        {
+            btnEliminar.ForeColor = Color.Black;
+            btnEliminar.BackColor = Color.LimeGreen;
+        }
+
+        private void btnEliminar_MouseLeave(object sender, EventArgs e)
+        {            
+            btnEliminar.ForeColor = Color.LimeGreen;
+            btnEliminar.BackColor = Color.Black;
+        }
+
+        private void btnLimpiar_MouseEnter(object sender, EventArgs e)
+        {
+            btnLimpiar.ForeColor = Color.LimeGreen;
+            btnLimpiar.BackColor = Color.Black;
+        }
+
+        private void btnLimpiar_MouseLeave(object sender, EventArgs e)
+        {
+            btnLimpiar.ForeColor = Color.Black;
+            btnLimpiar.BackColor = Color.LimeGreen;
+        }
+
+        private void btnVolver_MouseEnter(object sender, EventArgs e)
+        {
+            btnVolver.ForeColor = Color.LimeGreen;
+            btnVolver.BackColor = Color.Black;
+        }
+
+        private void btnVolver_MouseLeave(object sender, EventArgs e)
+        {
+            btnVolver.ForeColor = Color.Black;
+            btnVolver.BackColor = Color.LimeGreen;
+        }
+
+        private void btnGuardar_MouseEnter(object sender, EventArgs e)
+        {
+            btnGuardar.ForeColor = Color.LimeGreen;
+            btnGuardar.BackColor = Color.Black;
+        }
+
+        private void btnGuardar_MouseLeave(object sender, EventArgs e)
+        {
+            btnGuardar.ForeColor = Color.Black;
+            btnGuardar.BackColor = Color.LimeGreen;
+        }
+
+        private void btnSalir_MouseEnter(object sender, EventArgs e)
+        {
+            btnSalir.ForeColor = Color.LimeGreen;
+            btnSalir.BackColor = Color.Black;
+        }
+    
+
+        private void btnSalir_MouseLeave(object sender, EventArgs e)
+        {
+            btnSalir.ForeColor = Color.Black;
+            btnSalir.BackColor = Color.LimeGreen;
+        }
     }
 }

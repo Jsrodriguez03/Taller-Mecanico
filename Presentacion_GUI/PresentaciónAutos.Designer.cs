@@ -62,26 +62,12 @@
             this.txtPlaca = new System.Windows.Forms.TextBox();
             this.labelPlaca = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.ListaGeneral = new System.Windows.Forms.TabPage();
-            this.GrillaListadoGeneral = new System.Windows.Forms.DataGridView();
-            this.cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mecanico2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PestañaVehiculos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgServicios)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelDatosVehiculo.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.ListaGeneral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GrillaListadoGeneral)).BeginInit();
             this.SuspendLayout();
             // 
             // PestañaVehiculos
@@ -173,6 +159,8 @@
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnSalir.MouseEnter += new System.EventHandler(this.btnSalir_MouseEnter);
+            this.btnSalir.MouseLeave += new System.EventHandler(this.btnSalir_MouseLeave);
             // 
             // dgServicios
             // 
@@ -256,6 +244,8 @@
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.btnEliminar.MouseEnter += new System.EventHandler(this.btnEliminar_MouseEnter);
+            this.btnEliminar.MouseLeave += new System.EventHandler(this.btnEliminar_MouseLeave);
             // 
             // label7
             // 
@@ -282,6 +272,8 @@
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.btnAgregar.MouseEnter += new System.EventHandler(this.btnAgregar_MouseEnter);
+            this.btnAgregar.MouseLeave += new System.EventHandler(this.btnAgregar_MouseLeave);
             // 
             // boxServicio
             // 
@@ -385,6 +377,8 @@
             this.btnLimpiar.Text = "LIMPIAR";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            this.btnLimpiar.MouseEnter += new System.EventHandler(this.btnLimpiar_MouseEnter);
+            this.btnLimpiar.MouseLeave += new System.EventHandler(this.btnLimpiar_MouseLeave);
             // 
             // btnGuardar
             // 
@@ -398,6 +392,8 @@
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnGuardar.MouseEnter += new System.EventHandler(this.btnGuardar_MouseEnter);
+            this.btnGuardar.MouseLeave += new System.EventHandler(this.btnGuardar_MouseLeave);
             // 
             // btnVolver
             // 
@@ -411,6 +407,8 @@
             this.btnVolver.Text = "VOLVER";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            this.btnVolver.MouseEnter += new System.EventHandler(this.btnVolver_MouseEnter);
+            this.btnVolver.MouseLeave += new System.EventHandler(this.btnVolver_MouseLeave);
             // 
             // panelDatosVehiculo
             // 
@@ -510,123 +508,11 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.PestañaVehiculos);
-            this.tabControl1.Controls.Add(this.ListaGeneral);
             this.tabControl1.Location = new System.Drawing.Point(-2, -2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(846, 506);
             this.tabControl1.TabIndex = 13;
-            // 
-            // ListaGeneral
-            // 
-            this.ListaGeneral.Controls.Add(this.GrillaListadoGeneral);
-            this.ListaGeneral.Location = new System.Drawing.Point(4, 22);
-            this.ListaGeneral.Name = "ListaGeneral";
-            this.ListaGeneral.Padding = new System.Windows.Forms.Padding(3);
-            this.ListaGeneral.Size = new System.Drawing.Size(838, 480);
-            this.ListaGeneral.TabIndex = 2;
-            this.ListaGeneral.Text = "Listado General";
-            this.ListaGeneral.UseVisualStyleBackColor = true;
-            // 
-            // GrillaListadoGeneral
-            // 
-            this.GrillaListadoGeneral.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrillaListadoGeneral.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cedula,
-            this.nombre,
-            this.apellido,
-            this.telefono,
-            this.marca,
-            this.color,
-            this.placa,
-            this.servicio,
-            this.mecanico2,
-            this.precio2});
-            this.GrillaListadoGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GrillaListadoGeneral.Location = new System.Drawing.Point(3, 3);
-            this.GrillaListadoGeneral.Name = "GrillaListadoGeneral";
-            this.GrillaListadoGeneral.RowHeadersVisible = false;
-            this.GrillaListadoGeneral.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GrillaListadoGeneral.Size = new System.Drawing.Size(832, 474);
-            this.GrillaListadoGeneral.TabIndex = 0;
-            // 
-            // cedula
-            // 
-            this.cedula.FillWeight = 25.38071F;
-            this.cedula.HeaderText = "Cedula";
-            this.cedula.Name = "cedula";
-            this.cedula.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cedula.Width = 80;
-            // 
-            // nombre
-            // 
-            this.nombre.FillWeight = 25.38071F;
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // apellido
-            // 
-            this.apellido.FillWeight = 25.38071F;
-            this.apellido.HeaderText = "Apellido";
-            this.apellido.Name = "apellido";
-            this.apellido.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // telefono
-            // 
-            this.telefono.FillWeight = 25.38071F;
-            this.telefono.HeaderText = "Telefono";
-            this.telefono.Name = "telefono";
-            this.telefono.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.telefono.Width = 80;
-            // 
-            // marca
-            // 
-            this.marca.FillWeight = 25.38071F;
-            this.marca.HeaderText = "Marca";
-            this.marca.Name = "marca";
-            this.marca.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.marca.Width = 70;
-            // 
-            // color
-            // 
-            this.color.FillWeight = 25.38071F;
-            this.color.HeaderText = "Color";
-            this.color.Name = "color";
-            this.color.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.color.Width = 80;
-            // 
-            // placa
-            // 
-            this.placa.FillWeight = 25.38071F;
-            this.placa.HeaderText = "Placa";
-            this.placa.Name = "placa";
-            this.placa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.placa.Width = 80;
-            // 
-            // servicio
-            // 
-            this.servicio.FillWeight = 771.5736F;
-            this.servicio.HeaderText = "Servicio";
-            this.servicio.Name = "servicio";
-            this.servicio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.servicio.Width = 200;
-            // 
-            // mecanico2
-            // 
-            this.mecanico2.FillWeight = 25.38071F;
-            this.mecanico2.HeaderText = "Mecánico";
-            this.mecanico2.Name = "mecanico2";
-            this.mecanico2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.mecanico2.Width = 90;
-            // 
-            // precio2
-            // 
-            this.precio2.FillWeight = 25.38071F;
-            this.precio2.HeaderText = "Precio";
-            this.precio2.Name = "precio2";
-            this.precio2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.precio2.Width = 70;
             // 
             // PresentaciónAutos
             // 
@@ -651,8 +537,6 @@
             this.panelDatosVehiculo.ResumeLayout(false);
             this.panelDatosVehiculo.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            this.ListaGeneral.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GrillaListadoGeneral)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -660,15 +544,30 @@
         #endregion
 
         private System.Windows.Forms.TabPage PestañaVehiculos;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage ListaGeneral;
+        public System.Windows.Forms.TextBox txtTel;
+        public System.Windows.Forms.TextBox txtApe;
+        public System.Windows.Forms.TextBox txtNom;
+        public System.Windows.Forms.TextBox txtCedu;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.DataGridView dgServicios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripciónServicios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mecanico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label txtMecanico;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.ComboBox boxServicio;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label Precio;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Panel panelDatosVehiculo;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label Precio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtColor;
         private System.Windows.Forms.Label label5;
@@ -676,33 +575,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.Label labelPlaca;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.ComboBox boxServicio;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dgServicios;
-        private System.Windows.Forms.Label label6;
-        public System.Windows.Forms.DataGridView GrillaListadoGeneral;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripciónServicios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Mecanico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
-        public System.Windows.Forms.TextBox txtTel;
-        public System.Windows.Forms.TextBox txtApe;
-        public System.Windows.Forms.TextBox txtNom;
-        public System.Windows.Forms.TextBox txtCedu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cedula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn color;
-        private System.Windows.Forms.DataGridViewTextBoxColumn placa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn servicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mecanico2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio2;
-        private System.Windows.Forms.Label txtMecanico;
+        private System.Windows.Forms.TabControl tabControl1;
     }
 }

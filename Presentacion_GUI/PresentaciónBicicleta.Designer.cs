@@ -37,6 +37,7 @@
             this.txtCedu = new System.Windows.Forms.TextBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtMecanico = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -54,6 +55,8 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.panelDatosVehiculo = new System.Windows.Forms.Panel();
+            this.txtPlaca = new System.Windows.Forms.TextBox();
+            this.labelPlaca = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtColor = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -70,9 +73,6 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtMecanico = new System.Windows.Forms.Label();
-            this.txtPlaca = new System.Windows.Forms.TextBox();
-            this.labelPlaca = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.PestañaVehiculos.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -182,6 +182,8 @@
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnSalir.MouseEnter += new System.EventHandler(this.btnSalir_MouseEnter_1);
+            this.btnSalir.MouseLeave += new System.EventHandler(this.btnSalir_MouseLeave_1);
             // 
             // panel1
             // 
@@ -198,6 +200,19 @@
             this.panel1.Size = new System.Drawing.Size(592, 119);
             this.panel1.TabIndex = 42;
             // 
+            // txtMecanico
+            // 
+            this.txtMecanico.BackColor = System.Drawing.Color.White;
+            this.txtMecanico.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtMecanico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMecanico.ForeColor = System.Drawing.Color.Black;
+            this.txtMecanico.Location = new System.Drawing.Point(264, 77);
+            this.txtMecanico.Name = "txtMecanico";
+            this.txtMecanico.Size = new System.Drawing.Size(144, 21);
+            this.txtMecanico.TabIndex = 47;
+            this.txtMecanico.Text = "Nombre Mecánico";
+            this.txtMecanico.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Black;
@@ -210,6 +225,8 @@
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.btnEliminar.MouseEnter += new System.EventHandler(this.btnEliminar_MouseEnter);
+            this.btnEliminar.MouseLeave += new System.EventHandler(this.btnEliminar_MouseLeave);
             // 
             // label7
             // 
@@ -236,6 +253,8 @@
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.btnAgregar.MouseEnter += new System.EventHandler(this.btnAgregar_MouseEnter);
+            this.btnAgregar.MouseLeave += new System.EventHandler(this.btnAgregar_MouseLeave_1);
             // 
             // boxServicio
             // 
@@ -365,6 +384,8 @@
             this.btnLimpiar.Text = "LIMPIAR";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            this.btnLimpiar.MouseEnter += new System.EventHandler(this.btnLimpiar_MouseEnter_1);
+            this.btnLimpiar.MouseLeave += new System.EventHandler(this.btnLimpiar_MouseLeave_1);
             // 
             // btnGuardar
             // 
@@ -378,6 +399,8 @@
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnGuardar.MouseEnter += new System.EventHandler(this.btnGuardar_MouseEnter_1);
+            this.btnGuardar.MouseLeave += new System.EventHandler(this.btnGuardar_MouseLeave_1);
             // 
             // btnVolver
             // 
@@ -391,6 +414,8 @@
             this.btnVolver.Text = "VOLVER";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click_1);
+            this.btnVolver.MouseEnter += new System.EventHandler(this.btnVolver_MouseEnter_1);
+            this.btnVolver.MouseLeave += new System.EventHandler(this.btnVolver_MouseLeave_1);
             // 
             // panelDatosVehiculo
             // 
@@ -406,6 +431,29 @@
             this.panelDatosVehiculo.Name = "panelDatosVehiculo";
             this.panelDatosVehiculo.Size = new System.Drawing.Size(592, 119);
             this.panelDatosVehiculo.TabIndex = 8;
+            // 
+            // txtPlaca
+            // 
+            this.txtPlaca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPlaca.Enabled = false;
+            this.txtPlaca.ForeColor = System.Drawing.Color.White;
+            this.txtPlaca.Location = new System.Drawing.Point(402, 77);
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.Size = new System.Drawing.Size(162, 20);
+            this.txtPlaca.TabIndex = 41;
+            this.txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
+            // 
+            // labelPlaca
+            // 
+            this.labelPlaca.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPlaca.Image = global::TallerMecanico.Properties.Resources.icons8_placa_de_matrícula_401;
+            this.labelPlaca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelPlaca.Location = new System.Drawing.Point(401, 51);
+            this.labelPlaca.Name = "labelPlaca";
+            this.labelPlaca.Size = new System.Drawing.Size(106, 23);
+            this.labelPlaca.TabIndex = 40;
+            this.labelPlaca.Text = "PLACA";
+            this.labelPlaca.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
@@ -540,42 +588,6 @@
             // 
             this.Column12.HeaderText = "Precio";
             this.Column12.Name = "Column12";
-            // 
-            // txtMecanico
-            // 
-            this.txtMecanico.BackColor = System.Drawing.Color.White;
-            this.txtMecanico.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.txtMecanico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMecanico.ForeColor = System.Drawing.Color.Black;
-            this.txtMecanico.Location = new System.Drawing.Point(264, 77);
-            this.txtMecanico.Name = "txtMecanico";
-            this.txtMecanico.Size = new System.Drawing.Size(144, 21);
-            this.txtMecanico.TabIndex = 47;
-            this.txtMecanico.Text = "Nombre Mecánico";
-            this.txtMecanico.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtPlaca
-            // 
-            this.txtPlaca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPlaca.Enabled = false;
-            this.txtPlaca.ForeColor = System.Drawing.Color.White;
-            this.txtPlaca.Location = new System.Drawing.Point(402, 77);
-            this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(162, 20);
-            this.txtPlaca.TabIndex = 41;
-            this.txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
-            // 
-            // labelPlaca
-            // 
-            this.labelPlaca.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPlaca.Image = global::TallerMecanico.Properties.Resources.icons8_placa_de_matrícula_401;
-            this.labelPlaca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelPlaca.Location = new System.Drawing.Point(401, 51);
-            this.labelPlaca.Name = "labelPlaca";
-            this.labelPlaca.Size = new System.Drawing.Size(106, 23);
-            this.labelPlaca.TabIndex = 40;
-            this.labelPlaca.Text = "PLACA";
-            this.labelPlaca.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // PresentaciónBicicleta
             // 

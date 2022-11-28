@@ -60,6 +60,8 @@
             this.boxServicios.Text = "SIGUIENTE";
             this.boxServicios.UseVisualStyleBackColor = false;
             this.boxServicios.Click += new System.EventHandler(this.boxSiguiente_Click);
+            this.boxServicios.MouseEnter += new System.EventHandler(this.boxServicios_MouseEnter);
+            this.boxServicios.MouseLeave += new System.EventHandler(this.boxServicios_MouseLeave);
             // 
             // boxLimpiar
             // 
@@ -72,6 +74,8 @@
             this.boxLimpiar.Text = "LIMPIAR";
             this.boxLimpiar.UseVisualStyleBackColor = false;
             this.boxLimpiar.Click += new System.EventHandler(this.boxLimpiar_Click);
+            this.boxLimpiar.MouseEnter += new System.EventHandler(this.boxLimpiar_MouseEnter);
+            this.boxLimpiar.MouseLeave += new System.EventHandler(this.boxLimpiar_MouseLeave);
             // 
             // panel1
             // 
@@ -245,6 +249,8 @@
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnSalir.MouseEnter += new System.EventHandler(this.btnSalir_MouseEnter);
+            this.btnSalir.MouseLeave += new System.EventHandler(this.btnSalir_MouseLeave);
             // 
             // PresentaciónClientes
             // 

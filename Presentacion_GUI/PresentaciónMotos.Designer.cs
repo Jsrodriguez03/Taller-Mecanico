@@ -48,6 +48,7 @@
             this.txtCedu = new System.Windows.Forms.TextBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtMecanico = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -73,7 +74,6 @@
             this.txtPlaca = new System.Windows.Forms.TextBox();
             this.labelPlaca = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.txtMecanico = new System.Windows.Forms.Label();
             this.ListaGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaListadoGeneral)).BeginInit();
             this.PestañaVehiculos.SuspendLayout();
@@ -284,6 +284,8 @@
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnSalir.MouseEnter += new System.EventHandler(this.btnSalir_MouseEnter);
+            this.btnSalir.MouseLeave += new System.EventHandler(this.btnSalir_MouseLeave);
             // 
             // panel1
             // 
@@ -300,6 +302,19 @@
             this.panel1.Size = new System.Drawing.Size(592, 119);
             this.panel1.TabIndex = 42;
             // 
+            // txtMecanico
+            // 
+            this.txtMecanico.BackColor = System.Drawing.Color.White;
+            this.txtMecanico.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtMecanico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMecanico.ForeColor = System.Drawing.Color.Black;
+            this.txtMecanico.Location = new System.Drawing.Point(271, 76);
+            this.txtMecanico.Name = "txtMecanico";
+            this.txtMecanico.Size = new System.Drawing.Size(144, 21);
+            this.txtMecanico.TabIndex = 47;
+            this.txtMecanico.Text = "Nombre Mecánico";
+            this.txtMecanico.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Black;
@@ -312,6 +327,8 @@
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.btnEliminar.MouseEnter += new System.EventHandler(this.btnEliminar_MouseEnter);
+            this.btnEliminar.MouseLeave += new System.EventHandler(this.btnEliminar_MouseLeave);
             // 
             // label7
             // 
@@ -338,6 +355,8 @@
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.btnAgregar.MouseEnter += new System.EventHandler(this.btnAgregar_MouseEnter);
+            this.btnAgregar.MouseLeave += new System.EventHandler(this.btnAgregar_MouseLeave);
             // 
             // boxServicio
             // 
@@ -475,6 +494,8 @@
             this.btnLimpiar.Text = "LIMPIAR";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            this.btnLimpiar.MouseEnter += new System.EventHandler(this.btnLimpiar_MouseEnter);
+            this.btnLimpiar.MouseLeave += new System.EventHandler(this.btnLimpiar_MouseLeave);
             // 
             // btnGuardar
             // 
@@ -488,6 +509,8 @@
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnGuardar.MouseEnter += new System.EventHandler(this.btnGuardar_MouseEnter);
+            this.btnGuardar.MouseLeave += new System.EventHandler(this.btnGuardar_MouseLeave);
             // 
             // btnVolver
             // 
@@ -501,6 +524,8 @@
             this.btnVolver.Text = "VOLVER";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click_1);
+            this.btnVolver.MouseEnter += new System.EventHandler(this.btnVolver_MouseEnter);
+            this.btnVolver.MouseLeave += new System.EventHandler(this.btnVolver_MouseLeave);
             // 
             // panelDatosVehiculo
             // 
@@ -606,19 +631,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(846, 506);
             this.tabControl1.TabIndex = 15;
-            // 
-            // txtMecanico
-            // 
-            this.txtMecanico.BackColor = System.Drawing.Color.White;
-            this.txtMecanico.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.txtMecanico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMecanico.ForeColor = System.Drawing.Color.Black;
-            this.txtMecanico.Location = new System.Drawing.Point(271, 76);
-            this.txtMecanico.Name = "txtMecanico";
-            this.txtMecanico.Size = new System.Drawing.Size(144, 21);
-            this.txtMecanico.TabIndex = 47;
-            this.txtMecanico.Text = "Nombre Mecánico";
-            this.txtMecanico.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // PresentaciónMotos
             // 

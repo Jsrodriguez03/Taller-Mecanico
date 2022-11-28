@@ -1,6 +1,7 @@
 ﻿using Entidades;
 using Logica;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace TALLERM
@@ -234,6 +235,42 @@ namespace TALLERM
             {
                 this.Close();
             }
+        }
+
+        private void boxServicios_MouseEnter(object sender, EventArgs e)
+        {
+            boxServicios.ForeColor = Color.LimeGreen;
+            boxServicios.BackColor = Color.Black;
+        }
+
+        private void boxServicios_MouseLeave(object sender, EventArgs e)
+        {
+            boxServicios.ForeColor = Color.Black;
+            boxServicios.BackColor = Color.LimeGreen;
+        }
+
+        private void boxLimpiar_MouseEnter(object sender, EventArgs e)
+        {
+            boxLimpiar.ForeColor = Color.LimeGreen;
+            boxLimpiar.BackColor = Color.Black;
+        }
+
+        private void boxLimpiar_MouseLeave(object sender, EventArgs e)
+        {
+            boxLimpiar.ForeColor = Color.Black;
+            boxLimpiar.BackColor = Color.LimeGreen;
+        }
+
+        private void btnSalir_MouseEnter(object sender, EventArgs e)
+        {
+            btnSalir.ForeColor = Color.LimeGreen;
+            btnSalir.BackColor = Color.Black;
+        }
+
+        private void btnSalir_MouseLeave(object sender, EventArgs e)
+        {
+            btnSalir.ForeColor = Color.Black;
+            btnSalir.BackColor = Color.LimeGreen;
         }
     }
 }
