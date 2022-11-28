@@ -85,6 +85,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListaAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaAuto.Designer.cs">
+      <DependentUpon>ListaAuto.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentaciónClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,15 @@
     <Compile Include="PresentaciónMotos.Designer.cs">
       <DependentUpon>PresentaciónMotos.cs</DependentUpon>
     </Compile>
+    <Compile Include="VisPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisPrincipal.Designer.cs">
+      <DependentUpon>VisPrincipal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ListaAuto.resx">
+      <DependentUpon>ListaAuto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentaciónClientes.resx">
       <DependentUpon>PresentaciónClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentaciónMotos.resx">
       <DependentUpon>PresentaciónMotos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisPrincipal.resx">
+      <DependentUpon>VisPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -337,6 +355,12 @@
       <Project>{0cddc79d-3a5a-439b-b2c9-6761910986eb}</Project>
       <Name>Logica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga__2_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-repair-icon-workshop-mechanic-symbol-png-image_4822021-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

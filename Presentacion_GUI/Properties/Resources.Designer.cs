@@ -123,6 +123,16 @@ namespace TallerMecanico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap descarga__2__removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("descarga__2_-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap descarga1 {
             get {
                 object obj = ResourceManager.GetObject("descarga1", resourceCulture);
@@ -648,6 +658,16 @@ namespace TallerMecanico.Properties {
         internal static System.Drawing.Bitmap Placa {
             get {
                 object obj = ResourceManager.GetObject("Placa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_repair_icon_workshop_mechanic_symbol_png_image_4822021_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-repair-icon-workshop-mechanic-symbol-png-image_4822021-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
