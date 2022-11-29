@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Datos;
+using System;
 using System.Windows.Forms;
 
 namespace TallerMecanico
@@ -15,6 +9,16 @@ namespace TallerMecanico
         public ListadoServicios()
         {
             InitializeComponent();
+        }
+
+        private void ListadoServicios_Load(object sender, EventArgs e)
+        {
+            GrillaServicio.DataSource = RepositorioServicio.Buscar(txtBus.Text);
+        }
+
+        private void btnCerrar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

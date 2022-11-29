@@ -1,13 +1,7 @@
 ﻿using Datos;
 using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TallerMecanico
@@ -18,27 +12,11 @@ namespace TallerMecanico
         {
             InitializeComponent();
         }
-
-        private void volverToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PresentaciónPrincipal pPal = new PresentaciónPrincipal();
-            this.Hide();
-            pPal.ShowDialog();
-            this.Close();
-        }
-
-        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var respuesta = MessageBox.Show("¿Desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (respuesta == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
+        
 
         private void ListadoAuto_Load(object sender, EventArgs e)
         {
-            //CargarGrilla();
+            CargarGrilla();
         }
 
         public void CargarGrilla()
@@ -58,11 +36,37 @@ namespace TallerMecanico
         private void button1_Click(object sender, EventArgs e)
         {
             CargarGrilla();
+        }  
+
+        private void volverToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PresentaciónPrincipal pPal = new PresentaciónPrincipal();
+            this.Hide();
+            pPal.ShowDialog();
+            this.Close();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var respuesta = MessageBox.Show("¿Desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            GrillaListadoGeneral.DataSource = RepositorioAutomovil.Buscar(txtBuscar.Text);
+            if (txtBuscar.Text != "")
+            {
+                ListadoServicios lser = new ListadoServicios();
+                lser.txtBus.Text = txtBuscar.Text;
+                lser.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Digite El Servicio A Buscar");
+            }
         }
     }
 }

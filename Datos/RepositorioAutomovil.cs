@@ -30,29 +30,5 @@ namespace Datos
             }            
         }
 
-        public static List<Auto> Buscar(string idS)
-        {
-            List<Auto> _lista = new List<Auto>();
-
-            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT idServicio, Propietario, " +
-                "Marca, Color, Placa FROM auto " +
-                "where Color = '{0}'", idS), BaseDatos.ObtenerConexion());
-
-
-            MySqlDataReader _reader = _comando.ExecuteReader();
-            while (_reader.Read())
-            {
-                Auto auto = new Auto();
-                auto.Propietario = _reader.GetString(0);
-                auto.Propietario = _reader.GetString(1);
-                auto.Marca = _reader.GetString(2);
-                auto.Color = _reader.GetString(3);
-                auto.Placa = _reader.GetString(4);
-                _lista.Add(auto);
-            }
-
-            return _lista;
-        }
-
     }
 }

@@ -406,98 +406,20 @@ namespace TALLERM
         {
             if (boxServicio.Text != "Seleccionar")
             {
-                if (boxServicio.Text == "Limpieza o Cambio  de gasolina")
-                {
-                    txtMecanico.Text = "Steven Molina";
-                }
-                else
-                {
-                    if (boxServicio.Text == "Ajustes del Borner")
-                    {
-                        txtMecanico.Text = "Junior Rodriguez";
-                    }
-                    else
-                    {
-                        if (boxServicio.Text == "Ajuste del tiempo de encendido")
-                        {
-                            txtMecanico.Text = "Luis Pinto";
-                        }
-                        else
-                        {
-                            if (boxServicio.Text == "Limpieza o Cambio del filtro de aire")
-                            {
-                                txtMecanico.Text = "Nayid Castellar";
-                            }
-                            else
-                            {
-                                if (boxServicio.Text == "Ajustes del Motor")
-                                {
-                                    txtMecanico.Text = "Juliana Torres";
-                                }
-                                else
-                                {
-                                    if (boxServicio.Text == "Limpieza o Cambio de las bujías")
-                                    {
-                                        txtMecanico.Text = "Junior Rodriguez";
-                                    }
-                                    else
-                                    {
-                                        if (boxServicio.Text == "Nivelación de batería")
-                                        {
-                                            txtMecanico.Text = "Juliana Torres";
-                                        }
-                                        else
-                                        {
-                                            if (boxServicio.Text == "Pintar")
-                                            {
-                                                txtMecanico.Text = "Luis Pinto";
-                                            }
-                                            else
-                                            {
-                                                if (boxServicio.Text == "Pinchazos")
-                                                {
-                                                    txtMecanico.Text = "Nayid Castellar";
-                                                }
-                                                else
-                                                {
-                                                    if (boxServicio.Text == "Reparación de clutch")
-                                                    {
-                                                        txtMecanico.Text = "Steven Molina";
-                                                    }
-                                                    else
-                                                    {
-                                                        if (boxServicio.Text == "Reparación de Frenos")
-                                                        {
-                                                            txtMecanico.Text = "Junior Rodriguez";
-                                                        }
-                                                        else
-                                                        {
-                                                            if (boxServicio.Text == "Reparación de luces")
-                                                            {
-                                                                txtMecanico.Text = "Juliana Torres";
-                                                            }
-                                                            else
-                                                            {
-                                                                if (boxServicio.Text == "Cambio de Aceite y Filtro")
-                                                                {
-                                                                    txtMecanico.Text = "Luis Pinto";
-                                                                }
-                                                                else
-                                                                {
-                                                                    txtMecanico.Text = "Junior Rodriguez";
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+                if (boxServicio.SelectedIndex == 1) { txtMecanico.Text = "Junior Rodriguez"; }
+                if (boxServicio.SelectedIndex == 2) { txtMecanico.Text = "Juliana Torres"; }
+                if (boxServicio.SelectedIndex == 3) { txtMecanico.Text = "Luis Pinto"; }
+                if (boxServicio.SelectedIndex == 4) { txtMecanico.Text = "Nayid Castellar"; }
+                if (boxServicio.SelectedIndex == 5) { txtMecanico.Text = "Steven Molina"; }
+                if (boxServicio.SelectedIndex == 6) { txtMecanico.Text = "Junior Rodriguez"; }
+                if (boxServicio.SelectedIndex == 7) { txtMecanico.Text = "Juliana Torres"; }
+                if (boxServicio.SelectedIndex == 8) { txtMecanico.Text = "Luis Pinto"; }
+                if (boxServicio.SelectedIndex == 9) { txtMecanico.Text = "Nayid Castellar"; }
+                if (boxServicio.SelectedIndex == 10) { txtMecanico.Text = "Steven Molina"; }
+                if (boxServicio.SelectedIndex == 11) { txtMecanico.Text = "Junior Rodriguez"; }
+                if (boxServicio.SelectedIndex == 12) { txtMecanico.Text = "Juliana Torres"; }
+                if (boxServicio.SelectedIndex == 13) { txtMecanico.Text = "Luis Pinto"; }
+                if (boxServicio.SelectedIndex == 14) { txtMecanico.Text = "Steven Molina"; }
             }
         }
         #endregion

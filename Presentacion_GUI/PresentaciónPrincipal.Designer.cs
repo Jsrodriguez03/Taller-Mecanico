@@ -51,6 +51,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.LimeGreen;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.oPCIONESToolStripMenuItem,
             this.lToolStripMenuItem,
@@ -66,13 +67,13 @@
             this.oPCIONESToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.regisToolStripMenuItem});
             this.oPCIONESToolStripMenuItem.Name = "oPCIONESToolStripMenuItem";
-            this.oPCIONESToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
+            this.oPCIONESToolStripMenuItem.Size = new System.Drawing.Size(127, 20);
             this.oPCIONESToolStripMenuItem.Text = "Gestion de Servicio";
             // 
             // regisToolStripMenuItem
             // 
             this.regisToolStripMenuItem.Name = "regisToolStripMenuItem";
-            this.regisToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.regisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.regisToolStripMenuItem.Text = "Registrar Cliente";
             this.regisToolStripMenuItem.Click += new System.EventHandler(this.regisToolStripMenuItem_Click);
             // 
@@ -81,7 +82,7 @@
             this.lToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consulToolStripMenuItem});
             this.lToolStripMenuItem.Name = "lToolStripMenuItem";
-            this.lToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.lToolStripMenuItem.Size = new System.Drawing.Size(105, 20);
             this.lToolStripMenuItem.Text = "Listado General";
             // 
             // consulToolStripMenuItem
@@ -91,34 +92,34 @@
             this.motoToolStripMenuItem,
             this.bicicletaToolStripMenuItem});
             this.consulToolStripMenuItem.Name = "consulToolStripMenuItem";
-            this.consulToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consulToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.consulToolStripMenuItem.Text = "Consultar Listado";
             // 
             // auToolStripMenuItem
             // 
             this.auToolStripMenuItem.Name = "auToolStripMenuItem";
-            this.auToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.auToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.auToolStripMenuItem.Text = "Auto";
             this.auToolStripMenuItem.Click += new System.EventHandler(this.auToolStripMenuItem_Click);
             // 
             // motoToolStripMenuItem
             // 
             this.motoToolStripMenuItem.Name = "motoToolStripMenuItem";
-            this.motoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motoToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.motoToolStripMenuItem.Text = "Moto";
             this.motoToolStripMenuItem.Click += new System.EventHandler(this.motoToolStripMenuItem_Click);
             // 
             // bicicletaToolStripMenuItem
             // 
             this.bicicletaToolStripMenuItem.Name = "bicicletaToolStripMenuItem";
-            this.bicicletaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bicicletaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.bicicletaToolStripMenuItem.Text = "Bicicleta";
             this.bicicletaToolStripMenuItem.Click += new System.EventHandler(this.bicicletaToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem2
             // 
             this.salirToolStripMenuItem2.Name = "salirToolStripMenuItem2";
-            this.salirToolStripMenuItem2.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem2.Size = new System.Drawing.Size(43, 20);
             this.salirToolStripMenuItem2.Text = "Salir";
             this.salirToolStripMenuItem2.Click += new System.EventHandler(this.salirToolStripMenuItem2_Click);
             // 
@@ -169,7 +170,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.LimeGreen;
             this.pictureBox1.Image = global::TallerMecanico.Properties.Resources.pngtree_repair_icon_workshop_mechanic_symbol_png_image_4822021_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(132, -9);
+            this.pictureBox1.Location = new System.Drawing.Point(135, -15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(385, 338);
             this.pictureBox1.TabIndex = 6;

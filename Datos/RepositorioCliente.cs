@@ -1,6 +1,7 @@
 ﻿using Entidades;
 using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Datos
@@ -23,6 +24,6 @@ namespace Datos
                 return 0;
             }
         }
-        
+
     }
 }

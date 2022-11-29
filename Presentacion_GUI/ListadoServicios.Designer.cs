@@ -28,57 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnVolver = new System.Windows.Forms.Button();
-            this.GrillaListadoGeneral = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListadoServicios));
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.GrillaServicio = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.GrillaListadoGeneral)).BeginInit();
+            this.txtBus = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.GrillaServicio)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnVolver
+            // btnCerrar
             // 
-            this.btnVolver.BackColor = System.Drawing.Color.Black;
-            this.btnVolver.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.ForeColor = System.Drawing.Color.LimeGreen;
-            this.btnVolver.Location = new System.Drawing.Point(635, 392);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(144, 40);
-            this.btnVolver.TabIndex = 50;
-            this.btnVolver.Text = "VOLVER";
-            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnCerrar.BackColor = System.Drawing.Color.Black;
+            this.btnCerrar.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.LimeGreen;
+            this.btnCerrar.Location = new System.Drawing.Point(287, 10);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(144, 40);
+            this.btnCerrar.TabIndex = 50;
+            this.btnCerrar.Text = "CERRAR";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
-            // GrillaListadoGeneral
+            // GrillaServicio
             // 
-            this.GrillaListadoGeneral.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrillaListadoGeneral.Location = new System.Drawing.Point(12, 78);
-            this.GrillaListadoGeneral.Name = "GrillaListadoGeneral";
-            this.GrillaListadoGeneral.RowHeadersVisible = false;
-            this.GrillaListadoGeneral.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GrillaListadoGeneral.Size = new System.Drawing.Size(776, 363);
-            this.GrillaListadoGeneral.TabIndex = 46;
+            this.GrillaServicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrillaServicio.Location = new System.Drawing.Point(12, 56);
+            this.GrillaServicio.Name = "GrillaServicio";
+            this.GrillaServicio.RowHeadersVisible = false;
+            this.GrillaServicio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GrillaServicio.Size = new System.Drawing.Size(419, 264);
+            this.GrillaServicio.TabIndex = 46;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label1.Location = new System.Drawing.Point(63, 30);
+            this.label1.Location = new System.Drawing.Point(12, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(528, 33);
+            this.label1.Size = new System.Drawing.Size(267, 33);
             this.label1.TabIndex = 47;
-            this.label1.Text = "SERVICIOS PRESTADOS POR AUTOMOVIL";
+            this.label1.Text = "SERVICIOS TOTALES";
+            // 
+            // txtBus
+            // 
+            this.txtBus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.txtBus.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBus.Enabled = false;
+            this.txtBus.Location = new System.Drawing.Point(1, 1);
+            this.txtBus.Multiline = true;
+            this.txtBus.Name = "txtBus";
+            this.txtBus.Size = new System.Drawing.Size(25, 20);
+            this.txtBus.TabIndex = 51;
+            this.txtBus.Visible = false;
             // 
             // ListadoServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnVolver);
+            this.ClientSize = new System.Drawing.Size(443, 334);
+            this.ControlBox = false;
+            this.Controls.Add(this.txtBus);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.GrillaListadoGeneral);
+            this.Controls.Add(this.GrillaServicio);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ListadoServicios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListadoServicios";
-            ((System.ComponentModel.ISupportInitialize)(this.GrillaListadoGeneral)).EndInit();
+            this.Load += new System.EventHandler(this.ListadoServicios_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.GrillaServicio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,8 +107,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnVolver;
-        public System.Windows.Forms.DataGridView GrillaListadoGeneral;
+        private System.Windows.Forms.Button btnCerrar;
+        public System.Windows.Forms.DataGridView GrillaServicio;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox txtBus;
     }
 }
