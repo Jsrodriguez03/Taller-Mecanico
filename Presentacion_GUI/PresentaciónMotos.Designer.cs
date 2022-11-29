@@ -29,18 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PresentaciónMotos));
-            this.ListaGeneral = new System.Windows.Forms.TabPage();
-            this.GrillaListadoGeneral = new System.Windows.Forms.DataGridView();
-            this.cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mecanico2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PestañaVehiculos = new System.Windows.Forms.TabPage();
             this.txtTel = new System.Windows.Forms.TextBox();
             this.txtApe = new System.Windows.Forms.TextBox();
@@ -56,9 +44,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dgServicios = new System.Windows.Forms.DataGridView();
-            this.descripciónServicios = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Responsable = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -74,8 +59,9 @@
             this.txtPlaca = new System.Windows.Forms.TextBox();
             this.labelPlaca = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.ListaGeneral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GrillaListadoGeneral)).BeginInit();
+            this.descripciónServicios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mecanico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PestañaVehiculos.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgServicios)).BeginInit();
@@ -83,117 +69,6 @@
             this.panelDatosVehiculo.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ListaGeneral
-            // 
-            this.ListaGeneral.Controls.Add(this.GrillaListadoGeneral);
-            this.ListaGeneral.Location = new System.Drawing.Point(4, 22);
-            this.ListaGeneral.Name = "ListaGeneral";
-            this.ListaGeneral.Padding = new System.Windows.Forms.Padding(3);
-            this.ListaGeneral.Size = new System.Drawing.Size(838, 480);
-            this.ListaGeneral.TabIndex = 2;
-            this.ListaGeneral.Text = "Listado General";
-            this.ListaGeneral.UseVisualStyleBackColor = true;
-            // 
-            // GrillaListadoGeneral
-            // 
-            this.GrillaListadoGeneral.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrillaListadoGeneral.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cedula,
-            this.nombre,
-            this.apellido,
-            this.telefono,
-            this.marca,
-            this.color,
-            this.placa,
-            this.servicio,
-            this.mecanico2,
-            this.precio2});
-            this.GrillaListadoGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GrillaListadoGeneral.Location = new System.Drawing.Point(3, 3);
-            this.GrillaListadoGeneral.Name = "GrillaListadoGeneral";
-            this.GrillaListadoGeneral.RowHeadersVisible = false;
-            this.GrillaListadoGeneral.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GrillaListadoGeneral.Size = new System.Drawing.Size(832, 474);
-            this.GrillaListadoGeneral.TabIndex = 1;
-            // 
-            // cedula
-            // 
-            this.cedula.FillWeight = 25.38071F;
-            this.cedula.HeaderText = "Cedula";
-            this.cedula.Name = "cedula";
-            this.cedula.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cedula.Width = 80;
-            // 
-            // nombre
-            // 
-            this.nombre.FillWeight = 25.38071F;
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // apellido
-            // 
-            this.apellido.FillWeight = 25.38071F;
-            this.apellido.HeaderText = "Apellido";
-            this.apellido.Name = "apellido";
-            this.apellido.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // telefono
-            // 
-            this.telefono.FillWeight = 25.38071F;
-            this.telefono.HeaderText = "Telefono";
-            this.telefono.Name = "telefono";
-            this.telefono.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.telefono.Width = 80;
-            // 
-            // marca
-            // 
-            this.marca.FillWeight = 25.38071F;
-            this.marca.HeaderText = "Marca";
-            this.marca.Name = "marca";
-            this.marca.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.marca.Width = 70;
-            // 
-            // color
-            // 
-            this.color.FillWeight = 25.38071F;
-            this.color.HeaderText = "Color";
-            this.color.Name = "color";
-            this.color.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.color.Width = 80;
-            // 
-            // placa
-            // 
-            this.placa.FillWeight = 25.38071F;
-            this.placa.HeaderText = "Placa";
-            this.placa.Name = "placa";
-            this.placa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.placa.Width = 80;
-            // 
-            // servicio
-            // 
-            this.servicio.FillWeight = 771.5736F;
-            this.servicio.HeaderText = "Servicio";
-            this.servicio.Name = "servicio";
-            this.servicio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.servicio.Width = 200;
-            // 
-            // mecanico2
-            // 
-            this.mecanico2.FillWeight = 25.38071F;
-            this.mecanico2.HeaderText = "Mecánico";
-            this.mecanico2.Name = "mecanico2";
-            this.mecanico2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.mecanico2.Width = 90;
-            // 
-            // precio2
-            // 
-            this.precio2.FillWeight = 25.38071F;
-            this.precio2.HeaderText = "Precio";
-            this.precio2.Name = "precio2";
-            this.precio2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.precio2.Width = 70;
             // 
             // PestañaVehiculos
             // 
@@ -375,13 +250,12 @@
             "Revisión de Cadena",
             "Revisión de Frenos",
             "Revisión de la Batería",
-            "Revisión de los neumáticos",
-            "",
-            ""});
+            "Revisión de los neumáticos"});
             this.boxServicio.Location = new System.Drawing.Point(23, 76);
             this.boxServicio.Name = "boxServicio";
             this.boxServicio.Size = new System.Drawing.Size(224, 21);
             this.boxServicio.TabIndex = 41;
+            this.boxServicio.TextChanged += new System.EventHandler(this.boxServicio_TextChanged);
             this.boxServicio.Click += new System.EventHandler(this.txtServicio_Click);
             // 
             // label6
@@ -413,7 +287,7 @@
             this.dgServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgServicios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.descripciónServicios,
-            this.Responsable,
+            this.Mecanico,
             this.valor});
             this.dgServicios.Location = new System.Drawing.Point(19, 267);
             this.dgServicios.Name = "dgServicios";
@@ -423,27 +297,6 @@
             this.dgServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgServicios.Size = new System.Drawing.Size(592, 195);
             this.dgServicios.TabIndex = 41;
-            // 
-            // descripciónServicios
-            // 
-            this.descripciónServicios.HeaderText = "Descripción Servicios";
-            this.descripciónServicios.Name = "descripciónServicios";
-            this.descripciónServicios.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.descripciónServicios.Width = 290;
-            // 
-            // Responsable
-            // 
-            this.Responsable.HeaderText = "Mecánico Responsable";
-            this.Responsable.Name = "Responsable";
-            this.Responsable.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Responsable.Width = 168;
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Valor del Servicio";
-            this.valor.Name = "valor";
-            this.valor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.valor.Width = 131;
             // 
             // Precio
             // 
@@ -607,7 +460,7 @@
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(162, 20);
             this.txtPlaca.TabIndex = 34;
-            this.txtPlaca.Text = "Ingrese La Placa De la Bicicleta";
+            this.txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
             this.txtPlaca.Click += new System.EventHandler(this.txtPlaca_Click);
             // 
             // labelPlaca
@@ -625,12 +478,32 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.PestañaVehiculos);
-            this.tabControl1.Controls.Add(this.ListaGeneral);
             this.tabControl1.Location = new System.Drawing.Point(-3, -3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(846, 506);
             this.tabControl1.TabIndex = 15;
+            // 
+            // descripciónServicios
+            // 
+            this.descripciónServicios.HeaderText = "Descripción Servicios";
+            this.descripciónServicios.Name = "descripciónServicios";
+            this.descripciónServicios.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.descripciónServicios.Width = 290;
+            // 
+            // Mecanico
+            // 
+            this.Mecanico.HeaderText = "Mecánico Responsable";
+            this.Mecanico.Name = "Mecanico";
+            this.Mecanico.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Mecanico.Width = 168;
+            // 
+            // valor
+            // 
+            this.valor.HeaderText = "Valor del Servicio";
+            this.valor.Name = "valor";
+            this.valor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.valor.Width = 131;
             // 
             // PresentaciónMotos
             // 
@@ -647,9 +520,6 @@
             this.Name = "PresentaciónMotos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TALLER MECÁNICO - Solicitud de Datos Motocicleta";
-            this.Load += new System.EventHandler(this.PresentaciónBicicletas_Load);
-            this.ListaGeneral.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GrillaListadoGeneral)).EndInit();
             this.PestañaVehiculos.ResumeLayout(false);
             this.PestañaVehiculos.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -663,8 +533,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TabPage ListaGeneral;
         private System.Windows.Forms.TabPage PestañaVehiculos;
         public System.Windows.Forms.TextBox txtTel;
         public System.Windows.Forms.TextBox txtApe;
@@ -694,20 +562,9 @@
         private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.Label labelPlaca;
         private System.Windows.Forms.TabControl tabControl1;
-        public System.Windows.Forms.DataGridView GrillaListadoGeneral;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cedula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn color;
-        private System.Windows.Forms.DataGridViewTextBoxColumn placa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn servicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mecanico2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripciónServicios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Responsable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
         private System.Windows.Forms.Label txtMecanico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripciónServicios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mecanico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
     }
 }

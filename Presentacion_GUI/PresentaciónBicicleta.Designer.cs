@@ -212,6 +212,7 @@
             this.txtMecanico.TabIndex = 47;
             this.txtMecanico.Text = "Nombre Mecánico";
             this.txtMecanico.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtMecanico.TextChanged += new System.EventHandler(this.txtMecanico_TextChanged);
             // 
             // btnEliminar
             // 
@@ -272,6 +273,7 @@
             this.boxServicio.Name = "boxServicio";
             this.boxServicio.Size = new System.Drawing.Size(223, 21);
             this.boxServicio.TabIndex = 41;
+            this.boxServicio.TextChanged += new System.EventHandler(this.boxServicio_TextChanged);
             this.boxServicio.Click += new System.EventHandler(this.txtServicio_Click);
             // 
             // label6
@@ -604,7 +606,6 @@
             this.Name = "PresentaciónBicicleta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TALLER MECÁNICO - Solicitud de Datos Bicicleta";
-            this.Load += new System.EventHandler(this.PresentaciónBicicleta_Load);
             this.tabControl1.ResumeLayout(false);
             this.PestañaVehiculos.ResumeLayout(false);
             this.PestañaVehiculos.PerformLayout();

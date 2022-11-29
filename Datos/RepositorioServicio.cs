@@ -31,25 +31,45 @@ namespace Datos
             
         }
 
-        //public static List<Cliente> Buscar(string idS)
-        //{
-        //    List<Cliente> _lista = new List<Cliente>();
+        public int InsertarServicioBicicleta(Servicio servicio)
+        {
+            try
+            {
+                int retorno = 0;
+                MySqlCommand comando = new MySqlCommand(string.Format("Insert into  serviciobicicleta(IdServicio, NombreServicio, " +
+                    "IdMecanico, Precio) values('{0}','{1}','{2}','{3}')", servicio.IdServicio, servicio.NombreServicio,
+                    servicio.idMecanico.idMecanico, servicio.Precio), ObtenerConexion());
 
-        //    MySqlCommand _comando = new MySqlCommand(String.Format("SELECT NombreServicio, Precio," +
-        //        "FROM servicio where idServicio = '{0}'", idS), BaseDatos.ObtenerConexion());
+                retorno = comando.ExecuteNonQuery();
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
 
+        }
 
-        //    MySqlDataReader _reader = _comando.ExecuteReader();
-        //    while (_reader.Read())
-        //    {
-        //        Servicio servicio = new Servicio();
-        //        servicio.NombreServicio = _reader.GetString(0);
-        //        servicio.Precio = _reader.GetDouble(1);
-        //        _lista.Add(servicio);
-        //    }
+        public int InsertarServicioMotocicleta(Servicio servicio)
+        {
+            try
+            {
+                int retorno = 0;
+                MySqlCommand comando = new MySqlCommand(string.Format("Insert into  serviciomoto(IdServicio, NombreServicio, " +
+                    "IdMecanico, Precio) values('{0}','{1}','{2}','{3}')", servicio.IdServicio, servicio.NombreServicio,
+                    servicio.idMecanico.idMecanico, servicio.Precio), ObtenerConexion());
 
-        //    return _lista;
-        //}
+                retorno = comando.ExecuteNonQuery();
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+        }
 
         public static List<Servicio> Buscar(string nombre)
         {
@@ -77,5 +97,29 @@ namespace Datos
             return _lista;
         }
 
+        public static List<Servicio> BuscarBici(string nombre)
+        {
+            List<Servicio> _lista = new List<Servicio>();
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT s.IdServicio, s.NombreServicio, s.Precio, " +
+                "concat(m.NombreMecanico, ' ', m.ApellidoMecanico)" +
+                " FROM mecanico m JOIN serviciobicicleta s ON s.IdMecanico=m.IdMecanico " +
+                "where idServicio = '{0}'", nombre), BaseDatos.ObtenerConexion());
+
+
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                Servicio servicio = new Servicio();
+                servicio.IdServicio = _reader.GetString(0);
+                servicio.NombreServicio = _reader.GetString(1);
+                servicio.Precio = _reader.GetDouble(2);
+                servicio.IdServicio = _reader.GetString(3);
+
+                _lista.Add(servicio);
+            }
+
+            return _lista;
+        }
     }
 }

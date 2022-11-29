@@ -13,7 +13,9 @@ namespace TallerMecanico
 
         private void ListadoServicios_Load(object sender, EventArgs e)
         {
-            GrillaServicio.DataSource = RepositorioServicio.Buscar(txtBus.Text);
+            if (txtTipo.Text == "1") {GrillaServicio.DataSource = RepositorioServicio.Buscar(txtBus.Text);}
+            if (txtTipo.Text == "2") { GrillaServicio.DataSource = RepositorioServicio.BuscarBici(txtBus.Text); }
+            //if (txtTipo.Text == "1") { GrillaServicio.DataSource = RepositorioServicio.Buscar(txtBus.Text); }
         }
 
         private void btnCerrar_Click_1(object sender, EventArgs e)

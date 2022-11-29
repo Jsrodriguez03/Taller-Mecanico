@@ -25,5 +25,38 @@ namespace Datos
             }
         }
 
+        public int InsertarClienteBicicleta(Cliente cliente)
+        {
+            try
+            {
+                int retorno = 0;
+                MySqlCommand comando = new MySqlCommand(string.Format("Insert into  clientebicicleta(Cedula, Nombre, Apellido, Telefono) " +
+                "values('{0}','{1}','{2}','{3}')", cliente.Cedula, cliente.Nombre, cliente.Apellido, cliente.Telefono), ObtenerConexion());
+                retorno = comando.ExecuteNonQuery();
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+        }
+
+        public int InsertarClienteMotocicleta(Cliente cliente)
+        {
+            try
+            {
+                int retorno = 0;
+                MySqlCommand comando = new MySqlCommand(string.Format("Insert into  clientemoto(Cedula, Nombre, Apellido, Telefono) " +
+                "values('{0}','{1}','{2}','{3}')", cliente.Cedula, cliente.Nombre, cliente.Apellido, cliente.Telefono), ObtenerConexion());
+                retorno = comando.ExecuteNonQuery();
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+        }
     }
 }

@@ -33,6 +33,7 @@
             this.GrillaServicio = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBus = new System.Windows.Forms.TextBox();
+            this.txtTipo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaServicio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,6 +83,18 @@
             this.txtBus.TabIndex = 51;
             this.txtBus.Visible = false;
             // 
+            // txtTipo
+            // 
+            this.txtTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.txtTipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTipo.Enabled = false;
+            this.txtTipo.Location = new System.Drawing.Point(50, 1);
+            this.txtTipo.Multiline = true;
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(25, 20);
+            this.txtTipo.TabIndex = 52;
+            this.txtTipo.Visible = false;
+            // 
             // ListadoServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -89,6 +102,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(443, 334);
             this.ControlBox = false;
+            this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.txtBus);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label1);
@@ -111,5 +125,6 @@
         public System.Windows.Forms.DataGridView GrillaServicio;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtBus;
+        public System.Windows.Forms.TextBox txtTipo;
     }
 }

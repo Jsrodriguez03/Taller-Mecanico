@@ -7,10 +7,10 @@ namespace Logica
     {
         RepositorioMoto repositorioMoto = new RepositorioMoto();
 
-        //public int Insertar(Moto moto)
-        //{
-        //    //int resultado = repositorioMoto.InsertarMoto(moto);
-        //    return resultado;
-        //}
+        public int InsertarMoto(Moto moto)
+        {
+            int resultado = repositorioMoto.InsertarMotocicleta(moto);
+            return resultado;
+        }
     }
 }

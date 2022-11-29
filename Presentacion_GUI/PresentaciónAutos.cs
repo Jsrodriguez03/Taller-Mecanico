@@ -202,11 +202,6 @@ namespace TALLERM
             {
                 MessageBox.Show("Hay Campos sin Llenar, Por Favor Reviselos", "Revisar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else
-            {
-                //MessageBox.Show("Datos Guardados Exitosamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                
-            }
         }
 
         public void LimpiarTabla()
