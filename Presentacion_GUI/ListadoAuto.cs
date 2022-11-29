@@ -61,6 +61,7 @@ namespace TallerMecanico
             {
                 ListadoServicios lser = new ListadoServicios();
                 lser.txtBus.Text = txtBuscar.Text;
+                lser.txtTipo.Text = "1";
                 lser.ShowDialog();
             }
             else
