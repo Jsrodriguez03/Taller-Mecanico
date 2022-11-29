@@ -44,7 +44,7 @@
             this.txtTipo = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -238,19 +238,19 @@
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
-            // btnSalir
+            // btnVolver
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnSalir.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(275, 383);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(111, 40);
-            this.btnSalir.TabIndex = 30;
-            this.btnSalir.Text = "SALIR";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            this.btnSalir.MouseEnter += new System.EventHandler(this.btnSalir_MouseEnter);
-            this.btnSalir.MouseLeave += new System.EventHandler(this.btnSalir_MouseLeave);
+            this.btnVolver.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnVolver.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(275, 383);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(111, 40);
+            this.btnVolver.TabIndex = 30;
+            this.btnVolver.Text = "VOLVER";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            this.btnVolver.MouseEnter += new System.EventHandler(this.btnSalir_MouseEnter);
+            this.btnVolver.MouseLeave += new System.EventHandler(this.btnSalir_MouseLeave);
             // 
             // PresentaciónClientes
             // 
@@ -259,8 +259,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(409, 446);
-            this.ControlBox = false;
-            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.panel1);
@@ -274,6 +273,7 @@
             this.Name = "PresentaciónClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TALLER MECÁNICO - Solicitud de Datos Clientes";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PresentaciónClientes_FormClosing);
             this.Click += new System.EventHandler(this.DatosClientes_Click);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -298,6 +298,6 @@
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.TextBox txtTelefono;
         public System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

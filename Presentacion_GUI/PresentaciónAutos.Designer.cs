@@ -528,7 +528,6 @@
             this.Name = "PresentaciónAutos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TALLER MECÁNICO - Solicitud de Datos Automovil";
-            this.Load += new System.EventHandler(this.PresentaciónAutos_Load);
             this.PestañaVehiculos.ResumeLayout(false);
             this.PestañaVehiculos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgServicios)).EndInit();

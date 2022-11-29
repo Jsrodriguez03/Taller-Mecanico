@@ -2,9 +2,7 @@
 using Logica;
 using System;
 using System.Drawing;
-using System.IO;
 using System.Windows.Forms;
-
 
 namespace TALLERM
 {
@@ -63,13 +61,13 @@ namespace TALLERM
         public void InsertarAuto()
         {
             Auto auto = new Auto();
+            auto.idSer = new Servicio() { IdServicio = fecha + "S" + idSer.ToString() }; 
             auto.Propietario = txtNom.Text + " " + txtApe.Text;
             auto.Marca = txtMarca.Text;
             auto.Color = txtColor.Text;
             auto.Placa = txtPlaca.Text;
 
             ImpAutomovil automovilImp = new ImpAutomovil();
-
             int resultado = automovilImp.Insertar(auto);
 
             if (resultado > 0)
@@ -264,7 +262,6 @@ namespace TALLERM
                 txtMecanico.Text = "Nombre Mecánico";
             }
         }
-
 
         public void PrecioTotal()
         {
@@ -506,27 +503,9 @@ namespace TALLERM
         #endregion
 
 
-        private void PresentaciónAutos_Load(object sender, EventArgs e)
+        #region Diseño Botones
+        private void btnAgregar_MouseEnter(object sender, EventArgs e)
         {
-            CargarGrilla();
-        }
-
-        public void CargarGrilla()
-        {
-            //    String ruta1 = "Automoviles.TXT";
-            //    StreamReader sr = new StreamReader(ruta1);
-            //    string line = sr.ReadLine();
-            //    while (line != null)
-            //    {
-            //        String[] info = line.Split(';');
-            //        GrillaListadoGeneral.Rows.Add(info);
-            //        line = sr.ReadLine();
-            //    }
-            //    sr.Close();
-        }
-
-    private void btnAgregar_MouseEnter(object sender, EventArgs e)
-        {                       
             btnAgregar.ForeColor = Color.Black;
             btnAgregar.BackColor = Color.LimeGreen;
         }
@@ -544,7 +523,7 @@ namespace TALLERM
         }
 
         private void btnEliminar_MouseLeave(object sender, EventArgs e)
-        {            
+        {
             btnEliminar.ForeColor = Color.LimeGreen;
             btnEliminar.BackColor = Color.Black;
         }
@@ -590,12 +569,13 @@ namespace TALLERM
             btnSalir.ForeColor = Color.LimeGreen;
             btnSalir.BackColor = Color.Black;
         }
-    
 
         private void btnSalir_MouseLeave(object sender, EventArgs e)
         {
             btnSalir.ForeColor = Color.Black;
             btnSalir.BackColor = Color.LimeGreen;
         }
+        #endregion
+
     }
 }

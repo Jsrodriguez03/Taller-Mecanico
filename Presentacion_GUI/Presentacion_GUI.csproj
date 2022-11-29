@@ -85,11 +85,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ListaAuto.cs">
+    <Compile Include="ListadoBicicleta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListaAuto.Designer.cs">
-      <DependentUpon>ListaAuto.cs</DependentUpon>
+    <Compile Include="ListadoBicicleta.Designer.cs">
+      <DependentUpon>ListadoBicicleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoAuto.Designer.cs">
+      <DependentUpon>ListadoAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoMoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoMoto.Designer.cs">
+      <DependentUpon>ListadoMoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoServicios.Designer.cs">
+      <DependentUpon>ListadoServicios.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentaciónClientes.cs">
       <SubType>Form</SubType>
@@ -117,14 +135,23 @@
     <Compile Include="PresentaciónMotos.Designer.cs">
       <DependentUpon>PresentaciónMotos.cs</DependentUpon>
     </Compile>
-    <Compile Include="VisPrincipal.cs">
+    <Compile Include="PresentaciónPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VisPrincipal.Designer.cs">
-      <DependentUpon>VisPrincipal.cs</DependentUpon>
+    <Compile Include="PresentaciónPrincipal.Designer.cs">
+      <DependentUpon>PresentaciónPrincipal.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ListaAuto.resx">
-      <DependentUpon>ListaAuto.cs</DependentUpon>
+    <EmbeddedResource Include="ListadoAuto.resx">
+      <DependentUpon>ListadoAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoBicicleta.resx">
+      <DependentUpon>ListadoBicicleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoMoto.resx">
+      <DependentUpon>ListadoMoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoServicios.resx">
+      <DependentUpon>ListadoServicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentaciónClientes.resx">
       <DependentUpon>PresentaciónClientes.cs</DependentUpon>
@@ -148,8 +175,8 @@
     <EmbeddedResource Include="PresentaciónMotos.resx">
       <DependentUpon>PresentaciónMotos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VisPrincipal.resx">
-      <DependentUpon>VisPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="PresentaciónPrincipal.resx">
+      <DependentUpon>PresentaciónPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -3,6 +3,7 @@ using Logica;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using TallerMecanico;
 
 namespace TALLERM
 {
@@ -226,16 +227,7 @@ namespace TALLERM
             {
                 txtCedula.Text = "Ingrese Su Cedula";
             }
-        }        
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            var respuesta = MessageBox.Show("¿Desea salir?", "         T A L L E R      M E C Á N I C O", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (respuesta == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
+        }   
 
         private void boxServicios_MouseEnter(object sender, EventArgs e)
         {
@@ -263,14 +255,38 @@ namespace TALLERM
 
         private void btnSalir_MouseEnter(object sender, EventArgs e)
         {
-            btnSalir.ForeColor = Color.LimeGreen;
-            btnSalir.BackColor = Color.Black;
+            btnVolver.ForeColor = Color.LimeGreen;
+            btnVolver.BackColor = Color.Black;
         }
 
         private void btnSalir_MouseLeave(object sender, EventArgs e)
         {
-            btnSalir.ForeColor = Color.Black;
-            btnSalir.BackColor = Color.LimeGreen;
+            btnVolver.ForeColor = Color.Black;
+            btnVolver.BackColor = Color.LimeGreen;
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            PresentaciónPrincipal pPal = new PresentaciónPrincipal();
+            this.Hide();
+            pPal.ShowDialog();
+            this.Close();
+        }
+
+        private void PresentaciónClientes_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //var respuesta = MessageBox.Show("¿Desea salir?", "         T A L L E R      M E C Á N I C O", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //if (respuesta != DialogResult.Yes)
+            //{
+            //    e.Cancel = true;
+            //}
+
+            //var respuesta = MessageBox.Show("Desea salir ....", "Agenda v:0.1", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //if (respuesta != DialogResult.Yes)
+            //{
+            //    e.Cancel = true;
+            //}
         }
     }
+    
 }

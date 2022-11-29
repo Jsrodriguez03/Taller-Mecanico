@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using TallerMecanico;
 
 namespace TALLERM
 {
@@ -13,7 +14,7 @@ namespace TALLERM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PresentaciónClientes());
+            Application.Run(new PresentaciónPrincipal());
         }
     }
 }

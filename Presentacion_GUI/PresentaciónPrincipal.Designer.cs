@@ -1,6 +1,6 @@
 ﻿namespace TallerMecanico
 {
-    partial class VisPrincipal
+    partial class PresentaciónPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PresentaciónPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.oPCIONESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.carroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.motoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sALIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consulToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.motoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bicicletaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,7 +53,8 @@
             this.menuStrip1.BackColor = System.Drawing.Color.LimeGreen;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.oPCIONESToolStripMenuItem,
-            this.lToolStripMenuItem});
+            this.lToolStripMenuItem,
+            this.salirToolStripMenuItem2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(543, 24);
@@ -65,45 +64,22 @@
             // oPCIONESToolStripMenuItem
             // 
             this.oPCIONESToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.regisToolStripMenuItem,
-            this.sALIRToolStripMenuItem});
+            this.regisToolStripMenuItem});
             this.oPCIONESToolStripMenuItem.Name = "oPCIONESToolStripMenuItem";
             this.oPCIONESToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
             this.oPCIONESToolStripMenuItem.Text = "Gestion de Servicio";
             // 
             // regisToolStripMenuItem
             // 
-            this.regisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.carroToolStripMenuItem1,
-            this.motoToolStripMenuItem1});
             this.regisToolStripMenuItem.Name = "regisToolStripMenuItem";
-            this.regisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.regisToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.regisToolStripMenuItem.Text = "Registrar Cliente";
-            // 
-            // carroToolStripMenuItem1
-            // 
-            this.carroToolStripMenuItem1.Name = "carroToolStripMenuItem1";
-            this.carroToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.carroToolStripMenuItem1.Text = "Carro";
-            this.carroToolStripMenuItem1.Click += new System.EventHandler(this.carroToolStripMenuItem1_Click);
-            // 
-            // motoToolStripMenuItem1
-            // 
-            this.motoToolStripMenuItem1.Name = "motoToolStripMenuItem1";
-            this.motoToolStripMenuItem1.Size = new System.Drawing.Size(103, 22);
-            this.motoToolStripMenuItem1.Text = "Moto";
-            // 
-            // sALIRToolStripMenuItem
-            // 
-            this.sALIRToolStripMenuItem.Name = "sALIRToolStripMenuItem";
-            this.sALIRToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.sALIRToolStripMenuItem.Text = "Salir";
+            this.regisToolStripMenuItem.Click += new System.EventHandler(this.regisToolStripMenuItem_Click);
             // 
             // lToolStripMenuItem
             // 
             this.lToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consulToolStripMenuItem,
-            this.salirToolStripMenuItem1});
+            this.consulToolStripMenuItem});
             this.lToolStripMenuItem.Name = "lToolStripMenuItem";
             this.lToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
             this.lToolStripMenuItem.Text = "Listado General";
@@ -115,32 +91,36 @@
             this.motoToolStripMenuItem,
             this.bicicletaToolStripMenuItem});
             this.consulToolStripMenuItem.Name = "consulToolStripMenuItem";
-            this.consulToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.consulToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consulToolStripMenuItem.Text = "Consultar Listado";
             // 
             // auToolStripMenuItem
             // 
             this.auToolStripMenuItem.Name = "auToolStripMenuItem";
-            this.auToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.auToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.auToolStripMenuItem.Text = "Auto";
+            this.auToolStripMenuItem.Click += new System.EventHandler(this.auToolStripMenuItem_Click);
             // 
             // motoToolStripMenuItem
             // 
             this.motoToolStripMenuItem.Name = "motoToolStripMenuItem";
-            this.motoToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.motoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.motoToolStripMenuItem.Text = "Moto";
+            this.motoToolStripMenuItem.Click += new System.EventHandler(this.motoToolStripMenuItem_Click);
             // 
             // bicicletaToolStripMenuItem
             // 
             this.bicicletaToolStripMenuItem.Name = "bicicletaToolStripMenuItem";
-            this.bicicletaToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.bicicletaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bicicletaToolStripMenuItem.Text = "Bicicleta";
+            this.bicicletaToolStripMenuItem.Click += new System.EventHandler(this.bicicletaToolStripMenuItem_Click);
             // 
-            // salirToolStripMenuItem1
+            // salirToolStripMenuItem2
             // 
-            this.salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
-            this.salirToolStripMenuItem1.Size = new System.Drawing.Size(166, 22);
-            this.salirToolStripMenuItem1.Text = "Salir";
+            this.salirToolStripMenuItem2.Name = "salirToolStripMenuItem2";
+            this.salirToolStripMenuItem2.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem2.Text = "Salir";
+            this.salirToolStripMenuItem2.Click += new System.EventHandler(this.salirToolStripMenuItem2_Click);
             // 
             // label2
             // 
@@ -189,21 +169,27 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.LimeGreen;
             this.pictureBox1.Image = global::TallerMecanico.Properties.Resources.pngtree_repair_icon_workshop_mechanic_symbol_png_image_4822021_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(133, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(132, -9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(385, 338);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // VisPrincipal
+            // PresentaciónPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(543, 364);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "VisPrincipal";
-            this.Text = "VisPrincipal";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "PresentaciónPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Vista Principal ";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -219,19 +205,16 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem oPCIONESToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regisToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem carroToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem motoToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem sALIRToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consulToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem auToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem motoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bicicletaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem2;
     }
 }

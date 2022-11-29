@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TallerMecanico
 {
-    public partial class ListaAuto : Form
+    public partial class ListadoServicios : Form
     {
-        public ListaAuto()
+        public ListadoServicios()
         {
             InitializeComponent();
         }

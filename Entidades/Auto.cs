@@ -2,21 +2,18 @@
 {
     public class Auto : Vehiculo
     {
-        public Auto()
-        {
+        public string Placa { get; set; }
 
-        }
-
-        public Auto(string Propietario, string Marca, string Color, string Placa) : base(Propietario, Marca, Color)
-        {
-            this.Placa = Placa;
-        }
+        //public Auto(Servicio idServicio, string Propietario, string Marca, string Color, string Placa) : base(idServicio, Propietario, Marca, Color)
+        //{
+        //    this.Placa = Placa;
+        //}
 
         public override string ToString()
         {
-            return $"{Propietario};{Marca};{Color};{Placa}";
+            return $"{idSer.IdServicio};{Propietario};{Marca};{Color};{Placa}";
         }
 
-        public string Placa { get; set; }
+        
     }
 }
