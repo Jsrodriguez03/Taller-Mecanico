@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Datos;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +33,45 @@ namespace TallerMecanico
             if (respuesta == DialogResult.Yes)
             {
                 this.Close();
+            }
+        }
+
+        private void ListadoMoto_Load(object sender, EventArgs e)
+        {
+            CargarGrilla();
+        }
+
+        public void CargarGrilla()
+        {
+            MySqlConnection conexion = BaseDatos.ObtenerConexion();
+
+            string consulta = "SELECT c.Cedula, c.Nombre, c.Apellido, c.Telefono, a.idServicio, a.Marca, a.Color, a.Placa FROM clientemoto c " +
+                "JOIN moto a WHERE c.idCliente = a.idCliente";
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, conexion);
+
+            DataTable dt = new DataTable();
+
+            adaptador.Fill(dt);
+            GrillaListadoGeneral.DataSource = dt;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CargarGrilla();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text != "")
+            {
+                ListadoServicios lser = new ListadoServicios();
+                lser.txtBus.Text = txtBuscar.Text;
+                lser.txtTipo.Text = "3";
+                lser.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Digite El Servicio A Buscar");
             }
         }
     }

@@ -3,6 +3,7 @@ using Logica;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using TallerMecanico;
 
 namespace TALLERM
 {
@@ -43,6 +44,15 @@ namespace TALLERM
 
             LimpiarCajas();
             LimpiarTabla();
+            Guardado();
+        }
+
+        public void Guardado()
+        {
+            PresentaciónPrincipal ppal = new PresentaciónPrincipal();
+            this.Hide();
+            ppal.ShowDialog();
+            this.Close();
         }
 
         #region Inserciones

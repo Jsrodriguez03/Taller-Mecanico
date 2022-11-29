@@ -2,9 +2,6 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Datos
@@ -104,6 +101,31 @@ namespace Datos
             MySqlCommand _comando = new MySqlCommand(String.Format("SELECT s.IdServicio, s.NombreServicio, s.Precio, " +
                 "concat(m.NombreMecanico, ' ', m.ApellidoMecanico)" +
                 " FROM mecanico m JOIN serviciobicicleta s ON s.IdMecanico=m.IdMecanico " +
+                "where idServicio = '{0}'", nombre), BaseDatos.ObtenerConexion());
+
+
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                Servicio servicio = new Servicio();
+                servicio.IdServicio = _reader.GetString(0);
+                servicio.NombreServicio = _reader.GetString(1);
+                servicio.Precio = _reader.GetDouble(2);
+                servicio.IdServicio = _reader.GetString(3);
+
+                _lista.Add(servicio);
+            }
+
+            return _lista;
+        }
+
+        public static List<Servicio> BuscarMoto(string nombre)
+        {
+            List<Servicio> _lista = new List<Servicio>();
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT s.IdServicio, s.NombreServicio, s.Precio, " +
+                "concat(m.NombreMecanico, ' ', m.ApellidoMecanico)" +
+                " FROM mecanico m JOIN serviciomoto s ON s.IdMecanico=m.IdMecanico " +
                 "where idServicio = '{0}'", nombre), BaseDatos.ObtenerConexion());
 
 

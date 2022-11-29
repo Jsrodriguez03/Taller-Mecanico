@@ -4,6 +4,7 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using TallerMecanico;
 
 namespace TALLERM
 {
@@ -45,12 +46,21 @@ namespace TALLERM
 
             LimpiarCajas();
             LimpiarTabla();
+            Guardado();
+        }
+
+        public void Guardado()
+        {
+            PresentaciónPrincipal ppal = new PresentaciónPrincipal();
+            this.Hide();
+            ppal.ShowDialog();
+            this.Close();
         }
 
         #region Inserciones
         public void Insertar()
         {
-            //InsertarCliente();
+            InsertarCliente();
             InsertarMoto();
             InsertarServicio();
         }
@@ -221,7 +231,7 @@ namespace TALLERM
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (boxServicio.Text != "Seleccionar" && txtMecanico.Text != "Seleccionar")
+            if (boxServicio.Text != "Seleccionar")
             {
                 string valor = "";
                 if (boxServicio.Text == "Ajuste del Nivel de la suspensión")
@@ -302,7 +312,7 @@ namespace TALLERM
                 dgServicios.Rows.Add(boxServicio.Text, txtMecanico.Text, valor);
                 PrecioTotal();
                 boxServicio.Text = "Seleccionar";
-                txtMecanico.Text = "Seleccionar";
+                txtMecanico.Text = "Nombre Mecanico";
             }
             else
             {

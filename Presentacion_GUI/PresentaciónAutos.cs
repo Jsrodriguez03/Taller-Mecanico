@@ -3,6 +3,7 @@ using Logica;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using TallerMecanico;
 
 namespace TALLERM
 {
@@ -46,6 +47,7 @@ namespace TALLERM
 
             LimpiarCajas();
             LimpiarTabla();
+            Guardado();
 
         }
 
@@ -208,6 +210,14 @@ namespace TALLERM
         {
             dgServicios.Rows.Clear();
             PrecioTotal();
+        }
+
+        public void Guardado()
+        {
+            PresentaciónPrincipal ppal = new PresentaciónPrincipal();
+            this.Hide();
+            ppal.ShowDialog();
+            this.Close();
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
