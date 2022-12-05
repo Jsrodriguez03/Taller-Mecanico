@@ -39,31 +39,66 @@ namespace TALLERM
         {
             InicializarCajas();
             VerificarCajas();
-            Insertar();
-
-            Servicio servicio = new Servicio();
-            servicio.IdServicio = idSer.ToString();
-            idSer++;
-
-            LimpiarCajas();
-            LimpiarTabla();
-            Guardado();
+            
 
         }
 
+        public void InicializarCajas()
+        {
+            if (txtMarca.Text == "")
+            {
+                txtMarca.Text = "Ingrese La Marca Del Vehiculo";
+            }
 
+            if (txtColor.Text == "")
+            {
+                txtColor.Text = "Ingrese El Color Del Vehiculo";
+            }
+
+            if (txtPlaca.Text == "")
+            {
+                txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
+            }
+
+            if (boxServicio.Text == "")
+            {
+                boxServicio.Text = "Seleccionar";
+            }
+        }
+
+        public void VerificarCajas()
+        {
+            if (txtMarca.Text == "Ingrese La Marca Del Vehiculo" || txtColor.Text == "Ingrese El Color Del Vehiculo" ||
+                txtPlaca.Text == "Ingrese La Placa Del Vehiculo" || dgServicios.Rows[0].Cells[0].Value == null)
+            {
+                MessageBox.Show("Hay Campos sin Llenar, Por Favor Reviselos", "Revisar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                Insertar();
+
+                Servicio servicio = new Servicio();
+                servicio.IdServicio = idSer.ToString();
+                idSer++;
+
+                LimpiarCajas();
+                LimpiarTabla();
+                Guardado();
+            }
+        }
+        
         #region Inserciones
         public void Insertar()
         {
             InsertarCliente();
-            InsertarAuto();            
+            InsertarAuto();
             InsertarServicio();
         }
 
         public void InsertarAuto()
         {
             Auto auto = new Auto();
-            auto.idSer = new Servicio() { IdServicio = fecha + "S" + idSer.ToString() }; 
+            auto.idSer = new Servicio() { IdServicio = fecha + "S" + idSer.ToString() };
             auto.Propietario = txtNom.Text + " " + txtApe.Text;
             auto.Marca = txtMarca.Text;
             auto.Color = txtColor.Text;
@@ -172,39 +207,6 @@ namespace TALLERM
             MessageBox.Show("Servicio Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
-
-
-        public void InicializarCajas()
-        {
-            if (txtMarca.Text == "")
-            {
-                txtMarca.Text = "Ingrese La Marca Del Vehiculo";
-            }
-
-            if (txtColor.Text == "")
-            {
-                txtColor.Text = "Ingrese El Color Del Vehiculo";
-            }
-
-            if (txtPlaca.Text == "")
-            {
-                txtPlaca.Text = "Ingrese La Placa Del Vehiculo";
-            }
-
-            if (boxServicio.Text == "")
-            {
-                boxServicio.Text = "Seleccionar";
-            }
-        }
-
-        public void VerificarCajas()
-        {
-            if (txtMarca.Text == "Ingrese La Marca Del Vehiculo" || txtColor.Text == "Ingrese El Color Del Vehiculo" ||
-                txtPlaca.Text == "Ingrese La Placa Del Vehiculo" || dgServicios.Rows[0].Cells[0].Value == null)
-            {
-                MessageBox.Show("Hay Campos sin Llenar, Por Favor Reviselos", "Revisar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
 
         public void LimpiarTabla()
         {

@@ -14,7 +14,7 @@
 
         public override string ToString()
         {
-            return $"{idMecanico};{Cedula};{Nombre};{Apellido}";
+            return $"{idMecanico}";
         }
 
         public string idMecanico { get; set; }

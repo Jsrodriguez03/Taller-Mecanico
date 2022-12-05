@@ -62,31 +62,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.ListaGeneral = new System.Windows.Forms.TabPage();
-            this.GrillaListadoGeneral = new System.Windows.Forms.DataGridView();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.PestañaVehiculos.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgServicios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelDatosVehiculo.SuspendLayout();
-            this.ListaGeneral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GrillaListadoGeneral)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.PestañaVehiculos);
-            this.tabControl1.Controls.Add(this.ListaGeneral);
             this.tabControl1.Location = new System.Drawing.Point(-3, -3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -514,83 +500,6 @@
             this.label3.Text = "     MARCA";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // ListaGeneral
-            // 
-            this.ListaGeneral.Controls.Add(this.GrillaListadoGeneral);
-            this.ListaGeneral.Location = new System.Drawing.Point(4, 22);
-            this.ListaGeneral.Name = "ListaGeneral";
-            this.ListaGeneral.Padding = new System.Windows.Forms.Padding(3);
-            this.ListaGeneral.Size = new System.Drawing.Size(838, 480);
-            this.ListaGeneral.TabIndex = 2;
-            this.ListaGeneral.Text = "Listado General";
-            this.ListaGeneral.UseVisualStyleBackColor = true;
-            // 
-            // GrillaListadoGeneral
-            // 
-            this.GrillaListadoGeneral.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GrillaListadoGeneral.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrillaListadoGeneral.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column6,
-            this.Column4,
-            this.apellido,
-            this.Column7,
-            this.Column9,
-            this.color,
-            this.Column10,
-            this.Column11,
-            this.Column12});
-            this.GrillaListadoGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GrillaListadoGeneral.Location = new System.Drawing.Point(3, 3);
-            this.GrillaListadoGeneral.Name = "GrillaListadoGeneral";
-            this.GrillaListadoGeneral.RowHeadersVisible = false;
-            this.GrillaListadoGeneral.Size = new System.Drawing.Size(832, 474);
-            this.GrillaListadoGeneral.TabIndex = 1;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Cedula";
-            this.Column6.Name = "Column6";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Nombre";
-            this.Column4.Name = "Column4";
-            // 
-            // apellido
-            // 
-            this.apellido.HeaderText = "Apellido";
-            this.apellido.Name = "apellido";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Telefono";
-            this.Column7.Name = "Column7";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Marca";
-            this.Column9.Name = "Column9";
-            // 
-            // color
-            // 
-            this.color.HeaderText = "Color";
-            this.color.Name = "color";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Servicio";
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Mecánico";
-            this.Column11.Name = "Column11";
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Precio";
-            this.Column12.Name = "Column12";
-            // 
             // PresentaciónBicicleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -614,8 +523,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelDatosVehiculo.ResumeLayout(false);
             this.panelDatosVehiculo.PerformLayout();
-            this.ListaGeneral.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GrillaListadoGeneral)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -637,7 +544,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TabPage ListaGeneral;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label7;
@@ -645,7 +551,6 @@
         private System.Windows.Forms.ComboBox boxServicio;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView GrillaListadoGeneral;
         private System.Windows.Forms.Button btnSalir;
         public System.Windows.Forms.TextBox txtTel;
         public System.Windows.Forms.TextBox txtApe;
@@ -654,15 +559,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descripciónServicios;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mecanico;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn color;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.Label txtMecanico;
         private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.Label labelPlaca;

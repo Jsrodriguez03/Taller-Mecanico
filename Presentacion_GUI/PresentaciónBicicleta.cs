@@ -35,16 +35,7 @@ namespace TALLERM
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             InicializarCajas();
-            VerificarCajas();
-            Insertar();
-
-            Servicio servicio = new Servicio();
-            servicio.IdServicio = idSer.ToString();
-            idSer++;
-
-            LimpiarCajas();
-            LimpiarTabla();
-            Guardado();
+            VerificarCajas();            
         }
 
         public void Guardado()
@@ -199,6 +190,18 @@ namespace TALLERM
                 dgServicios.Rows[0].Cells[0].Value == null)
             {
                 MessageBox.Show("Hay Campos sin Completar, Por Favor Reviselos");
+            }
+            else
+            {
+                Insertar();
+
+                Servicio servicio = new Servicio();
+                servicio.IdServicio = idSer.ToString();
+                idSer++;
+
+                LimpiarCajas();
+                LimpiarTabla();
+                Guardado();
             }
         }
 

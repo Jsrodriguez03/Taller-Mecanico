@@ -85,8 +85,7 @@ namespace Datos
                 servicio.IdServicio = _reader.GetString(0);
                 servicio.NombreServicio = _reader.GetString(1);
                 servicio.Precio = _reader.GetDouble(2);
-                servicio.IdServicio = _reader.GetString(3);
-
+                servicio.idMecanico = new Mecanico() { idMecanico = _reader.GetString(3) };
 
                 _lista.Add(servicio);
             }
@@ -111,7 +110,7 @@ namespace Datos
                 servicio.IdServicio = _reader.GetString(0);
                 servicio.NombreServicio = _reader.GetString(1);
                 servicio.Precio = _reader.GetDouble(2);
-                servicio.IdServicio = _reader.GetString(3);
+                servicio.idMecanico = new Mecanico() { idMecanico = _reader.GetString(3) };
 
                 _lista.Add(servicio);
             }
@@ -136,7 +135,7 @@ namespace Datos
                 servicio.IdServicio = _reader.GetString(0);
                 servicio.NombreServicio = _reader.GetString(1);
                 servicio.Precio = _reader.GetDouble(2);
-                servicio.IdServicio = _reader.GetString(3);
+                servicio.idMecanico = new Mecanico() { idMecanico = _reader.GetString(3) };
 
                 _lista.Add(servicio);
             }
